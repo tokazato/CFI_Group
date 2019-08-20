@@ -38,6 +38,14 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    }
+    input[type=date]::-webkit-inner-spin-button, 
+    input[type=date]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    }
 }
 .container {
     max-width: 1550px;
@@ -166,7 +174,7 @@
     display: none;
     flex-direction: column;
     background: #fff;
-    padding: 25px;
+    padding: 18px;
     width: 244px;
     position: absolute;
     top: 60px;
@@ -252,7 +260,7 @@ main {
     align-items: center;
     position: relative;
     width: 100%;
-    bottom: 80px;
+    bottom: 120px;
     z-index: 100;
     .mainSliderArrrow span {
         border-radius: 50%;
@@ -300,7 +308,7 @@ main {
         width: 984px;
         .newsBox {
             display: flex;
-            border: 1px solid #D8D6D6;
+            border: 2px solid #D8D6D6;
             border-radius: 10px;
             position: relative;
             margin: 60px 0;
@@ -317,6 +325,9 @@ main {
                 background: #1FB26F;
                 color: #fff;
                 border-radius: 10px;
+                font-family: mtavrulibold;
+                font-size: 16px;
+                cursor: pointer;
             }
             .newsTextBox {
                 padding: 25px 45px;
@@ -338,11 +349,22 @@ main {
                 font-size: 15px;
                 font-family: roboto;
                 color: #454A4A;
+                margin-bottom: 16px;
             }
-            .calculatorNumberP {
+            .calculatorInput {
                 font-size: 18px;
                 color: #454A4A;
                 font-family: roboto;
+                background: #fff;
+                height: 64px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                font-weight: bold;
+                width: 108px;
+                text-align: center;
+                outline: none;
             }
             .calculatorGetLoan {
                 padding: 30px 0;
@@ -376,24 +398,22 @@ main {
                 display: flex;
                 justify-content: space-around;
                 margin-bottom: 40px;
-                p:nth-child(2) {
-                    margin-top: 36px;
-                    margin-bottom: 20px;
-                }
             }
             .getLoanDate {
                 display: flex;
                 justify-content: space-around;
                 margin-bottom: 30px;
-                p:nth-child(2) {
-                    margin-top: 36px;
+                input:nth-child(2) {
                     margin-bottom: 20px;
+                    width: 198px;
+                    appearance: none;
                 }
             }
             .toCalculate {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                padding-bottom: 40px;
                 span:first-child {
                     padding: 20px 100px;
                     background: #E2574C;
@@ -402,6 +422,7 @@ main {
                     margin-right: 13px;
                     font-size: 18px;
                     font-family: mtavrulibold;
+                    cursor: pointer;
                 }
                 span:nth-child(2){
                     padding: 15px 35px 17px 35px;
@@ -410,6 +431,7 @@ main {
                     font-size: 24px;
                     font-family: mtavrulibold;
                     color: #454A4A;
+                    cursor: pointer;
                 }
             }
         }
@@ -423,6 +445,7 @@ main {
                 justify-content: space-evenly;
                 align-items: center;
                 margin-bottom: 20px;
+                padding-top: 31px;
                 span {
                     font-size: 17px;
                     font-family: roboto;
@@ -431,6 +454,7 @@ main {
             }
             .currentExchangeRateBox {
                 margin-top: 35px;
+                padding-bottom: 50px;
                 .exchangeAction {
                     margin-bottom: 35px;
                     span {
