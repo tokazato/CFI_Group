@@ -26,11 +26,13 @@
                     <a href="#!"><img src="assets/media/img/Group 20.svg" alt=""></a>
                     <a class="headerYoutube" href="#!"><img src="assets/media/img/Group 19.svg" alt=""></a>
                 </div>
-                <select class="headerSelect" name="" id="">
-                    <option value="">ქართული</option>
-                    <option value="">ინგლისური</option>
-                    <option value="">რუსული</option>
-                </select>
+                <div class="headerLanguageBox">
+                    <div class="headerLanguageContent">
+                        <a href="#!">ქართული</a>
+                        <a href="#!">ინგლისური</a>
+                        <a href="#!">რუსული</a>
+                    </div>
+                </div>
             </div>
         </div>
             <nav class="headerNav">
@@ -46,7 +48,7 @@
                             <a class="firstNavContent" href="#!">სიახლეები</a>
                         </li>
                         <li class="openHeaderDropDown">
-                            <a class="loans" href="#!">სესხები</a>
+                            <a class="loans" href="#!">სესხები<i class="fas fa-chevron-down loansArrow"></i></a>
                             <ul class="dropDownContent">
                                 <li>
                                     <a href="#!">იპოთეკური სესხი</a>
@@ -85,29 +87,58 @@
           <!-- Swiper -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img class="mainImg" src="assets/media/img/Background.png" alt=""></div>
-                <div class="swiper-slide"><img class="mainImg" src="assets/media/img/Background.png" alt=""></div>
-                <div class="swiper-slide"><img class="mainImg" src="assets/media/img/Background.png" alt=""></div>
+                <div class="swiper-slide">
+                    <div>
+                         <img class="mainImg" src="assets/media/img/Background.png" alt="">
+                    <div class="mainText">
+                        <h1>წლის ყველაზე მიმზიდველი შეთავაზება</h1>
+                        <p>ჩვენი მთავარი მისიაა - როგორც მცირე ბიზნესის, 
+                            ასევე ჩვენი მოქალაქეების სასესხო პროდუქტებით მხარდაჭერა 
+                            არა მხოლოდ პროდუქტების მოქნილი პირობებით, არამედ 
+                        </p>
+                        <div>
+                            <span class="getLoan">სესხის აღება</span>
+                            <span class="learnMore">გაიგეთ მეტი</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="swiper-slide"><img class="mainImg" src="assets/media/img/Background.png" alt="">
+                    <div class="mainText">
+                        <h1>წლის ყველაზე მიმზიდველი შეთავაზება</h1>
+                        <p>ჩვენი მთავარი მისიაა - როგორც მცირე ბიზნესის, 
+                            ასევე ჩვენი მოქალაქეების სასესხო პროდუქტებით მხარდაჭერა 
+                            არა მხოლოდ პროდუქტების მოქნილი პირობებით, არამედ 
+                        </p>
+                        <div>
+                            <span class="getLoan">სესხის აღება</span>
+                            <span class="learnMore">გაიგეთ მეტი</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide"><img class="mainImg" src="assets/media/img/image.png" alt="">
+                    <div class="mainText">
+                        <h1>წლის ყველაზე მიმზიდველი შეთავაზება</h1>
+                        <p>ჩვენი მთავარი მისიაა - როგორც მცირე ბიზნესის, 
+                            ასევე ჩვენი მოქალაქეების სასესხო პროდუქტებით მხარდაჭერა 
+                            არა მხოლოდ პროდუქტების მოქნილი პირობებით, არამედ 
+                        </p>
+                        <div>
+                            <span class="getLoan">სესხის აღება</span>
+                            <span class="learnMore">გაიგეთ მეტი</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="mainText">
-            <h1>წლის ყველაზე მიმზიდველი შეთავაზება</h1>
-            <p>ჩვენი მთავარი მისიაა - როგორც მცირე ბიზნესის, 
-                ასევე ჩვენი მოქალაქეების სასესხო პროდუქტებით მხარდაჭერა 
-                არა მხოლოდ პროდუქტების მოქნილი პირობებით, არამედ 
-            </p>
-            <div>
-                <span class="getLoan">სესხის აღება</span>
-                <span class="learnMore">გაიგეთ მეტი</span>
-            </div>
-        </div>
+        
         <div class="container">
             <div class="mainFooter">
                 <div class="mainSliderArrrow">
                     <span class="mainSliderLeft">
                         <i class="fas fa-angle-left"></i>
                     </span>
-                    <span>
+                    <span class="mainSliderRight">
                         <i class="fas fa-angle-right"></i>
                     </span>
                 </div>
@@ -122,6 +153,204 @@
             </div>
         </div>
     </main>
+    <section>
+        <div class="container">
+            <div class="firstSectionContent">
+                <div class="gridBoxLeft">
+                    <h1 class="h1title">სიახლეები</h1>
+                    <div class="newsBox">
+                        <div>
+                            <img class="sectionImg" src="assets/media/img/sectionimg1.png" alt="">
+                        </div>
+                        <div class="newsTextBox">
+                            <h3 class="h3title">დამატებითი ინფორმაცია საშეღავათო პერიოდით გაცემულ სესხებთან დაკავშირებით</h3>
+                            <p class="sectionP">მომსახურების გვერდებიდან გადავდივართ შესაბამის განცხადების შევსების გვერდებზე 
+                                (იპოთეკური სესხი - იპოთეკური სესხის განაცხადი; ავტო სესხი - ავტო სესხის განაცხადი, 
+                                სამომხმარებლო სესხი - სამომახმარებლო სესხის განაცხადი და ა.შ)
+                            </p>
+                        </div>
+                        <p class="newsLearMore">მეტის ნახვა</p>
+                    </div>
+                    <div class="newsBox">
+                        <div>
+                            <img class="sectionImg" src="assets/media/img/sectionpic2.png" alt="">
+                        </div>
+                        <div class="newsTextBox">
+                            <h3 class="h3title">დამატებითი ინფორმაცია საშეღავათო პერიოდით გაცემულ სესხებთან დაკავშირებით</h3>
+                            <p class="sectionP">მომსახურების გვერდებიდან გადავდივართ შესაბამის განცხადების შევსების გვერდებზე 
+                                (იპოთეკური სესხი - იპოთეკური სესხის განაცხადი; ავტო სესხი - ავტო სესხის განაცხადი, 
+                                სამომხმარებლო სესხი - სამომახმარებლო სესხის განაცხადი და ა.შ)
+                            </p>
+                        </div>
+                        <p class="newsLearMore">მეტის ნახვა</p>
+                    </div>
+                    <div class="newsBox">
+                        <div>
+                            <img class="sectionImg" src="assets/media/img/sectionpic3.png" alt="">
+                        </div>
+                        <div class="newsTextBox">
+                            <h3 class="h3title">დამატებითი ინფორმაცია საშეღავათო პერიოდით გაცემულ სესხებთან დაკავშირებით</h3>
+                            <p class="sectionP">მომსახურების გვერდებიდან გადავდივართ შესაბამის განცხადების შევსების გვერდებზე 
+                                (იპოთეკური სესხი - იპოთეკური სესხის განაცხადი; ავტო სესხი - ავტო სესხის განაცხადი, 
+                                სამომხმარებლო სესხი - სამომახმარებლო სესხის განაცხადი და ა.შ)
+                            </p>
+                        </div>
+                        <p class="newsLearMore">მეტის ნახვა</p>
+                    </div>
+                </div>
+                <div class="gridBoxRight">
+                    <h1 class="h1title">კალკულატორი</h1>
+                    <div class="calculatorBox">
+                        <div class="calculatorGetLoan">
+                            <span class="loanEasy">მარტივი</span>
+                            <span class="anuiteti">ანუიტეტი</span>
+                        </div>
+                            <div class="calculatorLoanConditions">
+                                <div>
+                                    <p class="calculatorTextP">სესხის თანხა</p>
+                                    <p class="calculatorNumberP">2345</p>
+                                </div>
+                                <div>
+                                    <p class="calculatorTextP">წლიური %</p>
+                                    <p class="calculatorNumberP">12</p>
+                                </div>
+                                <div>
+                                    <p class="calculatorTextP">თვიური %</p>
+                                    <p class="calculatorNumberP">12</p>
+                                </div>
+                            </div>
+                            <div class="getLoanDate">
+                                <div>
+                                    <p class="calculatorTextP">სესხის პერიოდი თვეებში</p>
+                                    <p class="calculatorNumberP">12</p>
+                                </div>
+                                <div>
+                                    <p class="calculatorTextP">სესხის გაცემის დღე</p>
+                                    <p class="calculatorNumberP">14 / 08 / 2019</p>
+                                </div>
+                            </div>
+                        <div class="toCalculate">
+                            <span>გამოთვლა</span>
+                            <span>?</span>
+                        </div>
+                    </div>
+                    <h1 class="h1title">ვალუტის კურსი</h1>
+                    <div class="exchangeRate">
+                        <div class="nationalBankBox">
+                            <img src="assets/media/img/Logo_of_National_Bank_of_Georgia.png" alt="">
+                            <span>საქართველოს ეროვნული ბანკი</span>
+                        </div>
+                        <img src="assets/media/img/Path 222.svg" alt="">
+                        <div class="currentExchangeRateBox">
+                            <div class="exchangeAction">
+                                <span>ვალუტა</span>
+                                <span>ყიდვა</span>
+                                <span>გაყიდვა</span>
+                            </div>
+                            <div>
+                                <div class="dollar">
+                                    <img src="assets/media/img/usa.png" alt="">
+                                    <span>GBP</span>
+                                </div>
+                                <span class="sellMoney">2.9000</span>
+                                <span class="buyMoney">2.9100</span>
+                            </div>
+                            <div>
+                                <div class="euro">
+                                    <img src="assets/media/img/eu.png" alt="">
+                                    <span>EUR</span>
+                                </div>
+                                <span class="sellMoney">3.2430</span>
+                                <span class="buyMoney">3.2580</span>
+                            </div>
+                            <div>
+                                <div class="gbp">
+                                    <img src="assets/media/img/Path 81.png" alt="">
+                                    <span>GBP</span>
+                                </div>
+                                <span class="sellMoney">3.4930</span>
+                                <span class="buyMoney">3.5130</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="howGetLoan">
+            <h1 class="h1title">როგორ ავიღოთ სესხი</h1>
+            <div class="arrowBox">
+                <img src="assets/media/img/boldlineblue.svg" alt="">
+                <img class="sectioArrowred" src="assets/media/img/Path 203.svg" alt="">
+            </div>
+        </div>
+        <div class="howGetLoanContent">
+            <div>
+                <img src="assets/media/img/Rectangle 37.png" alt="">
+            </div>
+            <dv class="getLoanMethodBox">
+                <div class="getLoanMethod">
+                    <img src="assets/media/img/Group 71.svg" alt="">
+                    <div>
+                        <h3 class="h3title">შეავსე განაცხადი ონლაინ</h3>
+                        <p class="sectionP">შეიძინეთ, ააშენეთ ან გაარემონტეთ თქვენი ოცნების სახლი. მიიღეთ უძრავი ქონების საბაზრო ღირებულების</p>
+                    </div>
+                </div>
+                <div class="getLoanMethod">
+                    <img src="assets/media/img/Group 72.svg" alt="">
+                    <div>
+                        <h3 class="h3title">დაგვირეკე</h3>
+                        <p class="sectionP">შეიძინეთ, ააშენეთ ან გაარემონტეთ თქვენი ოცნების სახლი. მიიღეთ უძრავი ქონების საბაზრო ღირებულების</p>
+                    </div>
+                </div>
+                <div class="getLoanMethod">
+                    <img src="assets/media/img/Group 74.svg" alt="">
+                    <div>
+                        <h3 class="h3title">გვეწვიე</h3>
+                        <p class="sectionP">შეიძინეთ, ააშენეთ ან გაარემონტეთ თქვენი ოცნების სახლი. მიიღეთ უძრავი ქონების საბაზრო ღირებულების</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footerContent">
+                <div class="footerbox1">
+                    <div class="footelLogobox">
+                        <img src="assets/media/img/Group 84.svg" alt="">
+                        <p>2019</p>
+                    </div>
+                    <p class="rightDefender">ყველა უფლება დაცულია</p>
+                </div>
+                <div class="footerNavigation">
+                    <ul>
+                        <li>
+                            <a href="#!">მთავარი</a>
+                        </li>
+                        <li>
+                            <a href="#!">სიახლეები</a>
+                        </li>
+                        <li>
+                            <a href="#!">სესხები</a>
+                        </li>
+                        <li>
+                            <a href="#!">შეავსე განაცხადი</a>
+                        </li>
+                        <li>
+                            <a href="#!">დაგვიკავშირდი</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footerSocialLogo">
+                    <img src="assets/media/img/Facebook.svg" alt="">
+                    <img src="assets/media/img/Youtube.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
     <script src="assets/js/swiper.min.js"></script>

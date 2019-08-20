@@ -23,7 +23,7 @@
 }
 
 .container {
-  width: 1520px;
+  max-width: 1550px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -63,12 +63,18 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 297px;
+  width: 350px;
   height: 33px;
-  border-left: 1px solid;
+  border-left: 2px solid #4346A4;
   padding-left: 66px;
   margin-left: 80px;
   margin-right: 58px;
+}
+
+.headerTel a {
+  color: #454A4A;
+  font-size: 20px;
+  font-family: roboto;
 }
 
 .headerTel img {
@@ -99,11 +105,55 @@
 .headerLinesBox {
   width: 484px;
   margin-right: 48px;
+  position: relative;
 }
 
-.headerSelect {
-  padding: 15px 24px;
+.headerLineGreen {
+  position: absolute;
+  top: 10px;
+}
+
+.headerLanguageBox {
+  width: 155px;
+  height: 48px;
   border-radius: 24px;
+  border: 1px solid #102943;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.headerLanguageBox:hover {
+  height: 108px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.headerLanguageBox .headerLanguageContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 15px;
+  width: 100%;
+}
+
+.headerLanguageBox a {
+  color: #454A4A;
+  font-size: 15px;
+  font-family: mtavrulibold;
+  margin-bottom: 15px;
 }
 
 .headerNav {
@@ -127,19 +177,35 @@
   opacity: 0.6;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  font-size: 16px;
+  font-family: mtavrulibold;
 }
 
 .firstNavContent:hover {
   opacity: 1;
-  background: #17395e;
+  background: #233A52;
 }
 
 .loans {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 22px 40px;
   color: #fff;
-  opacity: 0.4;
+  opacity: 0.6;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  font-size: 16px;
+  font-family: mtavrulibold;
+  width: 100%;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .loans:hover {
@@ -148,8 +214,20 @@
   opacity: 1;
 }
 
+.loans .loansArrow {
+  margin-left: 3.5px;
+  font-size: 10px;
+}
+
 .openHeaderDropDown {
   position: relative;
+}
+
+.openHeaderDropDown:hover .loansArrow {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .dropDownContent {
@@ -162,7 +240,7 @@
   padding: 25px;
   width: 244px;
   position: absolute;
-  top: 43px;
+  top: 60px;
   z-index: 9;
 }
 
@@ -183,9 +261,22 @@ main {
   position: relative;
 }
 
+main::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 668px;
+  width: 100%;
+  background: #102943;
+  opacity: 0.6;
+  z-index: 1;
+}
+
 main .mainImg {
   display: block;
   width: 100%;
+  height: 668px;
 }
 
 main .mainText {
@@ -208,11 +299,15 @@ main .mainText p {
   margin-top: 40px;
   margin-bottom: 60px;
   width: 818px;
+  font-size: 18px;
+  font-family: roboto;
 }
 
 main .mainText span {
   padding: 15px 24px 17px 24px;
   border-radius: 5px;
+  font-size: 18px;
+  font-family: mtavrulibold;
 }
 
 main .mainText .getLoan {
@@ -223,8 +318,13 @@ main .mainText .learnMore {
   border: 1px solid #707070;
 }
 
-.swiper-pagination {
-  padding-bottom: 20px;
+.swiper-pagination span:nth-child(2) {
+  margin: 0 16px !important;
+}
+
+.swiper-pagination span {
+  background: #fff !important;
+  padding: 7px;
 }
 
 .mainFooter {
@@ -252,6 +352,18 @@ main .mainText .learnMore {
   border: 1px solid #fff;
   color: #fff;
   padding: 22px 25px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.mainFooter .mainSliderArrrow span:hover {
+  background: #9e9c9c;
+  color: #181818;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  border: none;
 }
 
 .mainFooter .mainSliderLeft {
@@ -268,5 +380,448 @@ main .mainText .learnMore {
 .mainFooter .wholeImgNumber {
   font-size: 27px;
   color: #707070;
+}
+
+.h1title {
+  font-size: 30px;
+  font-family: mtavrulibold;
+  color: #454A4A;
+}
+
+.h3title {
+  font-size: 20px;
+  font-family: mtavrulibold;
+  color: #454A4A;
+}
+
+.sectionP {
+  font-size: 16px;
+  color: #454A4A;
+  font-family: roboto;
+}
+
+.firstSectionContent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.firstSectionContent .gridBoxLeft {
+  width: 984px;
+}
+
+.firstSectionContent .gridBoxLeft .newsBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #D8D6D6;
+  border-radius: 10px;
+  position: relative;
+  margin: 60px 0;
+}
+
+.firstSectionContent .gridBoxLeft .newsBox .sectionImg {
+  position: relative;
+  right: 24px;
+  bottom: 26px;
+}
+
+.firstSectionContent .gridBoxLeft .newsBox .newsLearMore {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  padding: 17px 35px 18px 35px;
+  background: #1FB26F;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.firstSectionContent .gridBoxLeft .newsBox .newsTextBox {
+  padding: 25px 45px;
+}
+
+.firstSectionContent .gridBoxLeft .newsBox .newsTextBox h3 {
+  margin-bottom: 16px;
+}
+
+.firstSectionContent .gridBoxRight {
+  width: 481px;
+  text-align: center;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox {
+  background: #F4F4F4;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .calculatorTextP {
+  font-size: 15px;
+  font-family: roboto;
+  color: #454A4A;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .calculatorNumberP {
+  font-size: 18px;
+  color: #454A4A;
+  font-family: roboto;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .calculatorGetLoan {
+  padding: 30px 0;
+  border-bottom: 1.5px solid #E1E1E1;
+  margin-bottom: 40px;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .calculatorGetLoan .loanEasy {
+  margin-right: 108px;
+  padding: 30px 0;
+  font-size: 18px;
+  font-family: mtavrulibold;
+  color: #707070;
+  cursor: pointer;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .calculatorGetLoan .loanEasy:hover {
+  color: #454A4A;
+  border-bottom: 1.5px solid #E2574C;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .calculatorGetLoan .anuiteti {
+  padding: 30px 0;
+  font-size: 18px;
+  font-family: mtavrulibold;
+  color: #707070;
+  cursor: pointer;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .calculatorGetLoan .anuiteti:hover {
+  color: #454A4A;
+  border-bottom: 1.5px solid #E2574C;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .calculatorLoanConditions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .calculatorLoanConditions p:nth-child(2) {
+  margin-top: 36px;
+  margin-bottom: 20px;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .getLoanDate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .getLoanDate p:nth-child(2) {
+  margin-top: 36px;
+  margin-bottom: 20px;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .toCalculate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .toCalculate span:first-child {
+  padding: 20px 100px;
+  background: #E2574C;
+  border-radius: 5px;
+  color: #fff;
+  margin-right: 13px;
+  font-size: 18px;
+  font-family: mtavrulibold;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .toCalculate span:nth-child(2) {
+  padding: 15px 35px 17px 35px;
+  border: 1px solid #E0E0E0;
+  border-radius: 5px;
+  font-size: 24px;
+  font-family: mtavrulibold;
+  color: #454A4A;
+}
+
+.firstSectionContent .gridBoxRight .exchangeRate {
+  background: #F4F4F4;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.firstSectionContent .gridBoxRight .exchangeRate .nationalBankBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.firstSectionContent .gridBoxRight .exchangeRate .nationalBankBox span {
+  font-size: 17px;
+  font-family: roboto;
+  color: #454A4A;
+}
+
+.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox {
+  margin-top: 35px;
+}
+
+.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .exchangeAction {
+  margin-bottom: 35px;
+}
+
+.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .exchangeAction span {
+  font-size: 16px;
+  color: #454A4A;
+  font-family: mtavrulibold;
+}
+
+.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .euro {
+  margin: 30px 0;
+}
+
+.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .euro img, .firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .dollar img, .firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .gbp img {
+  margin-right: 16px;
+}
+
+.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .euro span, .firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .dollar span, .firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .gbp span {
+  font-size: 18px;
+  color: #454A4A;
+  font-family: mtavrulibold;
+}
+
+.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .sellMoney {
+  color: #1FB26F;
+  padding: 8px 17px 10px 17px;
+  background: #E4EFEA;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: mtavrulibold;
+}
+
+.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .buyMoney {
+  color: #E35E54;
+  padding: 8px 17px 10px 17px;
+  background: #F3E9E9;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: mtavrulibold;
+}
+
+.howGetLoan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 108px;
+}
+
+.howGetLoan h1 {
+  font-size: 32px;
+  font-family: mtavrulibold;
+}
+
+.howGetLoan .arrowBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.howGetLoan .sectioArrowred {
+  position: absolute;
+  top: 5px;
+}
+
+.howGetLoanContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 70px;
+}
+
+.getLoanMethodBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 80px;
+}
+
+.getLoanMethodBox .getLoanMethod {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 744px;
+  height: 124px;
+}
+
+.getLoanMethodBox .getLoanMethod div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-left: 46px;
+}
+
+.getLoanMethodBox .getLoanMethod div h3 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-family: mtavrulibold;
+  color: #454A4A;
+}
+
+.getLoanMethodBox .getLoanMethod div p {
+  font-size: 16px;
+  font-family: roboto;
+  color: #454A4A;
+}
+
+.getLoanMethodBox .getLoanMethod img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer {
+  background: #F2F2F2;
+  margin-top: 115px;
+}
+
+.footerContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 180px;
+}
+
+.footerContent .footerbox1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footerContent .footerbox1 .footelLogobox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footerContent .footerbox1 .footelLogobox p {
+  font-size: 25px;
+  font-family: mtavrulibold;
+  margin-left: 20px;
+}
+
+.footerContent .footerbox1 .rightDefender {
+  font-size: 16px;
+  color: #1D1D1D;
+  font-family: roboto;
+}
+
+.footerContent .footerNavigation {
+  width: 719px;
+}
+
+.footerContent .footerNavigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footerContent .footerNavigation ul a {
+  color: #1D1D1D;
+  font-family: mtavrulibold;
+}
+
+.footerContent .footerSocialLogo img:first-Child {
+  margin-right: 20px;
 }
 /*# sourceMappingURL=style.css.map */
