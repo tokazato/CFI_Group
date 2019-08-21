@@ -6,7 +6,6 @@ $(document).ready(function(){
     //     $('.dropDownContentSecond').slideToggle('slow');
     //    });
     $('.question').hover(function(){
-            $('.attention').slideToggle('slow').css('opacity', '1' );
-        });
-
+        $('.attention').slideToggle('slow');
+    });
 })
