@@ -23,14 +23,14 @@
                     <img class="headerLineGreen" src="assets/media/img/Path 65.svg" alt="">
                 </div>
                 <div class="headerSocialLogo">
-                    <a href="#!"><img src="assets/media/img/Group 20.svg" alt=""></a>
-                    <a class="headerYoutube" href="#!"><img src="assets/media/img/Group 19.svg" alt=""></a>
+                    <a class="headerFb" href="#!"><img src="assets/media/img/facebook-f.svg" alt=""></a>
+                    <a class="headerYoutube" href="#!"><img src="assets/media/img/Youtube.svg" alt=""></a>
                 </div>
                 <div class="headerLanguageBox">
                     <div class="headerLanguageContent">
-                        <a href="#!">ქართული</a>
-                        <a href="#!">ინგლისური</a>
-                        <a href="#!">რუსული</a>
+                        <a class="active" href="#!">ქართული<i class="fas fa-chevron-down languageArrow"></i></a>
+                        <a href="#!">ინგლისური<i class="fas fa-chevron-down languageArrow"></i></a>
+                        <a href="#!">რუსული<i class="fas fa-chevron-down languageArrow"></i></a>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                 <div class="container">
                     <ul class="navigationBox">
                         <li>
-                            <a class="firstNavContent" href="#!">მთავარი</a>
+                            <a class="firstNavContent firstNavContentMain " href="#!">მთავარი</a>
                         </li>
                         <li>
                             <a class="firstNavContent" href="#!">ჩვენ შესახებ</a>
@@ -73,8 +73,31 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a class="firstNavContent" href="#!">შეავსე განაცხადი</a>
+                        <li class="openHeaderDropDown">
+                            <a class="loans" href="#!">შეავსე განაცხადი<i class="fas fa-chevron-down loansArrow"></i></a>
+                            <ul class="dropDownContent">
+                                    <li>
+                                        <a href="#!">იპოთეკური სესხი</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">სამომხმარებლო სესხი</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">ბიზნეს სესხი</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">სტარტაპ სესხი</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">სწრაფი სესხი</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">აგროსესხი</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!">ავტო სესხი</a>
+                                    </li>
+                                </ul>
                         </li>
                         <li>
                             <a class="firstNavContent"href="#!">დაგვიკავშირდი</a>
@@ -88,22 +111,9 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div>
-                         <img class="mainImg" src="assets/media/img/Background.png" alt="">
-                    <div class="mainText">
-                        <h1>წლის ყველაზე მიმზიდველი შეთავაზება</h1>
-                        <p>ჩვენი მთავარი მისიაა - როგორც მცირე ბიზნესის, 
-                            ასევე ჩვენი მოქალაქეების სასესხო პროდუქტებით მხარდაჭერა 
-                            არა მხოლოდ პროდუქტების მოქნილი პირობებით, არამედ 
-                        </p>
-                        <div>
-                            <span class="getLoan">სესხის აღება</span>
-                            <span class="learnMore">გაიგეთ მეტი</span>
-                        </div>
+                    <div class="mainImgBox">
+                        <img class="mainImg" src="assets/media/img/image.png" alt="">
                     </div>
-                    </div>
-                </div>
-                <div class="swiper-slide"><img class="mainImg" src="assets/media/img/Background.png" alt="">
                     <div class="mainText">
                         <h1>წლის ყველაზე მიმზიდველი შეთავაზება</h1>
                         <p>ჩვენი მთავარი მისიაა - როგორც მცირე ბიზნესის, 
@@ -116,7 +126,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide"><img class="mainImg" src="assets/media/img/image.png" alt="">
+                <div class="swiper-slide">
+                    <div class="mainImgBox">
+                        <img class="mainImg" src="assets/media/img/Background.png" alt="">  
+                    </div>
+                    <div class="mainText">
+                        <h1>წლის ყველაზე მიმზიდველი შეთავაზება</h1>
+                        <p>ჩვენი მთავარი მისიაა - როგორც მცირე ბიზნესის, 
+                            ასევე ჩვენი მოქალაქეების სასესხო პროდუქტებით მხარდაჭერა 
+                            არა მხოლოდ პროდუქტების მოქნილი პირობებით, არამედ 
+                        </p>
+                        <div>
+                            <span class="getLoan">სესხის აღება</span>
+                            <span class="learnMore">გაიგეთ მეტი</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="mainImgBox">
+                        <img class="mainImg" src="assets/media/img/image.png" alt="">       
+                    </div>
                     <div class="mainText">
                         <h1>წლის ყველაზე მიმზიდველი შეთავაზება</h1>
                         <p>ჩვენი მთავარი მისიაა - როგორც მცირე ბიზნესის, 
@@ -147,8 +176,16 @@
                     <div class="swiper-pagination"></div>
                 </div>
                 <div class="pageNumber">
-                    <span class="currentNumber">03</span> 
-                    <span class="wholeImgNumber">/ 08</span>
+                    <div class="currentNumberBox">
+                        <ul id="indexCounter">
+                            <li>01</li>
+                            <li>02</li>
+                            <li>03</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- <span class="currentNumber" id="mainslider-index" >01</span>  -->
+                    <span class="wholeImgNumber">/ 03</span>
                 </div>
             </div>
         </div>
@@ -220,6 +257,7 @@
                                 </div>
                             </div>
                             <div class="getLoanDate">
+                                <p class="attention">რეალური თანხა შეიძლება  აცდენილი იყოს კალკულატორის ანგარიშს !</p>
                                 <div>
                                     <p class="calculatorTextP">სესხის პერიოდი თვეებში</p>
                                     <input type="number" class="calculatorInput " value="12">
@@ -231,7 +269,7 @@
                             </div>
                         <div class="toCalculate">
                             <span>გამოთვლა</span>
-                            <span>?</span>
+                            <span class="question">?</span>
                         </div>
                     </div>
                     <h1 class="h1title">ვალუტის კურსი</h1>
@@ -347,6 +385,9 @@
                 <div class="footerSocialLogo">
                     <img src="assets/media/img/Facebook.svg" alt="">
                     <img src="assets/media/img/Youtube.svg" alt="">
+                </div>
+                <div>
+                    <img src="assets/media/img/smartweb.svg" alt="">
                 </div>
             </div>
         </div>

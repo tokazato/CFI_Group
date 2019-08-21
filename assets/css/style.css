@@ -32,6 +32,10 @@
   -webkit-appearance: none;
 }
 
+body {
+  font-family: mtavruli;
+}
+
 .container {
   max-width: 1550px;
   margin: 0 auto;
@@ -85,10 +89,21 @@
   color: #454A4A;
   font-size: 20px;
   font-family: roboto;
+  font-weight: bold;
+}
+
+.headerTel:hover img {
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .headerTel img {
   margin-right: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .headerSocialLogo {
@@ -108,8 +123,56 @@
 }
 
 .headerYoutube {
-  margin-left: 10px;
-  margin-right: 30px;
+  margin: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #FF2424;
+  -webkit-box-shadow: 0 0 0 5px #FFCACA, 0 0 0 10px #FFE8E8;
+          box-shadow: 0 0 0 5px #FFCACA, 0 0 0 10px #FFE8E8;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.headerYoutube:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.headerFb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #367DEF;
+  -webkit-box-shadow: 0 0 0 5px #CFE1FC, 0 0 0 10px #e5eefd;
+          box-shadow: 0 0 0 5px #CFE1FC, 0 0 0 10px #e5eefd;
+}
+
+.headerFb:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .headerLinesBox {
@@ -120,27 +183,16 @@
 
 .headerLineGreen {
   position: absolute;
-  top: 10px;
+  top: 8px;
 }
 
 .headerLanguageBox {
   width: 155px;
   height: 48px;
-  border-radius: 24px;
-  border: 1px solid #102943;
   position: relative;
-  overflow: hidden;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
 }
 
-.headerLanguageBox:hover {
-  height: 108px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-.headerLanguageBox .headerLanguageContent {
+.headerLanguageContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,22 +200,51 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 15px;
   width: 100%;
+  border-radius: 24px;
+  background: #fff;
+  overflow: hidden;
+  height: 47px;
+  border: 1px solid;
+  top: 0;
+  -webkit-transition: 0.9s ease;
+  transition: 0.9s ease;
 }
 
-.headerLanguageBox a {
-  color: #454A4A;
+.headerLanguageContent:hover {
+  height: 147px;
+  border-radius: 8px;
+  -webkit-transition: 0.9s ease;
+  transition: 0.9s ease;
+}
+
+.headerLanguageContent a.active {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  color: rgba(69, 74, 74, 0.8);
+}
+
+.headerLanguageContent a.active .languageArrow {
+  display: inline-block;
+}
+
+.headerLanguageContent a {
+  color: rgba(69, 74, 74, 0.3);
   font-size: 15px;
   font-family: mtavrulibold;
-  margin-bottom: 15px;
+  text-align: center;
+  padding: 14px 0;
+}
+
+.headerLanguageContent a .languageArrow {
+  display: none;
+  margin-left: 20px;
+  font-size: 12px;
 }
 
 .headerNav {
@@ -196,6 +277,11 @@
   background: #233A52;
 }
 
+.firstNavContentMain {
+  background: #233A52;
+  opacity: 1;
+}
+
 .loans {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,9 +308,11 @@
   color: #000000;
   background: #fff;
   opacity: 1;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-.loans .loansArrow {
+.loansArrow {
   margin-left: 3.5px;
   font-size: 10px;
 }
@@ -233,11 +321,25 @@
   position: relative;
 }
 
+.openHeaderDropDown:hover .dropDownContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
 .openHeaderDropDown:hover .loansArrow {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+.openHeaderDropDown:hover .loans {
+  background: #fff;
+  opacity: 1;
+  color: #000000;
 }
 
 .dropDownContent {
@@ -248,10 +350,12 @@
           flex-direction: column;
   background: #fff;
   padding: 18px;
-  width: 244px;
+  width: 238px;
   position: absolute;
   top: 60px;
   z-index: 9;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .dropDownContent li {
@@ -271,7 +375,7 @@ main {
   position: relative;
 }
 
-main::before {
+main .mainImgBox::before {
   content: '';
   position: absolute;
   left: 0;
@@ -322,10 +426,30 @@ main .mainText span {
 
 main .mainText .getLoan {
   background: #E2574C;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+main .mainText .getLoan:hover {
+  background: #C13E34;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 main .mainText .learnMore {
   border: 1px solid #707070;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+main .mainText .learnMore:hover {
+  color: #1D1D1D;
+  background: #fff;
+  border: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .swiper-pagination span:nth-child(2) {
@@ -380,11 +504,47 @@ main .mainText .learnMore {
   margin-right: 16px;
 }
 
-.mainFooter .currentNumber {
+.mainFooter .pageNumber {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.mainFooter .currentNumberBox {
   font-size: 62px;
   font-family: mtavrulibold;
   color: #fff;
   margin-right: 11px;
+  position: relative;
+  width: 68px;
+  height: 68px;
+  overflow: hidden;
+}
+
+.mainFooter .currentNumberBox ul {
+  position: absolute;
+  width: 100%;
+  height: 204px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  top: 0;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .mainFooter .wholeImgNumber {
@@ -451,6 +611,14 @@ main .mainText .learnMore {
   font-family: mtavrulibold;
   font-size: 16px;
   cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.firstSectionContent .gridBoxLeft .newsBox .newsLearMore:hover {
+  background: #1C8857;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .firstSectionContent .gridBoxLeft .newsBox .newsTextBox {
@@ -500,6 +668,7 @@ main .mainText .learnMore {
   width: 108px;
   text-align: center;
   outline: none;
+  border: none;
 }
 
 .firstSectionContent .gridBoxRight .calculatorBox .calculatorGetLoan {
@@ -551,6 +720,39 @@ main .mainText .learnMore {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-bottom: 30px;
+  position: relative;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .getLoanDate .attention {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 288px;
+  height: 104px;
+  background: #2D2F2F;
+  color: #fff;
+  position: absolute;
+  font-size: 14px;
+  font-family: roboto;
+  color: #C0C1C1;
+  padding: 18px;
+  border-radius: 10px;
+  right: 50px;
+  bottom: -10px;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .getLoanDate .attention::before {
+  content: '';
+  border-width: 10px;
+  border-color: #2D2F2F transparent transparent transparent;
+  border-style: solid;
+  position: absolute;
+  bottom: -20px;
+  right: 25px;
 }
 
 .firstSectionContent .gridBoxRight .calculatorBox .getLoanDate input:nth-child(2) {
@@ -583,6 +785,14 @@ main .mainText .learnMore {
   font-size: 18px;
   font-family: mtavrulibold;
   cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .toCalculate span:first-child:hover {
+  background: #C13E34;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .firstSectionContent .gridBoxRight .calculatorBox .toCalculate span:nth-child(2) {
@@ -716,7 +926,8 @@ main .mainText .learnMore {
 
 .howGetLoan .sectioArrowred {
   position: absolute;
-  top: 5px;
+  top: 3px;
+  z-index: -1;
 }
 
 .howGetLoanContent {
@@ -856,5 +1067,10 @@ footer {
 
 .footerContent .footerSocialLogo img:first-Child {
   margin-right: 20px;
+}
+
+.question:hover .attention {
+  display: block;
+  color: red;
 }
 /*# sourceMappingURL=style.css.map */
