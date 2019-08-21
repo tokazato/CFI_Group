@@ -33,7 +33,7 @@
 }
 
 body {
-  font-family: mtavruli;
+  font-family: roboto;
 }
 
 .container {
@@ -226,7 +226,7 @@ body {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
-  color: rgba(69, 74, 74, 0.8);
+  color: #454A4A;
 }
 
 .headerLanguageContent a.active .languageArrow {
@@ -239,6 +239,12 @@ body {
   font-family: mtavrulibold;
   text-align: center;
   padding: 14px 0;
+}
+
+.headerLanguageContent a:hover {
+  color: #454A4A;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .headerLanguageContent a .languageArrow {
@@ -365,6 +371,8 @@ body {
 .dropDownContent a {
   color: #000000;
   opacity: 0.6;
+  font-size: 15px;
+  font-family: mtavruli;
 }
 
 .dropDownContent a:hover {
@@ -681,8 +689,8 @@ main .mainText .learnMore:hover {
   margin-right: 108px;
   padding: 30px 0;
   font-size: 18px;
-  font-family: mtavrulibold;
   color: #707070;
+  font-family: mtavrulibold;
   cursor: pointer;
 }
 
@@ -700,6 +708,11 @@ main .mainText .learnMore:hover {
 }
 
 .firstSectionContent .gridBoxRight .calculatorBox .calculatorGetLoan .anuiteti:hover {
+  color: #454A4A;
+  border-bottom: 1.5px solid #E2574C;
+}
+
+.firstSectionContent .gridBoxRight .calculatorBox .calculatorGetLoan .active {
   color: #454A4A;
   border-bottom: 1.5px solid #E2574C;
 }
@@ -724,9 +737,7 @@ main .mainText .learnMore:hover {
 }
 
 .firstSectionContent .gridBoxRight .calculatorBox .getLoanDate .attention {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   text-align: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1061,16 +1072,59 @@ footer {
 }
 
 .footerContent .footerNavigation ul a {
-  color: #1D1D1D;
+  color: rgba(41, 41, 41, 0.6);
   font-family: mtavrulibold;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.footerContent .footerSocialLogo img:first-Child {
+.footerContent .footerNavigation ul a:hover {
+  color: #1D1D1D;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footerContent .footerNavigation ul a.active {
+  color: #1D1D1D;
+}
+
+.footerContent .footerSocialLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footerContent .footerSocialLogo .footerFb, .footerContent .footerSocialLogo .footerYoutube {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #1D1D1D;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.footerContent .footerSocialLogo .footerYoutube:hover {
+  background: #FF2424;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.footerContent .footerSocialLogo .footerFb {
   margin-right: 20px;
 }
 
-.question:hover .attention {
-  display: block;
-  color: red;
+.footerContent .footerSocialLogo .footerFb:hover {
+  background: #367DEF;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 /*# sourceMappingURL=style.css.map */

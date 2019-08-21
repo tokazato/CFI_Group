@@ -5,4 +5,8 @@ $(document).ready(function(){
     // $('.openHeaderDropDownSecond').hover(function(){
     //     $('.dropDownContentSecond').slideToggle('slow');
     //    });
+    $('.question').hover(function(){
+            $('.attention').slideToggle('slow').css('opacity', '1' );
+        });
+
 })

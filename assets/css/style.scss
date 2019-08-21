@@ -47,7 +47,7 @@
     } 
 }
 body {
-    font-family: mtavruli;
+    font-family: roboto;
 }
 .container {
     max-width: 1550px;
@@ -160,7 +160,7 @@ body {
         }
         a.active {
             order: -1;
-            color: rgba(69,74,74, 0.8);
+            color: #454A4A;
         }
         a.active .languageArrow{
             display: inline-block;
@@ -172,7 +172,10 @@ body {
             // margin-bottom: 15px;
             text-align: center;
             padding: 14px 0;
-    
+            &:hover {
+                color: #454A4A;
+                transition: 0.3s ease;
+            }
             .languageArrow{
                 display: none;
                 margin-left: 20px;
@@ -262,6 +265,8 @@ body {
     a {
         color: #000000;
         opacity: 0.6;
+        font-size: 15px;
+        font-family: mtavruli;
         &:hover {
             opacity: 1;
         }
@@ -497,12 +502,13 @@ main {
                     margin-right: 108px;
                     padding: 30px 0;
                     font-size: 18px;
-                    font-family: mtavrulibold;
                     color: #707070;
+                    font-family: mtavrulibold;
                     cursor: pointer;
                     &:hover {
                         color: #454A4A;
                         border-bottom: 1.5px solid #E2574C;
+
                     }
                 }
                 .anuiteti {
@@ -514,7 +520,12 @@ main {
                     &:hover {
                         color: #454A4A;
                         border-bottom: 1.5px solid #E2574C;
+
                     }
+                }
+                .active {
+                    color: #454A4A;
+                    border-bottom: 1.5px solid #E2574C;
                 }
             }
             .calculatorLoanConditions {
@@ -528,7 +539,7 @@ main {
                 margin-bottom: 30px;
                 position: relative;
                 .attention {
-                   display: flex;
+                   display: none;
                    text-align: left;
                    align-items: center;
                    width: 288px;
@@ -746,14 +757,42 @@ footer {
             display: flex;
             justify-content: space-between;
             a {
-                color: #1D1D1D;
+                color: rgba( #292929, 0.6);
                 font-family: mtavrulibold;
+                transition: 0.3s ease;
+                &:hover {
+                    color: #1D1D1D;
+                    transition: 0.3s ease;
+                }
+            }
+            a.active {
+                color: #1D1D1D; 
             }
         }
     }
     .footerSocialLogo {
-        img:first-Child {
+        display: flex;
+        .footerFb, .footerYoutube {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #1D1D1D;
+            transition: 0.5s ease;
+        }
+        .footerYoutube:hover {
+            background: #FF2424;
+            transition: 0.5s ease;
+        }
+        .footerFb {
             margin-right: 20px;
         }
+        .footerFb:hover {
+            background: #367DEF;
+            transition: 0.5s ease;
+        }
     }
+
 }
