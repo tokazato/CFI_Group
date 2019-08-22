@@ -349,6 +349,7 @@ main {
 .swiper-pagination span {
     background: #fff !important;
     padding: 7px;
+    outline: none;
     
 }
 .mainFooter {
@@ -405,7 +406,7 @@ main {
 
             
             top: 0; 
-            transition: 0.4s ease;
+            transition: 0.9s ease;
         }
     }
     .wholeImgNumber {

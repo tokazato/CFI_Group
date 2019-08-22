@@ -8,7 +8,7 @@ var swiper = new Swiper('.swiper-container', {
       el: '.swiper-pagination',
       clickable: true,
     },
-    speed: 1200,
+    speed: 1000,
     spaceBetween: 100,
     on: {
       slideChange: function () {

@@ -467,6 +467,7 @@ main .mainText .learnMore:hover {
 .swiper-pagination span {
   background: #fff !important;
   padding: 7px;
+  outline: none;
 }
 
 .mainFooter {
@@ -551,8 +552,8 @@ main .mainText .learnMore:hover {
           align-items: flex-start;
   width: 100%;
   top: 0;
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
+  -webkit-transition: 0.9s ease;
+  transition: 0.9s ease;
 }
 
 .mainFooter .wholeImgNumber {
