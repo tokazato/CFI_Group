@@ -32,6 +32,18 @@
     font-family: mtavrulibold;
     src: url(../fonts/TBCDinMtavruli_bold.ttf);
 }
+@font-face {
+    font-family: helvetica-bold;
+    src: url(../fonts/Linotype-Helvetica-Neue-World-75-Bold.ttf);
+}
+@font-face {
+    font-family: helvetica-normal;
+    src: url(../fonts/Linotype-Helvetica-Neue-World-55-Roman.ttf);
+}
+@font-face {
+    font-family: helvetica;
+    src: url(../fonts/Linotype-Helvetica-Neue-World-45Lt.ttf);
+}
 * {
     margin: 0;
     padding: 0;
@@ -948,4 +960,491 @@ footer {
     margin-right: 54px;
     margin-bottom: 56px;
     width: 793px;
+}
+
+// contact page
+.contact-box {
+    min-height: calc(100vh - 513px);
+    margin-top: 68px;
+}
+.contact-page-title {
+    font-size: 32px;
+    color: #102943;
+    font-family: mtavrulibold;
+    margin-bottom: 32px;
+}
+.contact-form-and-map-box {
+    display: flex;
+    justify-content: space-between;
+}
+.form-description-box {
+    display: flex;
+    justify-content: space-between;
+}
+.form-description {
+    width: 49%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(16, 41, 67, 0.3);
+    border: 1px solid rgba(16, 41, 67, 0.3);
+    border-radius: 5px;
+    font-family: mtavrulibold;
+    cursor: pointer;
+    transition: 0.2s ease;
+    &:hover {
+        color: #fff;
+        background: #57697B;
+        transition: 0.2s ease;
+    }
+}
+.form-description-active {
+    color: #fff;
+    background: #57697B;
+}
+.contact-form-box {
+    width: 35%;
+}
+.contact-map-address-box {
+    width: 60%;
+}
+.contact-input-box {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    margin: 10px 0;
+}
+.contact-first-name, .contact-email {
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid rgba(16, 41, 67, 0.7);
+    padding-left: 24px;
+    border-radius: 5px;
+    font-family: helvetica-bold;
+}
+.contact-email {
+    border: 1.5px solid #E2574C;
+    &::placeholder {
+        color: #E2574C;
+    }
+}
+.contact-user-icon-box, .contact-email-icon-box {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    background: #57697B;
+    width: 64px;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.contact-email-icon-box {
+    background:  #E2574C; 
+}
+.fa-user, .fa-envelope {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.contact-textarea {
+    background: #F4F4F4;
+    width: 100%;
+    padding-top: 13px;
+    padding-left: 24px;
+    border: none;
+    font-family: helvetica-bold;
+}
+.contact-roboto-box {
+    width: 100%;
+    height: 113px;
+    margin: 10px 0;
+    border: 1px solid #B7BEC6;
+}
+.contact-send-button-box {
+    width: 100%;
+    height: 60px;
+}
+.contact-send-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: #1FB26F;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: mtavrulibold;
+    cursor: pointer;
+}
+.contact-pdf-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: 1.5px solid rgba(16, 41, 67, 0.3);
+    transition: 0.2s ease;
+    &:hover {
+        background: #E2574C;
+        border: 1.5px solid  #E2574C;
+        transition: 0.2s ease;
+        .contact-pdf-text {
+            color: #fff;
+        }
+        .fa-file-pdf {
+            color: #fff;
+        }
+    }
+}
+.contact-pdf-text {
+    color: #1D1D1D;
+    font-size: 14px;
+    font-family: helvetica-bold;
+}
+.fa-file-pdf {
+    color: #E2574C;
+}
+.contact-address-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 41px;
+}
+.contact-address-title {
+    font-size: 16px;
+    font-family: helvetica-bold;
+    color: #102943;
+}
+.contact-address-p {
+    font-size: 14px;
+    color: #102943;
+}
+.contact-map-box {
+    width: 100%;
+    height: 550px;
+}
+.contact-footer {
+    margin-top: 10px;
+}
+
+// loans page 
+.loans-box {
+    margin-top: 75px;
+}
+.loans-bottom-content-box {
+    display: flex;
+    // justify-content: space-between;
+}
+.loans-h1 {
+    font-size: 40px;
+    color: #353D48;
+    font-family: mtavrulibold;
+    margin-bottom: 32px;
+}
+.loans-img {
+    height: 410px;
+    width: 100%;
+    margin-bottom: 32px;
+}
+.loans-left-side-box {
+    width: 58%;
+    margin-right: 58px;
+}
+.loans-left-side-h4 {
+    font-size: 16px;
+    font-family: helvetica-bold;
+    color: #454A4A;
+    margin-bottom: 6px;
+    margin-top: 20px;
+}
+.loans-left-side-text, .loans-left-side-list {
+    font-size: 16px;
+    color: #454A4A;
+    font-family: helvetica;
+}
+.loans-right-side-box {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loans-right-side-h2 {
+    font-size: 20px;
+    color: #102943;
+    font-family: mtavrulibold;
+    margin-bottom: 32px;
+}
+.loans-right-side-small-box {
+    height: 150px;
+    width: 100%;
+    border: 1.5px solid #C4CAD0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.loans-right-side-small-img-box {
+    height: 100%;
+}
+.loans-right-side-small-img {
+    margin-top: 20px;
+}
+.loans-right-side-h5 {
+    font-size: 18px;
+    color: #102943;
+    font-family: helvetica;
+}
+.loans-right-side-p {
+    font-size: 15px;
+    color: #102943;
+    font-family: helvetica;
+}
+.fill-form-text-box {
+    height: 56px;
+    width: 100%;
+    background: #1FB26F;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+// business fill form
+.fill-loan-form-img {
+    height: 272px;
+    width: 100%;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(4, 13, 22, 0.56);
+        z-index: 3;
+    }
+}
+.fill-loan-main-box {
+    min-height: calc(100vh - 755px);
+}
+.fill-loan-title-h1 {
+    font-size: 30px;
+    color: #7D8183;
+    font-family: mtavrulibold;
+    text-align: center;
+    margin-top: 47px;
+    margin-bottom: 44px;
+}
+
+input[type='radio']:after {
+    width: 27px;
+    height: 27px;
+    border-radius: 10px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #fff;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #A8B7B0;
+}
+input[type='radio']:checked:after {
+    width: 27px;
+    height: 27px;
+    border-radius: 10px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #1EAA6A;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+.fill-loan-box-content {
+    margin-bottom: 80px;
+}
+.fill-form-section-title-box {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #707070;
+    padding-bottom: 10px;
+    margin-bottom: 39px;
+}
+.fill-form-section-h2 {
+    font-size: 25px;
+    color: #1FB26F;
+    margin-left: 30px; 
+    font-family: helvetica-normal;
+}
+.fill-form-input-up-box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 12px;
+}
+.fill-form-input-box {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+.fill-form-input {
+    height: 62px;
+    width: 100%;
+    border: 1.5px solid #57697B;
+    border-radius: 5px;
+    box-shadow: none;
+    padding-left: 41px;
+}
+.fill-form-input-p {
+    font-size: 15px;
+    font-family: roboto;
+    color: #535353;
+    margin-bottom: 9px;
+} 
+.fill-form-input-box-section-2 {
+    display: flex;
+    width: 45%;
+}
+.fill-form-input-up-box-right-side {
+    display: none; 
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 53px; 
+}
+.fill-form-radio-botton-left-side-box-mortgage {
+    display: none;
+}
+.fill-form-section2-radio-text {
+    margin-left: 30px;
+    color: #74787B;
+    font-size: 20px;
+    font-family: roboto;
+}
+.fill-form-section-big-box {
+    width: 45%;
+}
+.fill-form-select-main-box  {
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+.fill-form-select-box {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid #57697B;
+    border-radius: 5px;
+    position: absolute;
+    top: 0px;
+    overflow: hidden;
+    transition: 0.6s ease;
+    &:hover {
+        height: 180px;
+        transition: 0.6s ease;
+        .fa-angle-down {
+            transform: rotate(-180deg);
+        }
+    }
+}
+.fill-form-select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 41px;
+    font-size: 15px;
+    color: #A7A7A7;
+    font-family: roboto;
+    cursor: pointer;
+    transition: 0.2s ease;
+    &:hover {
+        color: #535353; 
+        transition: 0.2s ease;
+    }
+}
+.fill-form-select-text-active {
+    color: #535353;
+    display: flex;
+    order: -1;
+}
+.fa-angle-down {
+    color: #A7A7A7;
+    display: none;
+    &:hover {
+        transform: rotate(-180deg);
+    }
+}
+.fill-form-select-arrow-active {
+    display: flex;
+}
+.fill-form-roboto-box {
+    width: 100%;
+    height: 133px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+    margin-bottom: 72px;
+}
+.fill-form-roboto {
+    width: 529px;
+    height: 100%;
+    border: 1.5px solid #848484;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.send-form-box {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.send-form {
+    width: 672px;
+    height: 100%;
+    background: #1FB26F;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+// agro loan 
+.fill-form-input-up-box-left-side {
+    display: flex; 
+    align-items: center;
+    margin-top: 53px;
+}
+.fill-form-textarea-box {
+    margin-top: 102px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.fill-form-textarea {
+    height: 158px;
+    width: 100%;
+    border: 1.5px solid #57697B;
+    border-radius: 5px;
+    box-shadow: none;
+    padding-left: 42px;
+    padding-top: 20px;
 }

@@ -8,6 +8,23 @@ $(document).ready(function(){
     $('.question').hover(function(){
         $('.attention').toggle();
     });
+
+    $("#radio_1").prop("checked", true);
+    $("#radio_1").on('click', function(){
+       $('.fill-form-input-up-box-right-side').css('display', 'none');
+       $('.fill-form-radio-botton-left-side-box ').css('display', 'block');
+    })
+    $("#mortgage_radio_1").on('click', function(){
+        $('.fill-form-input-up-box-right-side').css('display', 'none');
+        $('.fill-form-radio-botton-left-side-box-mortgage').css('display', 'block');
+     })
+    
+    $("#radio_2").on('click', function(){
+        $('.fill-form-input-up-box-right-side').css('display', 'flex');
+        $('.fill-form-radio-botton-left-side-box ').css('display', 'none');
+        $('.fill-form-radio-botton-left-side-box-mortgage').css('display', 'none');
+     })
+
 })
 
 var startToCalculate = document.getElementById('startToCalculate')
@@ -30,14 +47,15 @@ var monthly = document.getElementById('monthly');
 // }
 // startToCalculate.addEventListener('click', calculator );
 
-monthly.addEventListener('keyup', function(){
-    var savePercentMonthly =  monthly.value * 12;
-    var saveToFixedNumberMonthly = savePercentMonthly.toFixed(2)
-    annualPercent.value = saveToFixedNumberMonthly;
-})
-annualPercent.addEventListener('keyup', function(){
-    var savePercent =  annualPercent.value / 12;
-    var saveToFixedNumber = savePercent.toFixed(2)
-    monthly.value = saveToFixedNumber;
-})
+// monthly.addEventListener('keyup', function(){
+//     var savePercentMonthly =  monthly.value * 12;
+//     var saveToFixedNumberMonthly = savePercentMonthly.toFixed(2)
+//     annualPercent.value = saveToFixedNumberMonthly;
+// })
+// annualPercent.addEventListener('keyup', function(){
+//     var savePercent =  annualPercent.value / 12;
+//     var saveToFixedNumber = savePercent.toFixed(2)
+//     monthly.value = saveToFixedNumber;
+// })
+
  
