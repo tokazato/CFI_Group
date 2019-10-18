@@ -13,23 +13,29 @@
     <header>
         <div class="container">
             <div class="headerContent">
-                <a class="logo" href="#!"><img src="assets/media/img/Logo.png" alt=""></a>
-                <div class="headerTel">
-                    <img src="assets/media/img/Group 26.svg" alt="">
-                    <a href="tel:+995-(32)-223-75-23">+995 (32) 223 75 23</a>
+                <div class="header-content-left-side" >
+                    <a class="logo" href="#!"><img src="assets/media/img/Logo.png" alt=""></a>
                 </div>
-                <div class="headerLinesBox">
-                    <img src="assets/media/img/arcs.svg" alt="">
-                </div>
-                <div class="headerSocialLogo">
-                    <a class="headerFb" href="#!"><img src="assets/media/img/facebook-f.svg" alt=""></a>
-                    <a class="headerYoutube" href="#!"><img src="assets/media/img/LetterOfYoutube.svg" alt=""></a>
-                </div>
-                <div class="headerLanguageBox">
-                    <div class="headerLanguageContent">
-                        <a class="active" href="#!">ქართული<i class="fas fa-chevron-down languageArrow"></i></a>
-                        <a href="#!">ინგლისური<i class="fas fa-chevron-down languageArrow"></i></a>
-                        <a href="#!">რუსული<i class="fas fa-chevron-down languageArrow"></i></a>
+                <div class="header-content-right-side">
+                    <div class="header-social-logo-box" style="display: flex; align-items: center;">
+                        <a href="tel:+995-(32)-223-75-23" class="headerTel">
+                            <i class="fas fa-phone-alt"></i>
+                            <p class="header-phone-number">+995 (32) 223 75 23</p>
+                        </a>
+                        <div class="headerLinesBox">
+                            <img src="assets/media/img/arcs.svg" alt="">
+                        </div>
+                        <div class="headerSocialLogo">
+                            <a class="headerFb" href="#!"><img src="assets/media/img/facebook-f.svg" alt=""></a>
+                            <a class="headerYoutube" href="#!"><img src="assets/media/img/LetterOfYoutube.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="headerLanguageBox">
+                        <div class="headerLanguageContent">
+                            <a class="active" href="#!">ქართული<i class="fas fa-chevron-down languageArrow"></i></a>
+                            <a href="#!">ინგლისური<i class="fas fa-chevron-down languageArrow"></i></a>
+                            <a href="#!">რუსული<i class="fas fa-chevron-down languageArrow"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,25 +82,25 @@
                             <a class="loans">შეავსე განაცხადი<i class="fas fa-chevron-down loansArrow"></i></a>
                             <ul class="dropDownContent">
                                     <li>
-                                        <a href="#!">იპოთეკური სესხი</a>
+                                        <a href="mortgageLoan.html">იპოთეკური სესხი</a>
                                     </li>
                                     <li>
-                                        <a href="#!">სამომხმარებლო სესხი</a>
+                                        <a href="consumerLoan.html">სამომხმარებლო სესხი</a>
                                     </li>
                                     <li>
                                         <a href="businessLoan.html">ბიზნეს სესხი</a>
                                     </li>
                                     <li>
-                                        <a href="#!">სტარტაპ სესხი</a>
+                                        <a href="startup.html">სტარტაპ სესხი</a>
                                     </li>
                                     <li>
-                                        <a href="#!">სწრაფი სესხი</a>
+                                        <a href="fastLoan.html">სწრაფი სესხი</a>
                                     </li>
                                     <li>
-                                        <a href="#!">აგროსესხი</a>
+                                        <a href="agroLoan.html">აგროსესხი</a>
                                     </li>
                                     <li>
-                                        <a href="#!">ავტო სესხი</a>
+                                        <a href="autoLoan.html">ავტო სესხი</a>
                                     </li>
                                 </ul>
                         </li>
@@ -238,8 +244,8 @@
                     <h1 class="h1title">კალკულატორი</h1>
                     <div class="calculatorBox">
                         <div class="calculatorGetLoan">
-                            <span class="loanEasy active">მარტივი</span>
-                            <span class="anuiteti">ანუიტეტი</span>
+                            <span id="easyLoan" class="loanEasy get-loan-type-active">მარტივი</span>
+                            <span id="annuity" class="anuiteti">ანუიტეტი</span>
                         </div>
                             <div class="calculatorLoanConditions">
                                 <div>
@@ -263,11 +269,11 @@
                                 </div>
                                 <div>
                                     <p class="calculatorTextP">სესხის გაცემის დღე</p>
-                                    <input type="date" class="calculatorInput"  value="2019-08-14">
+                                    <input id="txtDate" min="2019-10-10" type="date" class="calculatorInput">
                                 </div>
                             </div>
                         <div class="toCalculate">
-                            <span id="startToCalculate">გამოთვლა</span>
+                            <a href="easyCalculator.html" id="startToCalculate">გამოთვლა</a>
                             <span class="question">?</span>
                         </div>
                     </div>

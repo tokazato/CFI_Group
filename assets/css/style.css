@@ -100,18 +100,62 @@ body {
   margin-right: 58px;
 }
 
-.headerTel a {
+@media only screen and (max-width: 1580px) {
+  .headerTel {
+    margin-right: 5px;
+    margin-left: 20px;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 1460px) {
+  .headerTel {
+    border-left: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .headerTel {
+    width: 42px;
+    margin-right: 10px;
+  }
+}
+
+.headerTel .header-phone-number {
   color: #454A4A;
   font-size: 20px;
   font-family: roboto;
   font-weight: bold;
 }
 
-.headerTel:hover img {
-  -webkit-transform: rotate(50deg);
-          transform: rotate(50deg);
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+.fa-phone-alt {
+  color: #1FB26F;
+  height: 44px;
+  width: 44px;
+  background: rgba(31, 178, 111, 0.1);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .fa-phone-alt {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .header-phone-number {
+    display: none;
+  }
 }
 
 .headerTel img {
@@ -165,6 +209,14 @@ body {
   transition: 0.5s ease;
 }
 
+@media only screen and (max-width: 1000px) {
+  .headerYoutube {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0 10px;
+  }
+}
+
 .headerFb {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,9 +242,22 @@ body {
   transition: 0.5s ease;
 }
 
+@media only screen and (max-width: 1000px) {
+  .headerFb {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 .headerLinesBox {
   width: 484px;
   margin-right: 48px;
+}
+
+@media only screen and (max-width: 1460px) {
+  .headerLinesBox {
+    display: none;
+  }
 }
 
 .headerLanguageBox {
@@ -231,6 +296,11 @@ body {
   transition: 0.9s ease;
 }
 
+.headerLanguageContent:hover .languageArrow {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
 .headerLanguageContent a.active {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
@@ -243,6 +313,12 @@ body {
 }
 
 .headerLanguageContent a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: rgba(69, 74, 74, 0.3);
   font-size: 15px;
   font-family: mtavrulibold;
@@ -260,6 +336,15 @@ body {
   display: none;
   margin-left: 20px;
   font-size: 12px;
+}
+
+.header-content-left-side, .header-content-right-side, .header-social-logo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .headerNav {
@@ -603,11 +688,11 @@ main .mainText .learnMore:hover {
           justify-content: space-between;
 }
 
-.firstSectionContent .gridBoxLeft {
+.gridBoxLeft {
   width: 984px;
 }
 
-.firstSectionContent .gridBoxLeft .newsBox {
+.gridBoxLeft .newsBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -617,13 +702,13 @@ main .mainText .learnMore:hover {
   margin: 60px 0;
 }
 
-.firstSectionContent .gridBoxLeft .newsBox .sectionImg {
+.gridBoxLeft .newsBox .sectionImg {
   position: relative;
   right: 24px;
   bottom: 26px;
 }
 
-.firstSectionContent .gridBoxLeft .newsBox .newsLearMore {
+.gridBoxLeft .newsBox .newsLearMore {
   position: absolute;
   bottom: -10px;
   right: -10px;
@@ -638,40 +723,40 @@ main .mainText .learnMore:hover {
   transition: 0.5s ease;
 }
 
-.firstSectionContent .gridBoxLeft .newsBox .newsLearMore:hover {
+.gridBoxLeft .newsBox .newsLearMore:hover {
   background: #1C8857;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
-.firstSectionContent .gridBoxLeft .newsBox .newsTextBox {
+.gridBoxLeft .newsBox .newsTextBox {
   padding: 25px 45px;
 }
 
-.firstSectionContent .gridBoxLeft .newsBox .newsTextBox h3 {
+.gridBoxLeft .newsBox .newsTextBox h3 {
   margin-bottom: 16px;
 }
 
-.firstSectionContent .gridBoxRight {
+.gridBoxRight {
   width: 481px;
   text-align: center;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox {
+.calculatorBox {
   background: #F4F4F4;
   border-radius: 10px;
   margin-bottom: 50px;
   margin-top: 30px;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .calculatorTextP {
+.calculatorTextP {
   font-size: 15px;
   font-family: roboto;
   color: #454A4A;
   margin-bottom: 16px;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .calculatorInput {
+.calculatorInput {
   font-size: 18px;
   color: #454A4A;
   font-family: roboto;
@@ -694,13 +779,13 @@ main .mainText .learnMore:hover {
   border: none;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .calculatorGetLoan {
+.calculatorGetLoan {
   padding: 30px 0;
   border-bottom: 1.5px solid #E1E1E1;
   margin-bottom: 40px;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .calculatorGetLoan .loanEasy {
+.calculatorGetLoan .loanEasy {
   margin-right: 108px;
   padding: 30px 0;
   font-size: 18px;
@@ -709,12 +794,12 @@ main .mainText .learnMore:hover {
   cursor: pointer;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .calculatorGetLoan .loanEasy:hover {
+.calculatorGetLoan .loanEasy:hover {
   color: #454A4A;
   border-bottom: 1.5px solid #E2574C;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .calculatorGetLoan .anuiteti {
+.calculatorGetLoan .anuiteti {
   padding: 30px 0;
   font-size: 18px;
   font-family: mtavrulibold;
@@ -722,17 +807,12 @@ main .mainText .learnMore:hover {
   cursor: pointer;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .calculatorGetLoan .anuiteti:hover {
+.calculatorGetLoan .anuiteti:hover {
   color: #454A4A;
   border-bottom: 1.5px solid #E2574C;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .calculatorGetLoan .active {
-  color: #454A4A;
-  border-bottom: 1.5px solid #E2574C;
-}
-
-.firstSectionContent .gridBoxRight .calculatorBox .calculatorLoanConditions {
+.calculatorLoanConditions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -741,7 +821,7 @@ main .mainText .learnMore:hover {
   margin-bottom: 40px;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .getLoanDate {
+.getLoanDate {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -751,7 +831,7 @@ main .mainText .learnMore:hover {
   position: relative;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .getLoanDate .attention {
+.getLoanDate .attention {
   display: none;
   text-align: left;
   -webkit-box-align: center;
@@ -771,7 +851,7 @@ main .mainText .learnMore:hover {
   bottom: -10px;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .getLoanDate .attention::before {
+.getLoanDate .attention::before {
   content: '';
   border-width: 10px;
   border-color: #2D2F2F transparent transparent transparent;
@@ -781,7 +861,7 @@ main .mainText .learnMore:hover {
   right: 25px;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .getLoanDate input:nth-child(2) {
+.getLoanDate input:nth-child(2) {
   margin-bottom: 20px;
   width: 198px;
   -webkit-appearance: none;
@@ -789,7 +869,7 @@ main .mainText .learnMore:hover {
           appearance: none;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .toCalculate {
+.toCalculate {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -802,7 +882,7 @@ main .mainText .learnMore:hover {
   padding-bottom: 40px;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .toCalculate span:first-child {
+.toCalculate :first-child {
   padding: 20px 100px;
   background: #E2574C;
   border-radius: 5px;
@@ -815,13 +895,13 @@ main .mainText .learnMore:hover {
   transition: 0.5s ease;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .toCalculate span:first-child:hover {
+.toCalculate :first-child:hover {
   background: #C13E34;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
-.firstSectionContent .gridBoxRight .calculatorBox .toCalculate span:nth-child(2) {
+.toCalculate :nth-child(2) {
   padding: 15px 35px 17px 35px;
   border: 1px solid #E0E0E0;
   border-radius: 5px;
@@ -831,14 +911,14 @@ main .mainText .learnMore:hover {
   cursor: pointer;
 }
 
-.firstSectionContent .gridBoxRight .exchangeRate {
+.exchangeRate {
   background: #F4F4F4;
   border-radius: 10px;
   margin-bottom: 50px;
   margin-top: 30px;
 }
 
-.firstSectionContent .gridBoxRight .exchangeRate .nationalBankBox {
+.exchangeRate .nationalBankBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -852,42 +932,42 @@ main .mainText .learnMore:hover {
   padding-top: 31px;
 }
 
-.firstSectionContent .gridBoxRight .exchangeRate .nationalBankBox span {
+.exchangeRate .nationalBankBox span {
   font-size: 17px;
   font-family: roboto;
   color: #454A4A;
 }
 
-.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox {
+.exchangeRate .currentExchangeRateBox {
   margin-top: 35px;
   padding-bottom: 50px;
 }
 
-.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .exchangeAction {
+.exchangeRate .currentExchangeRateBox .exchangeAction {
   margin-bottom: 35px;
 }
 
-.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .exchangeAction span {
+.exchangeRate .currentExchangeRateBox .exchangeAction span {
   font-size: 16px;
   color: #454A4A;
   font-family: mtavrulibold;
 }
 
-.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .euro {
+.exchangeRate .currentExchangeRateBox .euro {
   margin: 30px 0;
 }
 
-.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .euro img, .firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .dollar img, .firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .gbp img {
+.exchangeRate .currentExchangeRateBox .euro img, .exchangeRate .currentExchangeRateBox .dollar img, .exchangeRate .currentExchangeRateBox .gbp img {
   margin-right: 16px;
 }
 
-.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .euro span, .firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .dollar span, .firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .gbp span {
+.exchangeRate .currentExchangeRateBox .euro span, .exchangeRate .currentExchangeRateBox .dollar span, .exchangeRate .currentExchangeRateBox .gbp span {
   font-size: 18px;
   color: #454A4A;
   font-family: mtavrulibold;
 }
 
-.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox div {
+.exchangeRate .currentExchangeRateBox div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -899,7 +979,7 @@ main .mainText .learnMore:hover {
           align-items: center;
 }
 
-.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .sellMoney {
+.exchangeRate .currentExchangeRateBox .sellMoney {
   color: #1FB26F;
   padding: 8px 17px 10px 17px;
   background: #E4EFEA;
@@ -908,13 +988,18 @@ main .mainText .learnMore:hover {
   font-family: mtavrulibold;
 }
 
-.firstSectionContent .gridBoxRight .exchangeRate .currentExchangeRateBox .buyMoney {
+.exchangeRate .currentExchangeRateBox .buyMoney {
   color: #E35E54;
   padding: 8px 17px 10px 17px;
   background: #F3E9E9;
   border-radius: 5px;
   font-size: 18px;
   font-family: mtavrulibold;
+}
+
+.get-loan-type-active {
+  color: #454A4A;
+  border-bottom: 1.5px solid #E2574C;
 }
 
 .howGetLoan {
@@ -2068,5 +2153,225 @@ input[type='radio']:checked:after {
           box-shadow: none;
   padding-left: 42px;
   padding-top: 20px;
+}
+
+.easy-calculator-content {
+  margin-top: 70px;
+}
+
+.easy-calculator-content-h1 {
+  font-size: 48px;
+  color: #102943;
+  font-family: mtavrulibold;
+  margin-bottom: 50px;
+}
+
+.easy-calculator-first-box-title {
+  font-size: 18px;
+  color: #102943;
+  font-family: helvetica-bold;
+  margin-bottom: 30px;
+}
+
+.easy-calculator-first-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.loan-calculator-left-box {
+  width: 63%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 22px;
+}
+
+.loan-calculator-left-box div {
+  background-color: #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+}
+
+.loan-calculator-left-box div :first-child {
+  font-size: 15px;
+  font-family: helvetica-normal;
+  color: #102943;
+}
+
+.loan-calculator-left-box div :nth-child(2) {
+  font-size: 20px;
+  color: #3237CC;
+  font-family: helvetica-bold;
+}
+
+.grid-3 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.loan-calculatorBox {
+  background: #F4F4F4;
+  border-radius: 10px;
+}
+
+.loan-calculator-table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.loan-calculator-1-th {
+  width: 5%;
+}
+
+.loan-calculator-2-th {
+  width: 45%;
+  font-size: 16px;
+  color: #102943;
+  font-family: helvetica-normal;
+}
+
+.loan-calculator-3-th {
+  width: 40%;
+  font-size: 16px;
+  color: #102943;
+  font-family: helvetica-normal;
+}
+
+.loan-calculator-1-tbody-section {
+  height: 80px;
+  border: 1.5px solid #EDEFF1;
+  border-radius: 25px;
+}
+
+.tr-space {
+  height: 10px;
+}
+
+.td-counter-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.td-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  font-family: mtavrulibold;
+  color: #1FB26F;
+  height: 48px;
+  width: 48px;
+  background: rgba(31, 178, 111, 0.1);
+  border-radius: 50%;
+}
+
+.td-payment-day, .td-payment-money {
+  font-size: 18px;
+  color: #102943;
+  font-family: mtavruli;
+}
+
+.annuity-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 65%;
+}
+
+.annuity-calculator-left-box {
+  width: 63%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 22px;
+  margin-right: 30px;
+  position: relative;
+}
+
+.annuity-calculator-left-box div {
+  background-color: #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.annuity-calculator-left-box div :first-child {
+  font-size: 15px;
+  font-family: helvetica-normal;
+  color: #102943;
+}
+
+.annuity-calculator-left-box div :nth-child(2) {
+  font-size: 20px;
+  color: #3237CC;
+  font-family: helvetica-bold;
+}
+
+.annuity-box-title {
+  position: absolute;
+  left: 0;
+  top: -66px;
+  font-size: 18px;
+  color: #102943;
+  font-family: helvetica-bold;
+  margin-bottom: 30px;
+}
+
+.annuity-calculator-1-th {
+  width: 1%;
+}
+
+.annuity-calculator-2-th {
+  width: 10%;
+}
+
+.annuity-calculator-3-th {
+  width: 5%;
 }
 /*# sourceMappingURL=style.css.map */
