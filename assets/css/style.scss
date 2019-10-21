@@ -3,6 +3,11 @@
         @content;
     }
 }
+@mixin responsive-min($param){
+    @media only screen and (min-width: $param) {
+        @content;
+    }
+}
 @mixin flexbox($direction) {
     display: flex;
     flex-direction: $direction;
@@ -69,7 +74,6 @@ body {
 .container {
     max-width: 1550px;
     margin: 0 auto;
-    padding: 0 10px;
 }
 .headerContent {
     @include flexbox(row);
@@ -94,14 +98,24 @@ body {
         border-left: none;
     }
     @include responsive(1000px) {
-        width: 42px;
-        margin-right: 10px;
+        width: 166px;
+        margin-right: 0px;
+        margin-left: 0px;
+        background: #fff;
+        border-radius: 14px;
+        justify-content: flex-start;
+        height: 28px;
     }
     .header-phone-number {
         color: #454A4A;
         font-size: 20px;
         font-family: roboto;
         font-weight: bold;
+        @include responsive(1000px) {
+            font-size: 14px;
+            font-family: mtavrulibold;
+            color: #102943;
+        }
     }
 }
 .fa-phone-alt {
@@ -115,13 +129,13 @@ body {
     align-items: center;
     margin-right: 20px;
     @include responsive(1000px) {
-        margin-right: 0;
+        margin-right: 10px;
+        height: 28px;
+        width: 28px;
+        font-size: 10px;
+        color: #fff;
+        background: #1FB26F;
     }
-}
-.header-phone-number {
-    @include responsive(1000px) {
-        display: none;
-    } 
 }
 .headerTel img {
    margin-right: 20px;
@@ -129,7 +143,32 @@ body {
    transition: 0.3s ease;
 //    transform: rotate(135deg);
 }
-
+.burger {
+    display: none;
+    width: 32px; 
+    height: 24px; 
+    flex-direction: column; 
+    justify-content: space-evenly;
+    cursor: pointer;
+    @include responsive(1000px) {
+        display: flex;
+    }
+}
+.burger-span-1, .burger-span-2 {
+    width: 20px; 
+    height: 2px; 
+    display: block; 
+    background: black;
+    transition: 0.6s ease;
+}
+.burger-span-1-active {
+    transform: rotate(-45deg) translate(-6px, 5px);
+    transition: 0.6s ease;
+}
+.burger-span-2-active {
+    transform: rotate(45deg) translate( 0, 0);
+    transition: 0.6s ease;
+}
 
 .headerSocialLogo {
     @include flexbox(row);
@@ -152,6 +191,8 @@ body {
     @include responsive(1000px) {
         box-shadow: none;
         margin: 0 10px;
+        width: 28px;
+        height: 28px;
     }
 }
 .headerFb {
@@ -169,6 +210,8 @@ body {
     }
     @include responsive(1000px) {
         box-shadow: none;
+        width: 28px;
+        height: 28px;
     }
 }
 .headerLinesBox {
@@ -176,12 +219,15 @@ body {
    margin-right: 48px;
    @include responsive(1460px) {
     display: none;
-}
+   }
 }
 .headerLanguageBox {
-    width: 155px;
+    width: 100px;
     height: 48px;
     position: relative;
+    @include responsive(1000px) {
+        width: 80px;
+    }
 }
     .headerLanguageContent {
         display: flex;
@@ -200,16 +246,32 @@ body {
             height: 147px;
             border-radius: 8px;
             transition: 0.9s ease;
+            @include responsive(1000px) {
+                background: #fff;
+                color: #454A4A;
+                a.active {
+                   color: #454A4A;
+                }
+            }
             .languageArrow{
                 transform: rotate(-180deg);
             }
         }
+        @include responsive(1000px) {
+            background: none;
+            border: none; 
+            color: #fff;
+        }
         a.active {
             order: -1;
             color: #454A4A;
+            @include responsive(1000px) {
+                color: #fff;
+            }
         }
         a.active .languageArrow{
-            display: inline-block;
+            // display: inline-block;
+            visibility: visible;
         }
         a {
             display: flex;
@@ -224,7 +286,8 @@ body {
                 transition: 0.3s ease;
             }
             .languageArrow{
-                display: none;
+                // display: none;
+                visibility: hidden;
                 margin-left: 20px;
                 font-size: 12px;
             }
@@ -234,6 +297,28 @@ body {
     display: flex;
     align-items: center;
 }
+.header-content-left-side {
+    @include responsive(1000px) {
+       width: 100%;
+       justify-content: space-between;
+       margin-top: 60px;
+    }
+}
+.header-content-right-side {
+    @include responsive(1000px) {
+        position: absolute;
+        top: 0;
+        background: #102943;
+        width: 100%;
+        justify-content: space-between;
+        height: 56px;   
+    }
+}
+.header-social-logo-box {
+    @include responsive(1000px) {
+        flex-direction: row-reverse;
+    }
+}
 .headerNav {
     background: #102943;
 }
@@ -242,6 +327,18 @@ body {
     display: flex;
     align-items: center;
     height: 65px;
+    @include responsive(1000px) {
+        flex-direction: column;
+        height: initial;
+        padding: 30px 0;
+        display: none;
+        text-align: center;
+    }
+}
+.navigationBox > li {
+    @include responsive(1000px) {
+        padding: 10px 10px;
+    }
 }
 .firstNavContent {
     padding: 22px 40px;
@@ -254,10 +351,19 @@ body {
      opacity: 1;
      background: #233A52;
     }
+    @include responsive(1150px) {
+        padding: 22px 25px;
+    }
+    @include responsive(1000px) {
+        padding: 10px 10px;
+    }
 }
 .firstNavContentMain {
     background: #233A52;
     opacity: 1;
+    @include responsive(1000px) {
+       background: none;
+    }
 }
 .loans {
     display: flex;
@@ -271,35 +377,54 @@ body {
     font-family: mtavrulibold;
     width: 100%;
     transition: 0.5s ease;
+    cursor: pointer;
     &:hover {
      color: #000000;
      background: #fff;
      opacity: 1;
      transition: 0.5s ease;
     }
+    @include responsive(1150px) {
+        padding: 22px 25px;
+    }
+    @include responsive(1000px) {
+        padding: 0px 10px;
+        background: none;
+    }
 }
 .loansArrow {
     margin-left: 3.5px;
     font-size: 10px;
 }
+
 .openHeaderDropDown {
   position: relative;
   &:hover .dropDownContent {
-            // display: flex;
-            transform: perspective(1000px) rotateX(0deg);
-            transition: 0.5s ease;
+    transform: perspective(1000px) rotateX(0deg);
+    transition: 0.5s ease;
+    @include responsive(1000px) {
+        transition: none;
+    }
   }
   &:hover .loansArrow  {
-    transform: rotate(-180deg);
-    transition: 0.5s ease;
-}
-}
-.openHeaderDropDown {
+  @include  responsive-min(1000px) {
+        transform: rotate(-180deg);
+    }
+    }
     &:hover .loans {
-      background: #fff;
-      opacity: 1;
-      color: #000000;
-  }
+        background: #fff;
+        opacity: 1;
+        color: #000000;
+        @include responsive(1000px) {
+         background: none;
+         color: #fff;
+      }
+    }
+}
+.loansArrow-active {
+    @include responsive(1000px) {
+        transform: rotate(-180deg);
+     }
 }
 .dropDownContent {
     flex-direction: column;
@@ -314,8 +439,26 @@ body {
     transform: perspective(1000px) rotateX(-90deg);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    @include responsive(1000px) {
+        position: static;
+        transform: initial;
+        text-align: center;
+        background: none;
+        color: rgba(255, 255, 255, 0.8);
+        display: none;
+        transition: none;
+        width: 100%;
+        padding: 18px 0 0 0;
+    }
     li {
         margin-bottom: 16px;
+        @include responsive(1000px) {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
     }
     a {
         color: #000000;
@@ -325,7 +468,13 @@ body {
         &:hover {
             opacity: 1;
         }
+        @include responsive(1000px) {
+            color: rgba(255, 255, 255, 0.8);
+        }
     }
+}
+.dropDownContent-active {
+    display: flex;
 }
 main {
     position: relative;
@@ -357,8 +506,21 @@ main {
         color: #fff;
         text-align: center;
         h1 {
+            margin: 0 auto;
             font-size: 50px;
             font-family: mtavrulibold;
+            width: 100%;
+            @include responsive(1000px) {
+                font-size: 30px;
+                width: 100%;
+             }
+             @include responsive(700px) {
+                font-size: 22px;
+             }
+             @include responsive(550px) {
+                font-size: 20px;
+                width: 100%;
+             }
         }
         p {
             margin-top: 40px;
@@ -366,12 +528,20 @@ main {
             width: 818px;
             font-size: 18px;
             font-family: roboto;
+            @include responsive(1000px) {
+                font-size: 14px;
+                width: 80vw;
+             }
         }
         span {
             padding: 15px 24px 17px 24px;
             border-radius: 5px;
             font-size: 18px;
             font-family: mtavrulibold;
+            @include responsive(1000px) {
+                padding: 10px 15px 12px 15px;
+                font-size: 13px;
+             }
         }
         .getLoan {
             background: #E2574C;
@@ -413,6 +583,9 @@ main {
     width: 100%;
     bottom: 120px;
     z-index: 100;
+    @include responsive(1000px) {
+        align-items: flex-end;
+     }
     .mainSliderArrrow span {
         border-radius: 50%;
         border: 1px solid #fff;
@@ -463,6 +636,11 @@ main {
         font-size: 27px;
         color: #707070;
     }
+}
+.mainSliderArrrow {
+    @include responsive(550px) {
+        display: none;
+     }  
 }
 .h1title {
     @include titleh1;

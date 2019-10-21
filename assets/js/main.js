@@ -1,10 +1,15 @@
 $(document).ready(function(){
-    // $('.openHeaderDropDown').hover(function(){
-    //      $('.dropDownContent').slideToggle('slow');
-    //     });
-    // $('.openHeaderDropDownSecond').hover(function(){
-    //     $('.dropDownContentSecond').slideToggle('slow');
-    //    });
+    $('.openHeaderDropDown').click(function(){
+         $(this).find('.dropDownContent').slideToggle('slow');
+         $(this).find('.loansArrow').toggleClass('loansArrow-active');
+        });
+    
+    $('.burger').click(function(){
+        $('.burger-span-1').toggleClass('burger-span-1-active');
+        $('.burger-span-2').toggleClass('burger-span-2-active');
+       $('.navigationBox').slideToggle('slow')
+    });
+    
     $('.question').hover(function(){
         $('.attention').toggle();
     });
