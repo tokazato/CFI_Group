@@ -75,11 +75,26 @@ body {
     max-width: 1550px;
     margin: 0 auto;
 }
+.different-header {
+    @include responsive(1000px) {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+   
+}
 .headerContent {
     @include flexbox(row);
     justify-content: space-between;
     width: 100%;
     height: 150px;
+
+}
+.logo img {
+    width: 215px;
+    height: 45px;
+    @include responsive(550px) {
+        width: 147px;
+        height: 31px;
+    }
 }
 .headerTel {
     @include flexbox(row);
@@ -106,6 +121,9 @@ body {
         justify-content: flex-start;
         height: 28px;
     }
+    @include responsive(350px) {
+        width: 140px;
+    }
     .header-phone-number {
         color: #454A4A;
         font-size: 20px;
@@ -115,6 +133,9 @@ body {
             font-size: 14px;
             font-family: mtavrulibold;
             color: #102943;
+        }
+        @include responsive(350px) {
+            font-size: 12px;
         }
     }
 }
@@ -135,6 +156,9 @@ body {
         font-size: 10px;
         color: #fff;
         background: #1FB26F;
+    }
+    @include responsive(450px) {
+        margin-right: 2px;
     }
 }
 .headerTel img {
@@ -281,6 +305,9 @@ body {
             font-family: mtavrulibold;
             text-align: center;
             padding: 14px 0;
+            @include responsive(400px) {
+                font-size: 13px;
+            }
             &:hover {
                 color: #454A4A;
                 transition: 0.3s ease;
@@ -290,6 +317,9 @@ body {
                 visibility: hidden;
                 margin-left: 20px;
                 font-size: 12px;
+                @include responsive(400px) {
+                    margin-left: 5px;
+                }
             }
         }
 }
@@ -298,20 +328,28 @@ body {
     align-items: center;
 }
 .header-content-left-side {
+    padding: 0 0 0 24px;
     @include responsive(1000px) {
        width: 100%;
        justify-content: space-between;
        margin-top: 60px;
+       padding: 0 24px;
     }
 }
 .header-content-right-side {
+    padding: 0 24px 0 0;
     @include responsive(1000px) {
         position: absolute;
         top: 0;
+        left: 0;
         background: #102943;
         width: 100%;
         justify-content: space-between;
-        height: 56px;   
+        height: 56px;
+        padding: 0 24px;
+    }
+    @include responsive(380px) {
+        padding: 0 18px;
     }
 }
 .header-social-logo-box {
@@ -476,9 +514,26 @@ body {
 .dropDownContent-active {
     display: flex;
 }
+.main-swiper-box {
+    height: 668px;
+    @include responsive(850px) {
+        height: 512px;
+    }
+    @include responsive(550px) {
+        height: 312px;
+    }
+   
+}
 main {
     position: relative;
     .mainImgBox {
+        height: 668px;
+        @include responsive(850px) {
+            height: 512px;
+        }
+        @include responsive(550px) {
+            height: 312px;
+        }
         &::before {
             content: '';
             position: absolute;
@@ -489,12 +544,20 @@ main {
             background: #102943;
             opacity: 0.6;
             z-index: 1;
-        }  
+            height: 668px;
+            @include responsive(850px) {
+                height: 512px;
+            }
+            @include responsive(550px) {
+                height: 312px;
+            }
+        } 
     }
     .mainImg {
         display: block;
         width: 100%;
-        height: 668px;
+        height: 100%;
+        object-fit: cover;
     }
 
     .mainText {
@@ -505,6 +568,9 @@ main {
         z-index: 1;
         color: #fff;
         text-align: center;
+        @include responsive(550px) {
+            top: 42%;
+         }
         h1 {
             margin: 0 auto;
             font-size: 50px;
@@ -531,7 +597,11 @@ main {
             @include responsive(1000px) {
                 font-size: 14px;
                 width: 80vw;
-             }
+            }
+            @include responsive(550px) {
+                margin-top: 13px;
+                margin-bottom: 22px;
+            }
         }
         span {
             padding: 15px 24px 17px 24px;
@@ -583,14 +653,22 @@ main {
     width: 100%;
     bottom: 120px;
     z-index: 100;
+    padding: 0 24px;
     @include responsive(1000px) {
         align-items: flex-end;
+     }
+     @include responsive(550px) {
+        bottom: 40px;
      }
     .mainSliderArrrow span {
         border-radius: 50%;
         border: 1px solid #fff;
         color: #fff;
-        padding: 22px 25px;
+        height: 56px;
+        width: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         outline: none;
         cursor: pointer;
         transition: 0.5s ease;
@@ -618,6 +696,12 @@ main {
         width: 68px;
         height: 68px;
         overflow: hidden; 
+        @include responsive(550px) {
+            margin-right: 0px;
+            font-size: 20px;
+            width: 33px;
+            height: 23px;
+         }
         ul {
             position: absolute;
             width: 100%;
@@ -626,8 +710,6 @@ main {
             flex-direction: column;
             align-items: flex-start;
             width: 100%;
-
-            
             top: 0; 
             transition: 0.9s ease;
         }
@@ -635,108 +717,207 @@ main {
     .wholeImgNumber {
         font-size: 27px;
         color: #707070;
+        @include responsive(550px) {
+            font-size: 12px;
+            color: #969696;
+         }
     }
 }
 .mainSliderArrrow {
+    display: flex;
     @include responsive(550px) {
         display: none;
      }  
 }
 .h1title {
     @include titleh1;
+    @include responsive(450px) {
+        font-size: 16px;
+        text-align: center;
+    }
 }
 .h3title {
     @include titleh3;
+    @include responsive(850px) {
+        font-size: 12px;
+     } 
 }
 .sectionP {
+    margin-top: 16px;
     @include sectionP;
+    @include responsive(850px) {
+        font-size: 10px;
+    } 
+    @include responsive(850px) {
+        display: none;
+    }
 }
 .firstSectionContent {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
+    padding: 0 24px;
+    @include responsive(1630px) {
+        padding: 0 24px;
+    }
+    @include responsive(1400px) {
+        display: flex;
+        flex-direction: column-reverse
+    }
+    
 }
-    .gridBoxLeft {
-        width: 984px;
-        .newsBox {
-            display: flex;
-            border: 2px solid #D8D6D6;
-            border-radius: 10px;
-            position: relative;
-            margin: 60px 0;
-            .sectionImg {
-                position: relative;
-                right: 24px;
-                bottom: 26px;
-            }
-            .newsLearMore {
-                position: absolute;
-                bottom: -10px;
-                right: -10px;
-                padding: 17px 35px 18px 35px;
-                background: #1FB26F;
-                color: #fff;
-                border-radius: 10px;
-                font-family: mtavrulibold;
-                font-size: 16px;
-                cursor: pointer;
-                transition: 0.5s ease;
-                &:hover {
-                    background: #1C8857;
-                    transition: 0.5s ease;
-                }
-            }
-            .newsTextBox {
-                padding: 25px 45px;
-                h3 {
-                    margin-bottom: 16px;
-                }
-            }
-        }
+.gridBoxLeft {
+    // width: 984px;
+    width: 100%;
+}
+.gridBoxLeft-title-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.all-news {
+    display: none;
+    font-size: 12px;
+    color: #454A4A;
+    @include responsive(950px) {
+        display: block;
     }
-    .gridBoxRight {
-        width: 481px;
-        text-align: center;
+}
+.newsBox {
+    display: flex;
+    border: 2px solid #D8D6D6;
+    border-radius: 10px;
+    position: relative;
+    margin: 60px 0;
+    margin-right: 20px;
+    @include responsive(550px) {
+        margin-right: 0px;
     }
-        .calculatorBox {
-            background: #F4F4F4;
-            border-radius: 10px;
-            margin-bottom: 50px;
-            margin-top: 30px;
+    @include responsive(1400px) {
+        margin-right: 0px;
+        padding: 0 16px;
+    }
+    @include responsive(450px) {
+        flex-direction: column;
+        padding: 12px;
+        margin: 16px 0;
+     }
+}
+.sectionImg {
+    position: relative;
+    right: 24px;
+    bottom: 26px;
+    @include responsive(850px) {
+        width: 119px;
+        height: 98px;
+    }
+    @include responsive(450px) {
+        position: static;
+        width: 100%;
+        height: 180px;
+        margin-bottom: 10px;
+    }
+}
+.newsLearMore {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    padding: 17px 35px 18px 35px;
+    background: #1FB26F;
+    color: #fff;
+    border-radius: 10px;
+    font-family: mtavrulibold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    &:hover {
+        background: #1C8857;
+        transition: 0.5s ease;
+    }
+    @include responsive(950px) {
+        display: none;
+    }
+}
+.newsTextBox {
+    padding: 25px 45px;
+    @include responsive(850px) {
+        padding: 2px 2px;
+    }
+}
+.gridBoxRight {
+    width: 481px;
+    text-align: center;
+    @include responsive(1400px) {
+        margin: 0 auto;
+    }
+    @include responsive(570px) {
+        width: 100%;
+    }
+}
+.calculatorBox {
+    background: #F4F4F4;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+.calculatorTextP {
+    font-size: 15px;
+    font-family: roboto;
+    color: #454A4A;
+    margin-bottom: 16px;
+    @include responsive(550px) {
+        font-size: 10px;
+    }
+}
+.calculatorInput {
+    font-size: 18px;
+    color: #454A4A;
+    font-family: roboto;
+    background: #fff;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 108px;
+    text-align: center;
+    outline: none;
+    border: none;
+    @include responsive(570px) {
+        width: 70px;
+        font-size: 13px;
+    }
+}
+.exchange-rate-hide {
+    @include responsive(550px) {
+        display: none;
+    } 
+}
+.exchange-rate-main-box {
+    padding: 0 24px;
+    display: none;
+    @include responsive(550px) {
+        display: block;
+        h1 {
+            text-align: center;
         }
-            .calculatorTextP {
-                font-size: 15px;
-                font-family: roboto;
-                color: #454A4A;
-                margin-bottom: 16px;
-            }
-            .calculatorInput {
-                font-size: 18px;
-                color: #454A4A;
-                font-family: roboto;
-                background: #fff;
-                height: 64px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 10px;
-                font-weight: bold;
-                width: 108px;
-                text-align: center;
-                outline: none;
-                border: none;
-            }
+    } 
+}
             .calculatorGetLoan {
                 padding: 30px 0;
                 border-bottom: 1.5px solid #E1E1E1;
                 margin-bottom: 40px;
                 .loanEasy {
-                    margin-right: 108px;
+                    margin-right: 73px;
                     padding: 30px 0;
                     font-size: 18px;
                     color: #707070;
                     font-family: mtavrulibold;
                     cursor: pointer;
+                    @include responsive(550px) {
+                        font-size: 12px;
+                    }
                     &:hover {
                         color: #454A4A;
                         border-bottom: 1.5px solid #E2574C;
@@ -749,6 +930,9 @@ main {
                     font-family: mtavrulibold;
                     color: #707070;
                     cursor: pointer;
+                    @include responsive(550px) {
+                        font-size: 12px;
+                    }
                     &:hover {
                         color: #454A4A;
                         border-bottom: 1.5px solid #E2574C;
@@ -783,6 +967,14 @@ main {
                    border-radius: 10px;
                    right: 50px;
                    bottom: -10px;
+                   @include responsive(550px) {
+                    right: 22%;
+                   }
+                   @include responsive(450px) {
+                    width: 188px;
+                    font-size: 12px;
+                    right: 12%;
+                   }
                    &::before {
                        content: '';
                        border-width: 10px;
@@ -797,6 +989,10 @@ main {
                     margin-bottom: 20px;
                     width: 198px;
                     appearance: none;
+                    @include responsive(550px) {
+                        font-size: 13px;
+                        width: 120px;
+                    }
                 }
             }
             .toCalculate {
@@ -814,6 +1010,10 @@ main {
                     font-family: mtavrulibold;
                     cursor: pointer;
                     transition: 0.5s ease;
+                    @include responsive(550px) {
+                        padding: 13px 52px;  
+                        font-size: 12px;
+                    }
                     &:hover {
                         background: #C13E34;
                         transition: 0.5s ease;
@@ -827,6 +1027,10 @@ main {
                     font-family: mtavrulibold;
                     color: #454A4A;
                     cursor: pointer;
+                    @include responsive(550px) {
+                        font-size: 17px;
+                        padding: 11px 22px 10px 22px;
+                    }
                 }
             }
         .exchangeRate {
@@ -834,16 +1038,33 @@ main {
             border-radius: 10px;
             margin-bottom: 50px;
             margin-top: 30px;
+            .exchange-rate-line-img {
+                width: 80%;
+                margin: 0 auto ;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+
+            }
             .nationalBankBox {
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
                 margin-bottom: 20px;
                 padding-top: 31px;
+                img {
+                    @include responsive(550px) {
+                        width: 20px;
+                    height: 20px;
+                    } 
+                }
                 span {
                     font-size: 17px;
                     font-family: roboto;
                     color: #454A4A;
+                    @include responsive(550px) {
+                        font-size: 12px;
+                    }
                 }
             }
             .currentExchangeRateBox {
@@ -855,6 +1076,12 @@ main {
                         font-size: 16px;
                         color: #454A4A;
                         font-family: mtavrulibold;
+                        @include responsive(550px) {
+                            font-size: 12px;
+                        }
+                    }
+                    .exchange-rate-buy-text {
+                        margin-right: 27px;
                     }
                 }
                 .euro {
@@ -862,15 +1089,22 @@ main {
                 }
                 .euro img, .dollar img, .gbp img {
                     margin-right: 16px;
+                    @include responsive(550px) {
+                        height: 20px;
+                        width: 20px;
+                    }
                 }
                 .euro span, .dollar span, .gbp span {
                     font-size: 18px;
                     color: #454A4A;
                     font-family: mtavrulibold;
+                    @include responsive(550px) {
+                        font-size: 12px;
+                    }
                 }
                 div {
                     display: flex;
-                    justify-content: space-evenly;
+                    justify-content: space-around;
                     align-items: center;
                 }
                 .sellMoney {
@@ -880,6 +1114,11 @@ main {
                     border-radius: 5px;
                     font-size: 18px;
                     font-family: mtavrulibold;
+                    margin-right: 12px;
+                    @include responsive(550px) {
+                        font-size: 11px;
+                        padding: 5px 13px 7px 13px;
+                    }
                 }
                 .buyMoney {
                     color: #E35E54;
@@ -888,6 +1127,10 @@ main {
                     border-radius: 5px;
                     font-size: 18px;
                     font-family: mtavrulibold;
+                    @include responsive(550px) {
+                        font-size: 11px;
+                        padding: 5px 13px 7px 13px;
+                    }
                 }
             }
         }
@@ -901,14 +1144,27 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 108px;
+    @include responsive(450px) {
+        margin-top: 20px;
+    }
     h1 {
         font-size: 32px;
         font-family: mtavrulibold;
+        @include responsive(450px) {
+            font-size: 16px;
+        }
     }
     .arrowBox {
         display: flex;
         flex-direction: column;
         position: relative;
+        img {
+            width: 100%;
+            @include responsive(450px) {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
     }
     .sectioArrowred {
         position: absolute;
@@ -920,12 +1176,22 @@ main {
     display: flex;
     justify-content: space-between;
     margin-top: 70px;
+    @include responsive(1100px) {
+        flex-direction: column;
+    }
+    @include responsive(850px) {
+        margin-top: 21px;
+    }
 }
 .howGetLoanBoxImg {
     width: 45%;
+    @include responsive(1100px) {
+        width: 100%;
+    }
     img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
 }
 .getLoanMethodBox {
@@ -934,47 +1200,93 @@ main {
     justify-content: space-around;
     margin-left: 80px;
     width: 50%;
+    padding: 0 24px 0 0;
+    @include responsive(1500px) {
+        width: 70%;
+    }
+    @include responsive(1170px) {
+        margin-left: 20px; 
+        @include responsive(800px) {
+            margin-left: 0px; 
+        }
+    }
+    @include responsive(1100px) {
+        padding: 0 24px;
+        margin-top: 30px;
+    }
+    @include responsive(800px) {
+        width: 100%;
+     }
     .getLoanMethod {
         display: flex;
         align-items: flex-start;
         width: 744px;
         height: 124px;
+        @include responsive(1100px) {
+            margin-bottom: 24px;
+        }
+        @include responsive(800px) {
+            width: 100%;
+         }
         div {
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             margin-left: 46px;
+            @include responsive(1100px) {
+                justify-content: flex-start;
+            }
             h3 {
                 margin-bottom: 16px;
                 font-size: 20px;
                 font-family: mtavrulibold;
                 color: #454A4A;
+                @include responsive(800px) {
+                    font-size: 13px;
+                 }
             }
             p {
                 font-size: 16px;
                 font-family: roboto;
                 color: #454A4A;
+                @include responsive(800px) {
+                    font-size: 11px;
+                 }
             }
         }
         img {
             display: flex;
             align-items: flex-start;
+            @include responsive(800px) {
+               width: 42px;
+               height: 42px;
+            }
         }
     }
 }
 footer {
     background: #F2F2F2;
     margin-top: 115px;
+    @include responsive(800px) {
+        margin-top: 50px;
+     }
 }
 .footerContent {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 110px;
+    padding: 0 24px;
     .footerbox1 {
         display: flex;
         flex-direction: column;
+        img {
+            @include responsive(450px) {
+                width: 130px;
+                height: 27px;
+             } 
+        }
         .footelLogobox {
             display: flex;
             align-items: center;
@@ -992,6 +1304,12 @@ footer {
     }
     .footerNavigation {
         width: 719px;
+        @include responsive(1300px) {
+            width: 50%;
+         }
+         @include responsive(1180px) {
+            display: none;
+         }
         ul {
             display: flex;
             justify-content: space-between;
@@ -1011,6 +1329,9 @@ footer {
     }
     .footerSocialLogo {
         display: flex;
+        @include responsive(1180px) {
+            display: none;
+         }
         .footerFb, .footerYoutube {
             display: flex;
             justify-content: center;
@@ -1037,6 +1358,9 @@ footer {
 .create-by {
     font-size: 14px;
     color: #1D1D1D;
+    @include responsive(450px) {
+        font-size: 10px;
+     }
 }
 .smart-web-text {
     color: #8C3264;
@@ -1053,6 +1377,9 @@ footer {
     justify-content: center;
     color: #fff;
     font-size: 15px;
+    @include responsive(450px) {
+        font-size: 12px;
+     }
 }
 
 // about As 
@@ -1061,25 +1388,52 @@ footer {
     min-height: calc(100vh - 563px);
     display: flex;
     margin-top: 70px;
-    width: 90%;
+    width: 100%;
+    padding: 0 24px;
+    @include responsive(1230px) {
+        margin-top: 30px;
+    }
+}
+.aboutas-img {
+    @include responsive(1230px) {
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
 .aboutas-img img {
-    width: 700px;
+    width: 880px;
+    height: 410;
     float: left;
     margin-right: 70px;
+    margin-bottom: 24px;
+    @include responsive(1000px) {
+        width: 100%;
+     }
 }
 .aboutas-text-box {
     width: 624px;
 }
 .about-as-h1 {
+    order: -1;
     font-size: 48px;
     margin-bottom: 24px;
     font-family: mtavrulibold;
     color: #102943;
+    @include responsive(1000px) {
+        font-size: 30px;
+        text-align: center;
+    }
+    @include responsive(550px) {
+        font-size: 16px;
+    }
 }
 .about-as-text {
     font-size: 16px;
     color: #454A4A;
+    @include responsive(550px) {
+        font-size: 12px;
+    }
 }
 
 // news page 
@@ -1087,15 +1441,39 @@ footer {
     min-height: calc(100vh - 513px);
     width: 100%;
     margin-top: 70px;
+    padding: 0 24px;
+    @include responsive(550px) {
+        margin-top: 30px;
+    }
 }
 .news-grid-box {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 72px 16px;
+    @include responsive(1600px) {
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
+    }
+    @include responsive(1050px) {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+    @include responsive(600px) {
+        grid-gap: 30px 16px;
+    }
     div {
         width: 496px;
         position: relative;
         grid-column-gap: 20px;
+        @include responsive(600px) {
+            width: 85vw;
+        }
+    }
+}
+.news-car-img-box {
+    width: 200px;
+    img {
+        width: 100%;
     }
 }
 .news-see-more-button {
@@ -1113,6 +1491,9 @@ footer {
     transition: 0.3s ease;
     z-index: 1;
     border: 1px solid #D1D1D1;
+    @include responsive(600px) {
+        display: none; 
+    }
     &:hover {
         background: #fff;
         color: #17C593;
@@ -1124,10 +1505,16 @@ footer {
     font-family: mtavrulibold;
     color: #454A4A;
     margin-bottom: 14px;
+    @include responsive(600px) {
+        font-size: 12px; 
+    }
 }
 .news-text {
    font-size: 16px;
     color: #454A4A;
+    @include responsive(600px) {
+        display: none; 
+    }
 }
 .news-text-box {
     padding: 30px 10px 20px 10px;
@@ -1136,12 +1523,18 @@ footer {
     border-bottom-right-radius: 10px;
     position: relative;
     bottom: 5px;
+    @include responsive(600px) {
+        padding: 10px;
+    }
 }
 .news-pagenation-box {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 114px;
+    @include responsive(500px) {
+        margin-top: 34px;
+    }
 }
 .pagenation-text {
     display: flex;
@@ -1155,6 +1548,11 @@ footer {
     margin: 0px 3px;
     transition: 0.3s ease; 
     cursor: pointer;
+    @include responsive(500px) {
+        height: 32px;
+        width: 32px;
+        margin: 0px 1px;
+    }
     &:hover {
         background: #E2574C;
         color: #fff;
@@ -1165,45 +1563,89 @@ footer {
     background: #E2574C;
     color: #fff;
 }
-.fa-angle-double-right, .fa-angle-double-left {
-    margin: 0 20px;
+.fa-angle-double-right {
+    margin-left: 20px;
     cursor: pointer;
+    @include responsive(500px) {
+        margin-left: 10px;
+    }
+}
+.fa-angle-double-left {
+    margin-right: 20px;
+    cursor: pointer;
+    @include responsive(500px) {
+        margin-right: 10px;
+    }
 }
 
 // news 2 page 
 .news2-box {
     min-height: calc(100vh - 513px);
     margin-top: 100px;
+    padding: 0 24px;
+    @include responsive(1000px) {
+        margin-top: 20px;
+    }
 }
 .news2-content-box {
     margin-top: 52px;
+    @include responsive(550px) {
+        margin-top: 20px;
+    }
+    p {
+        @include responsive(550px) {
+            font-size: 12px;
+        }
+    }
 }
 .news2-h1 {
     font-size: 40px;
     color: #353D48;
     font-family: mtavrulibold;
+    @include responsive(870px) {
+        font-size: 20px;
+    }
 }
 .news2-img {
     float: left;
     margin-right: 54px;
     margin-bottom: 56px;
     width: 793px;
+    @include responsive(870px) {
+        width: 100%;
+    }
+    @include responsive(600px) {
+        margin-bottom: 20px;
+    }
 }
 
 // contact page
 .contact-box {
     min-height: calc(100vh - 513px);
     margin-top: 68px;
+    padding: 0 24px;
+    @include responsive(1000px) {
+        margin-top: 30px;
+    }
 }
 .contact-page-title {
     font-size: 32px;
     color: #102943;
     font-family: mtavrulibold;
     margin-bottom: 32px;
+    @include responsive(800px) {
+        text-align: center;
+    }
+    @include responsive(800px) {
+        font-size: 16px;
+    }
 }
 .contact-form-and-map-box {
     display: flex;
     justify-content: space-between;
+    @include responsive(800px) {
+        flex-direction: column;
+    }
 }
 .form-description-box {
     display: flex;
@@ -1221,6 +1663,10 @@ footer {
     font-family: mtavrulibold;
     cursor: pointer;
     transition: 0.2s ease;
+    @include responsive(500px) {
+       font-size: 12px;
+       height: 40px;
+    }
     &:hover {
         color: #fff;
         background: #57697B;
@@ -1233,9 +1679,16 @@ footer {
 }
 .contact-form-box {
     width: 35%;
+    @include responsive(800px) {
+        width: 100%;
+    }
 }
 .contact-map-address-box {
     width: 60%;
+    @include responsive(800px) {
+        width: 100%;
+        margin-top: 30px;
+    }
 }
 .contact-input-box {
     position: relative;
@@ -1249,7 +1702,11 @@ footer {
     border: 1.5px solid rgba(16, 41, 67, 0.7);
     padding-left: 24px;
     border-radius: 5px;
+    font-size: 14px;
     font-family: helvetica-bold;
+    @include responsive(500px) {
+        font-size: 12px;
+    }
 }
 .contact-email {
     border: 1.5px solid #E2574C;
@@ -1285,6 +1742,10 @@ footer {
     padding-left: 24px;
     border: none;
     font-family: helvetica-bold;
+    font-size: 14px;
+    @include responsive(500px) {
+        font-size: 12px;
+    }
 }
 .contact-roboto-box {
     width: 100%;
@@ -1321,6 +1782,7 @@ footer {
     margin: 10px 0;
     border: 1.5px solid rgba(16, 41, 67, 0.3);
     transition: 0.2s ease;
+    padding: 0 5px;
     &:hover {
         background: #E2574C;
         border: 1.5px solid  #E2574C;
@@ -1337,6 +1799,10 @@ footer {
     color: #1D1D1D;
     font-size: 14px;
     font-family: helvetica-bold;
+    margin-right: 5px;
+    @include responsive(500px) {
+        font-size: 10px;
+    }
 }
 .fa-file-pdf {
     color: #E2574C;
@@ -1345,15 +1811,31 @@ footer {
     display: flex;
     justify-content: space-between;
     margin-bottom: 41px;
+    @include responsive(500px) {
+        flex-direction: column;
+    }
+    a {
+        margin-right: 20px;
+        @include responsive(500px) {
+            margin-bottom: 10px;
+        }
+    }
 }
 .contact-address-title {
     font-size: 16px;
     font-family: helvetica-bold;
     color: #102943;
+    @include responsive(500px) {
+        font-size: 12px;
+    }
 }
 .contact-address-p {
+    font-family: helvetica;
     font-size: 14px;
     color: #102943;
+    @include responsive(500px) {
+        font-size: 10px;
+    }
 }
 .contact-map-box {
     width: 100%;
@@ -1366,25 +1848,45 @@ footer {
 // loans page 
 .loans-box {
     margin-top: 75px;
+    @include responsive(1000px) {
+        margin-top: 30px;
+    }
+}
+.loans-box-content {
+    padding: 0 24px;
 }
 .loans-bottom-content-box {
     display: flex;
     // justify-content: space-between;
+    @include responsive(900px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 .loans-h1 {
     font-size: 40px;
     color: #353D48;
     font-family: mtavrulibold;
     margin-bottom: 32px;
+    @include responsive(600px) {
+        text-align: center;
+        font-size: 16px;
+    }
 }
 .loans-img {
     height: 410px;
     width: 100%;
     margin-bottom: 32px;
+    @include responsive(600px) {
+        height: 210px;
+    }
 }
 .loans-left-side-box {
     width: 58%;
     margin-right: 58px;
+    @include responsive(900px) {
+        width: 100%;
+    }
 }
 .loans-left-side-h4 {
     font-size: 16px;
@@ -1392,23 +1894,36 @@ footer {
     color: #454A4A;
     margin-bottom: 6px;
     margin-top: 20px;
+    @include responsive(600px) {
+        font-size: 14px;
+    }
 }
 .loans-left-side-text, .loans-left-side-list {
     font-size: 16px;
     color: #454A4A;
     font-family: helvetica;
+    @include responsive(600px) {
+        font-size: 12px;
+    }
 }
 .loans-right-side-box {
     width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include responsive(900px) {
+        width: 100%;
+        margin-top: 40px;
+    }
 }
 .loans-right-side-h2 {
     font-size: 20px;
     color: #102943;
     font-family: mtavrulibold;
     margin-bottom: 32px;
+    @include responsive(600px) {
+        font-size: 14px;
+    }
 }
 .loans-right-side-small-box {
     height: 150px;
@@ -1419,22 +1934,35 @@ footer {
     align-items: center;
     justify-content: space-around;
     margin-bottom: 20px;
+    padding: 0 5px;
 }
 .loans-right-side-small-img-box {
     height: 100%;
 }
 .loans-right-side-small-img {
     margin-top: 20px;
+    width: 32px;
+    height: 32px;
+    @include responsive(600px) {
+        width: 21px;
+        height: 24px;
+    }
 }
 .loans-right-side-h5 {
     font-size: 18px;
     color: #102943;
     font-family: helvetica;
+    @include responsive(600px) {
+        font-size: 14px;
+    }
 }
 .loans-right-side-p {
     font-size: 15px;
     color: #102943;
     font-family: helvetica;
+    @include responsive(600px) {
+        font-size: 12px;
+    }
 }
 .fill-form-text-box {
     height: 56px;
@@ -1444,7 +1972,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.fill-form-text {
+    text-align: center;
     color: #fff;
+    @include responsive(600px) {
+        font-size: 12px;
+    }
 }
 
 // business fill form
@@ -1452,6 +1986,9 @@ footer {
     height: 272px;
     width: 100%;
     position: relative;
+    @include responsive(1000px) {
+       display: none;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -1465,6 +2002,7 @@ footer {
 }
 .fill-loan-main-box {
     min-height: calc(100vh - 755px);
+    padding: 0 24px;
 }
 .fill-loan-title-h1 {
     font-size: 30px;
@@ -1503,6 +2041,9 @@ input[type='radio']:checked:after {
 }
 .fill-loan-box-content {
     margin-bottom: 80px;
+    @include responsive(600px) {
+        margin-bottom: 61px;
+    }
 }
 .fill-form-section-title-box {
     display: flex;
@@ -1516,6 +2057,9 @@ input[type='radio']:checked:after {
     color: #1FB26F;
     margin-left: 30px; 
     font-family: helvetica-normal;
+    @include responsive(666px) {
+        font-size: 16px;
+    }
 }
 .fill-form-input-up-box {
     display: flex;
@@ -1523,11 +2067,19 @@ input[type='radio']:checked:after {
     justify-content: space-between;
     width: 100%;
     margin-top: 12px;
+    @include responsive(600px) {
+        flex-direction: column;
+        margin-top: 0px;
+    }
 }
 .fill-form-input-box {
     display: flex;
     flex-direction: column;
     width: 45%;
+    @include responsive(600px) {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
 .fill-form-input {
     height: 62px;
@@ -1546,12 +2098,19 @@ input[type='radio']:checked:after {
 .fill-form-input-box-section-2 {
     display: flex;
     width: 45%;
+    @include responsive(600px) {
+        width: 100%;
+        margin-bottom: 8px;
+    }
 }
 .fill-form-input-up-box-right-side {
     display: none; 
     align-items: center;
     justify-content: flex-end;
     margin-top: 53px; 
+    @include responsive(600px) {
+        margin-top: 0px; 
+    }
 }
 .fill-form-radio-botton-left-side-box-mortgage {
     display: none;
@@ -1564,6 +2123,10 @@ input[type='radio']:checked:after {
 }
 .fill-form-section-big-box {
     width: 45%;
+    @include responsive(600px) {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
 .fill-form-select-main-box  {
     width: 100%;
@@ -1627,6 +2190,11 @@ input[type='radio']:checked:after {
     align-items: center;
     margin-top: 160px;
     margin-bottom: 72px;
+    @include responsive(600px) {
+        margin-top: 126px;
+        margin-bottom: 10px;
+        height: 60px;
+    }
 }
 .fill-form-roboto {
     width: 529px;
@@ -1636,6 +2204,9 @@ input[type='radio']:checked:after {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    img {
+        height: 100%; 
+    }
 }
 .send-form-box {
     width: 100%;
@@ -1660,9 +2231,12 @@ input[type='radio']:checked:after {
     display: flex; 
     align-items: center;
     margin-top: 53px;
+    @include responsive(600px) {
+        margin-top: 0px;
+    }
 }
 .fill-form-textarea-box {
-    margin-top: 102px;
+    margin-top: 120px;
     display: flex;
     flex-direction: column;
     width: 100%;

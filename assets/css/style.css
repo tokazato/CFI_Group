@@ -56,6 +56,13 @@ body {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 1000px) {
+  .different-header {
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
 .headerContent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,6 +82,18 @@ body {
           justify-content: space-between;
   width: 100%;
   height: 150px;
+}
+
+.logo img {
+  width: 215px;
+  height: 45px;
+}
+
+@media only screen and (max-width: 550px) {
+  .logo img {
+    width: 147px;
+    height: 31px;
+  }
 }
 
 .headerTel {
@@ -127,6 +146,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 350px) {
+  .headerTel {
+    width: 140px;
+  }
+}
+
 .headerTel .header-phone-number {
   color: #454A4A;
   font-size: 20px;
@@ -139,6 +164,12 @@ body {
     font-size: 14px;
     font-family: mtavrulibold;
     color: #102943;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .headerTel .header-phone-number {
+    font-size: 12px;
   }
 }
 
@@ -168,6 +199,12 @@ body {
     font-size: 10px;
     color: #fff;
     background: #1FB26F;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .fa-phone-alt {
+    margin-right: 2px;
   }
 }
 
@@ -418,6 +455,12 @@ body {
   padding: 14px 0;
 }
 
+@media only screen and (max-width: 400px) {
+  .headerLanguageContent a {
+    font-size: 13px;
+  }
+}
+
 .headerLanguageContent a:hover {
   color: #454A4A;
   -webkit-transition: 0.3s ease;
@@ -430,6 +473,12 @@ body {
   font-size: 12px;
 }
 
+@media only screen and (max-width: 400px) {
+  .headerLanguageContent a .languageArrow {
+    margin-left: 5px;
+  }
+}
+
 .header-content-left-side, .header-content-right-side, .header-social-logo-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -439,6 +488,10 @@ body {
           align-items: center;
 }
 
+.header-content-left-side {
+  padding: 0 0 0 24px;
+}
+
 @media only screen and (max-width: 1000px) {
   .header-content-left-side {
     width: 100%;
@@ -446,19 +499,32 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-top: 60px;
+    padding: 0 24px;
   }
+}
+
+.header-content-right-side {
+  padding: 0 24px 0 0;
 }
 
 @media only screen and (max-width: 1000px) {
   .header-content-right-side {
     position: absolute;
     top: 0;
+    left: 0;
     background: #102943;
     width: 100%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 56px;
+    padding: 0 24px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .header-content-right-side {
+    padding: 0 18px;
   }
 }
 
@@ -717,8 +783,40 @@ body {
   display: flex;
 }
 
+.main-swiper-box {
+  height: 668px;
+}
+
+@media only screen and (max-width: 850px) {
+  .main-swiper-box {
+    height: 512px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .main-swiper-box {
+    height: 312px;
+  }
+}
+
 main {
   position: relative;
+}
+
+main .mainImgBox {
+  height: 668px;
+}
+
+@media only screen and (max-width: 850px) {
+  main .mainImgBox {
+    height: 512px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  main .mainImgBox {
+    height: 312px;
+  }
 }
 
 main .mainImgBox::before {
@@ -731,12 +829,27 @@ main .mainImgBox::before {
   background: #102943;
   opacity: 0.6;
   z-index: 1;
+  height: 668px;
+}
+
+@media only screen and (max-width: 850px) {
+  main .mainImgBox::before {
+    height: 512px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  main .mainImgBox::before {
+    height: 312px;
+  }
 }
 
 main .mainImg {
   display: block;
   width: 100%;
-  height: 668px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main .mainText {
@@ -748,6 +861,12 @@ main .mainText {
   z-index: 1;
   color: #fff;
   text-align: center;
+}
+
+@media only screen and (max-width: 550px) {
+  main .mainText {
+    top: 42%;
+  }
 }
 
 main .mainText h1 {
@@ -789,6 +908,13 @@ main .mainText p {
   main .mainText p {
     font-size: 14px;
     width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  main .mainText p {
+    margin-top: 13px;
+    margin-bottom: 22px;
   }
 }
 
@@ -863,6 +989,7 @@ main .mainText .learnMore:hover {
   width: 100%;
   bottom: 120px;
   z-index: 100;
+  padding: 0 24px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -873,11 +1000,27 @@ main .mainText .learnMore:hover {
   }
 }
 
+@media only screen and (max-width: 550px) {
+  .mainFooter {
+    bottom: 40px;
+  }
+}
+
 .mainFooter .mainSliderArrrow span {
   border-radius: 50%;
   border: 1px solid #fff;
   color: #fff;
-  padding: 22px 25px;
+  height: 56px;
+  width: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   outline: none;
   cursor: pointer;
   -webkit-transition: 0.5s ease;
@@ -919,6 +1062,15 @@ main .mainText .learnMore:hover {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 550px) {
+  .mainFooter .currentNumberBox {
+    margin-right: 0px;
+    font-size: 20px;
+    width: 33px;
+    height: 23px;
+  }
+}
+
 .mainFooter .currentNumberBox ul {
   position: absolute;
   width: 100%;
@@ -945,6 +1097,19 @@ main .mainText .learnMore:hover {
 }
 
 @media only screen and (max-width: 550px) {
+  .mainFooter .wholeImgNumber {
+    font-size: 12px;
+    color: #969696;
+  }
+}
+
+.mainSliderArrrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 550px) {
   .mainSliderArrrow {
     display: none;
   }
@@ -956,16 +1121,42 @@ main .mainText .learnMore:hover {
   color: #454A4A;
 }
 
+@media only screen and (max-width: 450px) {
+  .h1title {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
 .h3title {
   font-size: 20px;
   font-family: mtavrulibold;
   color: #454A4A;
 }
 
+@media only screen and (max-width: 850px) {
+  .h3title {
+    font-size: 12px;
+  }
+}
+
 .sectionP {
+  margin-top: 16px;
   font-size: 16px;
   color: #454A4A;
   font-family: roboto;
+}
+
+@media only screen and (max-width: 850px) {
+  .sectionP {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .sectionP {
+    display: none;
+  }
 }
 
 .firstSectionContent {
@@ -976,13 +1167,56 @@ main .mainText .learnMore:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 24px;
+}
+
+@media only screen and (max-width: 1630px) {
+  .firstSectionContent {
+    padding: 0 24px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .firstSectionContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .gridBoxLeft {
-  width: 984px;
+  width: 100%;
 }
 
-.gridBoxLeft .newsBox {
+.gridBoxLeft-title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.all-news {
+  display: none;
+  font-size: 12px;
+  color: #454A4A;
+}
+
+@media only screen and (max-width: 950px) {
+  .all-news {
+    display: block;
+  }
+}
+
+.newsBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -990,15 +1224,56 @@ main .mainText .learnMore:hover {
   border-radius: 10px;
   position: relative;
   margin: 60px 0;
+  margin-right: 20px;
 }
 
-.gridBoxLeft .newsBox .sectionImg {
+@media only screen and (max-width: 550px) {
+  .newsBox {
+    margin-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .newsBox {
+    margin-right: 0px;
+    padding: 0 16px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .newsBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 12px;
+    margin: 16px 0;
+  }
+}
+
+.sectionImg {
   position: relative;
   right: 24px;
   bottom: 26px;
 }
 
-.gridBoxLeft .newsBox .newsLearMore {
+@media only screen and (max-width: 850px) {
+  .sectionImg {
+    width: 119px;
+    height: 98px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .sectionImg {
+    position: static;
+    width: 100%;
+    height: 180px;
+    margin-bottom: 10px;
+  }
+}
+
+.newsLearMore {
   position: absolute;
   bottom: -10px;
   right: -10px;
@@ -1013,23 +1288,43 @@ main .mainText .learnMore:hover {
   transition: 0.5s ease;
 }
 
-.gridBoxLeft .newsBox .newsLearMore:hover {
+.newsLearMore:hover {
   background: #1C8857;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
 
-.gridBoxLeft .newsBox .newsTextBox {
+@media only screen and (max-width: 950px) {
+  .newsLearMore {
+    display: none;
+  }
+}
+
+.newsTextBox {
   padding: 25px 45px;
 }
 
-.gridBoxLeft .newsBox .newsTextBox h3 {
-  margin-bottom: 16px;
+@media only screen and (max-width: 850px) {
+  .newsTextBox {
+    padding: 2px 2px;
+  }
 }
 
 .gridBoxRight {
   width: 481px;
   text-align: center;
+}
+
+@media only screen and (max-width: 1400px) {
+  .gridBoxRight {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .gridBoxRight {
+    width: 100%;
+  }
 }
 
 .calculatorBox {
@@ -1044,6 +1339,12 @@ main .mainText .learnMore:hover {
   font-family: roboto;
   color: #454A4A;
   margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 550px) {
+  .calculatorTextP {
+    font-size: 10px;
+  }
 }
 
 .calculatorInput {
@@ -1069,6 +1370,33 @@ main .mainText .learnMore:hover {
   border: none;
 }
 
+@media only screen and (max-width: 570px) {
+  .calculatorInput {
+    width: 70px;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .exchange-rate-hide {
+    display: none;
+  }
+}
+
+.exchange-rate-main-box {
+  padding: 0 24px;
+  display: none;
+}
+
+@media only screen and (max-width: 550px) {
+  .exchange-rate-main-box {
+    display: block;
+  }
+  .exchange-rate-main-box h1 {
+    text-align: center;
+  }
+}
+
 .calculatorGetLoan {
   padding: 30px 0;
   border-bottom: 1.5px solid #E1E1E1;
@@ -1076,12 +1404,18 @@ main .mainText .learnMore:hover {
 }
 
 .calculatorGetLoan .loanEasy {
-  margin-right: 108px;
+  margin-right: 73px;
   padding: 30px 0;
   font-size: 18px;
   color: #707070;
   font-family: mtavrulibold;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+  .calculatorGetLoan .loanEasy {
+    font-size: 12px;
+  }
 }
 
 .calculatorGetLoan .loanEasy:hover {
@@ -1095,6 +1429,12 @@ main .mainText .learnMore:hover {
   font-family: mtavrulibold;
   color: #707070;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+  .calculatorGetLoan .anuiteti {
+    font-size: 12px;
+  }
 }
 
 .calculatorGetLoan .anuiteti:hover {
@@ -1141,6 +1481,20 @@ main .mainText .learnMore:hover {
   bottom: -10px;
 }
 
+@media only screen and (max-width: 550px) {
+  .getLoanDate .attention {
+    right: 22%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .getLoanDate .attention {
+    width: 188px;
+    font-size: 12px;
+    right: 12%;
+  }
+}
+
 .getLoanDate .attention::before {
   content: '';
   border-width: 10px;
@@ -1157,6 +1511,13 @@ main .mainText .learnMore:hover {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+@media only screen and (max-width: 550px) {
+  .getLoanDate input:nth-child(2) {
+    font-size: 13px;
+    width: 120px;
+  }
 }
 
 .toCalculate {
@@ -1185,6 +1546,13 @@ main .mainText .learnMore:hover {
   transition: 0.5s ease;
 }
 
+@media only screen and (max-width: 550px) {
+  .toCalculate :first-child {
+    padding: 13px 52px;
+    font-size: 12px;
+  }
+}
+
 .toCalculate :first-child:hover {
   background: #C13E34;
   -webkit-transition: 0.5s ease;
@@ -1201,11 +1569,30 @@ main .mainText .learnMore:hover {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 550px) {
+  .toCalculate :nth-child(2) {
+    font-size: 17px;
+    padding: 11px 22px 10px 22px;
+  }
+}
+
 .exchangeRate {
   background: #F4F4F4;
   border-radius: 10px;
   margin-bottom: 50px;
   margin-top: 30px;
+}
+
+.exchangeRate .exchange-rate-line-img {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .exchangeRate .nationalBankBox {
@@ -1222,10 +1609,23 @@ main .mainText .learnMore:hover {
   padding-top: 31px;
 }
 
+@media only screen and (max-width: 550px) {
+  .exchangeRate .nationalBankBox img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .exchangeRate .nationalBankBox span {
   font-size: 17px;
   font-family: roboto;
   color: #454A4A;
+}
+
+@media only screen and (max-width: 550px) {
+  .exchangeRate .nationalBankBox span {
+    font-size: 12px;
+  }
 }
 
 .exchangeRate .currentExchangeRateBox {
@@ -1243,6 +1643,16 @@ main .mainText .learnMore:hover {
   font-family: mtavrulibold;
 }
 
+@media only screen and (max-width: 550px) {
+  .exchangeRate .currentExchangeRateBox .exchangeAction span {
+    font-size: 12px;
+  }
+}
+
+.exchangeRate .currentExchangeRateBox .exchangeAction .exchange-rate-buy-text {
+  margin-right: 27px;
+}
+
 .exchangeRate .currentExchangeRateBox .euro {
   margin: 30px 0;
 }
@@ -1251,19 +1661,31 @@ main .mainText .learnMore:hover {
   margin-right: 16px;
 }
 
+@media only screen and (max-width: 550px) {
+  .exchangeRate .currentExchangeRateBox .euro img, .exchangeRate .currentExchangeRateBox .dollar img, .exchangeRate .currentExchangeRateBox .gbp img {
+    height: 20px;
+    width: 20px;
+  }
+}
+
 .exchangeRate .currentExchangeRateBox .euro span, .exchangeRate .currentExchangeRateBox .dollar span, .exchangeRate .currentExchangeRateBox .gbp span {
   font-size: 18px;
   color: #454A4A;
   font-family: mtavrulibold;
 }
 
+@media only screen and (max-width: 550px) {
+  .exchangeRate .currentExchangeRateBox .euro span, .exchangeRate .currentExchangeRateBox .dollar span, .exchangeRate .currentExchangeRateBox .gbp span {
+    font-size: 12px;
+  }
+}
+
 .exchangeRate .currentExchangeRateBox div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1276,6 +1698,14 @@ main .mainText .learnMore:hover {
   border-radius: 5px;
   font-size: 18px;
   font-family: mtavrulibold;
+  margin-right: 12px;
+}
+
+@media only screen and (max-width: 550px) {
+  .exchangeRate .currentExchangeRateBox .sellMoney {
+    font-size: 11px;
+    padding: 5px 13px 7px 13px;
+  }
 }
 
 .exchangeRate .currentExchangeRateBox .buyMoney {
@@ -1285,6 +1715,13 @@ main .mainText .learnMore:hover {
   border-radius: 5px;
   font-size: 18px;
   font-family: mtavrulibold;
+}
+
+@media only screen and (max-width: 550px) {
+  .exchangeRate .currentExchangeRateBox .buyMoney {
+    font-size: 11px;
+    padding: 5px 13px 7px 13px;
+  }
 }
 
 .get-loan-type-active {
@@ -1309,9 +1746,21 @@ main .mainText .learnMore:hover {
   margin-top: 108px;
 }
 
+@media only screen and (max-width: 450px) {
+  .howGetLoan {
+    margin-top: 20px;
+  }
+}
+
 .howGetLoan h1 {
   font-size: 32px;
   font-family: mtavrulibold;
+}
+
+@media only screen and (max-width: 450px) {
+  .howGetLoan h1 {
+    font-size: 16px;
+  }
 }
 
 .howGetLoan .arrowBox {
@@ -1323,6 +1772,17 @@ main .mainText .learnMore:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+}
+
+.howGetLoan .arrowBox img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 450px) {
+  .howGetLoan .arrowBox img {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .howGetLoan .sectioArrowred {
@@ -1341,13 +1801,36 @@ main .mainText .learnMore:hover {
   margin-top: 70px;
 }
 
+@media only screen and (max-width: 1100px) {
+  .howGetLoanContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .howGetLoanContent {
+    margin-top: 21px;
+  }
+}
+
 .howGetLoanBoxImg {
   width: 45%;
+}
+
+@media only screen and (max-width: 1100px) {
+  .howGetLoanBoxImg {
+    width: 100%;
+  }
 }
 
 .howGetLoanBoxImg img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .getLoanMethodBox {
@@ -1362,6 +1845,38 @@ main .mainText .learnMore:hover {
       justify-content: space-around;
   margin-left: 80px;
   width: 50%;
+  padding: 0 24px 0 0;
+}
+
+@media only screen and (max-width: 1500px) {
+  .getLoanMethodBox {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  .getLoanMethodBox {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 1170px) and (max-width: 800px) {
+  .getLoanMethodBox {
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .getLoanMethodBox {
+    padding: 0 24px;
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .getLoanMethodBox {
+    width: 100%;
+  }
 }
 
 .getLoanMethodBox .getLoanMethod {
@@ -1373,6 +1888,18 @@ main .mainText .learnMore:hover {
           align-items: flex-start;
   width: 744px;
   height: 124px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .getLoanMethodBox .getLoanMethod {
+    margin-bottom: 24px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .getLoanMethodBox .getLoanMethod {
+    width: 100%;
+  }
 }
 
 .getLoanMethodBox .getLoanMethod div {
@@ -1390,6 +1917,14 @@ main .mainText .learnMore:hover {
   margin-left: 46px;
 }
 
+@media only screen and (max-width: 1100px) {
+  .getLoanMethodBox .getLoanMethod div {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .getLoanMethodBox .getLoanMethod div h3 {
   margin-bottom: 16px;
   font-size: 20px;
@@ -1397,10 +1932,22 @@ main .mainText .learnMore:hover {
   color: #454A4A;
 }
 
+@media only screen and (max-width: 800px) {
+  .getLoanMethodBox .getLoanMethod div h3 {
+    font-size: 13px;
+  }
+}
+
 .getLoanMethodBox .getLoanMethod div p {
   font-size: 16px;
   font-family: roboto;
   color: #454A4A;
+}
+
+@media only screen and (max-width: 800px) {
+  .getLoanMethodBox .getLoanMethod div p {
+    font-size: 11px;
+  }
 }
 
 .getLoanMethodBox .getLoanMethod img {
@@ -1412,9 +1959,22 @@ main .mainText .learnMore:hover {
           align-items: flex-start;
 }
 
+@media only screen and (max-width: 800px) {
+  .getLoanMethodBox .getLoanMethod img {
+    width: 42px;
+    height: 42px;
+  }
+}
+
 footer {
   background: #F2F2F2;
   margin-top: 115px;
+}
+
+@media only screen and (max-width: 800px) {
+  footer {
+    margin-top: 50px;
+  }
 }
 
 .footerContent {
@@ -1428,6 +1988,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   height: 110px;
+  padding: 0 24px;
 }
 
 .footerContent .footerbox1 {
@@ -1438,6 +1999,13 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media only screen and (max-width: 450px) {
+  .footerContent .footerbox1 img {
+    width: 130px;
+    height: 27px;
+  }
 }
 
 .footerContent .footerbox1 .footelLogobox {
@@ -1463,6 +2031,18 @@ footer {
 
 .footerContent .footerNavigation {
   width: 719px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .footerContent .footerNavigation {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .footerContent .footerNavigation {
+    display: none;
+  }
 }
 
 .footerContent .footerNavigation ul {
@@ -1495,6 +2075,12 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media only screen and (max-width: 1180px) {
+  .footerContent .footerSocialLogo {
+    display: none;
+  }
 }
 
 .footerContent .footerSocialLogo .footerFb, .footerContent .footerSocialLogo .footerYoutube {
@@ -1536,6 +2122,12 @@ footer {
   color: #1D1D1D;
 }
 
+@media only screen and (max-width: 450px) {
+  .create-by {
+    font-size: 10px;
+  }
+}
+
 .smart-web-text {
   color: #8C3264;
   font-family: mtavrulibold;
@@ -1561,19 +2153,52 @@ footer {
   font-size: 15px;
 }
 
+@media only screen and (max-width: 450px) {
+  .right-protection-text {
+    font-size: 12px;
+  }
+}
+
 .aboutas-box {
   min-height: calc(100vh - 563px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 70px;
-  width: 90%;
+  width: 100%;
+  padding: 0 24px;
+}
+
+@media only screen and (max-width: 1230px) {
+  .aboutas-box {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 1230px) {
+  .aboutas-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .aboutas-img img {
-  width: 700px;
+  width: 880px;
+  height: 410;
   float: left;
   margin-right: 70px;
+  margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .aboutas-img img {
+    width: 100%;
+  }
 }
 
 .aboutas-text-box {
@@ -1581,10 +2206,26 @@ footer {
 }
 
 .about-as-h1 {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
   font-size: 48px;
   margin-bottom: 24px;
   font-family: mtavrulibold;
   color: #102943;
+}
+
+@media only screen and (max-width: 1000px) {
+  .about-as-h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .about-as-h1 {
+    font-size: 16px;
+  }
 }
 
 .about-as-text {
@@ -1592,10 +2233,23 @@ footer {
   color: #454A4A;
 }
 
+@media only screen and (max-width: 550px) {
+  .about-as-text {
+    font-size: 12px;
+  }
+}
+
 .news-box {
   min-height: calc(100vh - 513px);
   width: 100%;
   margin-top: 70px;
+  padding: 0 24px;
+}
+
+@media only screen and (max-width: 550px) {
+  .news-box {
+    margin-top: 30px;
+  }
 }
 
 .news-grid-box {
@@ -1606,10 +2260,50 @@ footer {
   grid-gap: 72px 16px;
 }
 
+@media only screen and (max-width: 1600px) {
+  .news-grid-box {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .news-grid-box {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .news-grid-box {
+    grid-gap: 30px 16px;
+  }
+}
+
 .news-grid-box div {
   width: 496px;
   position: relative;
   grid-column-gap: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .news-grid-box div {
+    width: 85vw;
+  }
+}
+
+.news-car-img-box {
+  width: 200px;
+}
+
+.news-car-img-box img {
+  width: 100%;
 }
 
 .news-see-more-button {
@@ -1636,6 +2330,12 @@ footer {
   border: 1px solid #D1D1D1;
 }
 
+@media only screen and (max-width: 600px) {
+  .news-see-more-button {
+    display: none;
+  }
+}
+
 .news-see-more-button:hover {
   background: #fff;
   color: #17C593;
@@ -1650,9 +2350,21 @@ footer {
   margin-bottom: 14px;
 }
 
+@media only screen and (max-width: 600px) {
+  .news-title {
+    font-size: 12px;
+  }
+}
+
 .news-text {
   font-size: 16px;
   color: #454A4A;
+}
+
+@media only screen and (max-width: 600px) {
+  .news-text {
+    display: none;
+  }
 }
 
 .news-text-box {
@@ -1662,6 +2374,12 @@ footer {
   border-bottom-right-radius: 10px;
   position: relative;
   bottom: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .news-text-box {
+    padding: 10px;
+  }
 }
 
 .news-pagenation-box {
@@ -1675,6 +2393,12 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 114px;
+}
+
+@media only screen and (max-width: 500px) {
+  .news-pagenation-box {
+    margin-top: 34px;
+  }
 }
 
 .pagenation-text {
@@ -1698,6 +2422,14 @@ footer {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 500px) {
+  .pagenation-text {
+    height: 32px;
+    width: 32px;
+    margin: 0px 1px;
+  }
+}
+
 .pagenation-text:hover {
   background: #E2574C;
   color: #fff;
@@ -1710,24 +2442,66 @@ footer {
   color: #fff;
 }
 
-.fa-angle-double-right, .fa-angle-double-left {
-  margin: 0 20px;
+.fa-angle-double-right {
+  margin-left: 20px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  .fa-angle-double-right {
+    margin-left: 10px;
+  }
+}
+
+.fa-angle-double-left {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  .fa-angle-double-left {
+    margin-right: 10px;
+  }
 }
 
 .news2-box {
   min-height: calc(100vh - 513px);
   margin-top: 100px;
+  padding: 0 24px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .news2-box {
+    margin-top: 20px;
+  }
 }
 
 .news2-content-box {
   margin-top: 52px;
 }
 
+@media only screen and (max-width: 550px) {
+  .news2-content-box {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .news2-content-box p {
+    font-size: 12px;
+  }
+}
+
 .news2-h1 {
   font-size: 40px;
   color: #353D48;
   font-family: mtavrulibold;
+}
+
+@media only screen and (max-width: 870px) {
+  .news2-h1 {
+    font-size: 20px;
+  }
 }
 
 .news2-img {
@@ -1737,9 +2511,28 @@ footer {
   width: 793px;
 }
 
+@media only screen and (max-width: 870px) {
+  .news2-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .news2-img {
+    margin-bottom: 20px;
+  }
+}
+
 .contact-box {
   min-height: calc(100vh - 513px);
   margin-top: 68px;
+  padding: 0 24px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact-box {
+    margin-top: 30px;
+  }
 }
 
 .contact-page-title {
@@ -1749,6 +2542,18 @@ footer {
   margin-bottom: 32px;
 }
 
+@media only screen and (max-width: 800px) {
+  .contact-page-title {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-page-title {
+    font-size: 16px;
+  }
+}
+
 .contact-form-and-map-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1756,6 +2561,15 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-form-and-map-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .form-description-box {
@@ -1788,6 +2602,13 @@ footer {
   transition: 0.2s ease;
 }
 
+@media only screen and (max-width: 500px) {
+  .form-description {
+    font-size: 12px;
+    height: 40px;
+  }
+}
+
 .form-description:hover {
   color: #fff;
   background: #57697B;
@@ -1804,8 +2625,21 @@ footer {
   width: 35%;
 }
 
+@media only screen and (max-width: 800px) {
+  .contact-form-box {
+    width: 100%;
+  }
+}
+
 .contact-map-address-box {
   width: 60%;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-map-address-box {
+    width: 100%;
+    margin-top: 30px;
+  }
 }
 
 .contact-input-box {
@@ -1821,7 +2655,14 @@ footer {
   border: 1.5px solid rgba(16, 41, 67, 0.7);
   padding-left: 24px;
   border-radius: 5px;
+  font-size: 14px;
   font-family: helvetica-bold;
+}
+
+@media only screen and (max-width: 500px) {
+  .contact-first-name, .contact-email {
+    font-size: 12px;
+  }
 }
 
 .contact-email {
@@ -1882,6 +2723,13 @@ footer {
   padding-left: 24px;
   border: none;
   font-family: helvetica-bold;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 500px) {
+  .contact-textarea {
+    font-size: 12px;
+  }
 }
 
 .contact-roboto-box {
@@ -1935,6 +2783,7 @@ footer {
   border: 1.5px solid rgba(16, 41, 67, 0.3);
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  padding: 0 5px;
 }
 
 .contact-pdf-box:hover {
@@ -1956,6 +2805,13 @@ footer {
   color: #1D1D1D;
   font-size: 14px;
   font-family: helvetica-bold;
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 500px) {
+  .contact-pdf-text {
+    font-size: 10px;
+  }
 }
 
 .fa-file-pdf {
@@ -1972,15 +2828,47 @@ footer {
   margin-bottom: 41px;
 }
 
+@media only screen and (max-width: 500px) {
+  .contact-address-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.contact-address-box a {
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .contact-address-box a {
+    margin-bottom: 10px;
+  }
+}
+
 .contact-address-title {
   font-size: 16px;
   font-family: helvetica-bold;
   color: #102943;
 }
 
+@media only screen and (max-width: 500px) {
+  .contact-address-title {
+    font-size: 12px;
+  }
+}
+
 .contact-address-p {
+  font-family: helvetica;
   font-size: 14px;
   color: #102943;
+}
+
+@media only screen and (max-width: 500px) {
+  .contact-address-p {
+    font-size: 10px;
+  }
 }
 
 .contact-map-box {
@@ -1996,10 +2884,32 @@ footer {
   margin-top: 75px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .loans-box {
+    margin-top: 30px;
+  }
+}
+
+.loans-box-content {
+  padding: 0 24px;
+}
+
 .loans-bottom-content-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media only screen and (max-width: 900px) {
+  .loans-bottom-content-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .loans-h1 {
@@ -2009,15 +2919,34 @@ footer {
   margin-bottom: 32px;
 }
 
+@media only screen and (max-width: 600px) {
+  .loans-h1 {
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
 .loans-img {
   height: 410px;
   width: 100%;
   margin-bottom: 32px;
 }
 
+@media only screen and (max-width: 600px) {
+  .loans-img {
+    height: 210px;
+  }
+}
+
 .loans-left-side-box {
   width: 58%;
   margin-right: 58px;
+}
+
+@media only screen and (max-width: 900px) {
+  .loans-left-side-box {
+    width: 100%;
+  }
 }
 
 .loans-left-side-h4 {
@@ -2028,10 +2957,22 @@ footer {
   margin-top: 20px;
 }
 
+@media only screen and (max-width: 600px) {
+  .loans-left-side-h4 {
+    font-size: 14px;
+  }
+}
+
 .loans-left-side-text, .loans-left-side-list {
   font-size: 16px;
   color: #454A4A;
   font-family: helvetica;
+}
+
+@media only screen and (max-width: 600px) {
+  .loans-left-side-text, .loans-left-side-list {
+    font-size: 12px;
+  }
 }
 
 .loans-right-side-box {
@@ -2048,11 +2989,24 @@ footer {
           align-items: center;
 }
 
+@media only screen and (max-width: 900px) {
+  .loans-right-side-box {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
 .loans-right-side-h2 {
   font-size: 20px;
   color: #102943;
   font-family: mtavrulibold;
   margin-bottom: 32px;
+}
+
+@media only screen and (max-width: 600px) {
+  .loans-right-side-h2 {
+    font-size: 14px;
+  }
 }
 
 .loans-right-side-small-box {
@@ -2069,6 +3023,7 @@ footer {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-bottom: 20px;
+  padding: 0 5px;
 }
 
 .loans-right-side-small-img-box {
@@ -2077,6 +3032,15 @@ footer {
 
 .loans-right-side-small-img {
   margin-top: 20px;
+  width: 32px;
+  height: 32px;
+}
+
+@media only screen and (max-width: 600px) {
+  .loans-right-side-small-img {
+    width: 21px;
+    height: 24px;
+  }
 }
 
 .loans-right-side-h5 {
@@ -2085,10 +3049,22 @@ footer {
   font-family: helvetica;
 }
 
+@media only screen and (max-width: 600px) {
+  .loans-right-side-h5 {
+    font-size: 14px;
+  }
+}
+
 .loans-right-side-p {
   font-size: 15px;
   color: #102943;
   font-family: helvetica;
+}
+
+@media only screen and (max-width: 600px) {
+  .loans-right-side-p {
+    font-size: 12px;
+  }
 }
 
 .fill-form-text-box {
@@ -2105,13 +3081,29 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.fill-form-text {
+  text-align: center;
   color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .fill-form-text {
+    font-size: 12px;
+  }
 }
 
 .fill-loan-form-img {
   height: 272px;
   width: 100%;
   position: relative;
+}
+
+@media only screen and (max-width: 1000px) {
+  .fill-loan-form-img {
+    display: none;
+  }
 }
 
 .fill-loan-form-img::before {
@@ -2127,6 +3119,7 @@ footer {
 
 .fill-loan-main-box {
   min-height: calc(100vh - 755px);
+  padding: 0 24px;
 }
 
 .fill-loan-title-h1 {
@@ -2170,6 +3163,12 @@ input[type='radio']:checked:after {
   margin-bottom: 80px;
 }
 
+@media only screen and (max-width: 600px) {
+  .fill-loan-box-content {
+    margin-bottom: 61px;
+  }
+}
+
 .fill-form-section-title-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2187,6 +3186,12 @@ input[type='radio']:checked:after {
   font-family: helvetica-normal;
 }
 
+@media only screen and (max-width: 666px) {
+  .fill-form-section-h2 {
+    font-size: 16px;
+  }
+}
+
 .fill-form-input-up-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2201,6 +3206,16 @@ input[type='radio']:checked:after {
   margin-top: 12px;
 }
 
+@media only screen and (max-width: 600px) {
+  .fill-form-input-up-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0px;
+  }
+}
+
 .fill-form-input-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2210,6 +3225,13 @@ input[type='radio']:checked:after {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 45%;
+}
+
+@media only screen and (max-width: 600px) {
+  .fill-form-input-box {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
 .fill-form-input {
@@ -2236,6 +3258,13 @@ input[type='radio']:checked:after {
   width: 45%;
 }
 
+@media only screen and (max-width: 600px) {
+  .fill-form-input-box-section-2 {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+
 .fill-form-input-up-box-right-side {
   display: none;
   -webkit-box-align: center;
@@ -2245,6 +3274,12 @@ input[type='radio']:checked:after {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-top: 53px;
+}
+
+@media only screen and (max-width: 600px) {
+  .fill-form-input-up-box-right-side {
+    margin-top: 0px;
+  }
 }
 
 .fill-form-radio-botton-left-side-box-mortgage {
@@ -2260,6 +3295,13 @@ input[type='radio']:checked:after {
 
 .fill-form-section-big-box {
   width: 45%;
+}
+
+@media only screen and (max-width: 600px) {
+  .fill-form-section-big-box {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
 .fill-form-select-main-box {
@@ -2365,6 +3407,14 @@ input[type='radio']:checked:after {
   margin-bottom: 72px;
 }
 
+@media only screen and (max-width: 600px) {
+  .fill-form-roboto-box {
+    margin-top: 126px;
+    margin-bottom: 10px;
+    height: 60px;
+  }
+}
+
 .fill-form-roboto {
   width: 529px;
   height: 100%;
@@ -2379,6 +3429,10 @@ input[type='radio']:checked:after {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 5px;
+}
+
+.fill-form-roboto img {
+  height: 100%;
 }
 
 .send-form-box {
@@ -2422,8 +3476,14 @@ input[type='radio']:checked:after {
   margin-top: 53px;
 }
 
+@media only screen and (max-width: 600px) {
+  .fill-form-input-up-box-left-side {
+    margin-top: 0px;
+  }
+}
+
 .fill-form-textarea-box {
-  margin-top: 102px;
+  margin-top: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

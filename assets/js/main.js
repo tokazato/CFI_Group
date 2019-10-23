@@ -1,7 +1,9 @@
 $(document).ready(function(){
     $('.openHeaderDropDown').click(function(){
-         $(this).find('.dropDownContent').slideToggle('slow');
-         $(this).find('.loansArrow').toggleClass('loansArrow-active');
+        if(window.matchMedia('(max-width: 1000px)').matches){
+            $(this).find('.dropDownContent').slideToggle('slow');
+            $(this).find('.loansArrow').toggleClass('loansArrow-active');
+        }
         });
     
     $('.burger').click(function(){
@@ -53,6 +55,18 @@ $(document).ready(function(){
     } 
     today = yyyy+'-'+mm+'-'+dd;
     $('#txtDate').attr('min', today);
+
+    var sliderLength = $('.swiper-slide').length;
+    $('.wholeImgNumber').text('/ ' + sliderLength);
+
+    for(let i = 1; i <= sliderLength; i++){
+        var li = $(`<li>${i}</li>`);
+        if(i < 10){
+            li = $(`<li>${'0' + i}</li>`);
+        }
+        $('#indexCounter').append(li);
+    }
+        
 })
 
 var startToCalculate = document.getElementById('startToCalculate')
