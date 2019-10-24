@@ -119,11 +119,11 @@
         <div class="container">
             <div class="easy-calculator-box">
                 <div class="easy-calculator-content">
-                    <h1 class="easy-calculator-content-h1">სესხის კალკულატორი</h1>
-                    <p class="easy-calculator-first-box-title">შეყვანილი მონაცემები</p>
+                    <h1 class="easy-calculator-content-h1 annuity-calculator-content-h1">სესხის კალკულატორი</h1>
                     <div class="easy-calculator-first-section">
                         <div class="annuity-box">
                             <div class="annuity-calculator-left-box">
+                                <p class="annuity-box-title">შეყვანილი მონაცემები</p>
                                 <div class="grid-1">
                                     <p>სესხის თანხა</p>
                                     <p>22.00</p>
@@ -207,7 +207,109 @@
                             </div>
                         </div>
                     </div>
-                    <table class="loan-calculator-table" >
+                    <div class="easy-calc-slider-box">
+                            <div>
+                                <div class="easy-calc-swiper-box-header">
+                                    <p class="easy-calculator-first-box-title-2">შეყვანილი მონაცემები</p>
+                                    <div class="easy-calc-swiper-arrow-box">
+                                            <!-- Add Arrows -->
+                                        <i class="fas fa-chevron-left easy-calc-swiper-go-left"></i>
+                                        <i class="fas fa-chevron-right easy-calc-swiper-go-right"></i>
+                                    </div>
+                                </div>
+                            <div class="easy-calc-swiper-box">
+                                    <!-- Swiper -->
+                                <div class="swiper-container easy-swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide swiper-content-box">
+                                            <div class="grid-1">
+                                                <p>სესხის თანხა</p>
+                                                <p>22.00</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-content-box">
+                                            <div class="grid-2">
+                                                <p>თვიური საპროცენტო განაკვეთი</p>
+                                                <p>0.08</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-content-box">
+                                            <div class="grid-3">
+                                                <p>სესხის პერიოდი თვეებში</p>
+                                                <p>12</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-content-box">
+                                            <div class="grid-4">
+                                                <p>მთლიანი %</p>
+                                                <p>0.12</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-content-box">
+                                            <div class="grid-5">
+                                                <p>სესხის დაბრუნების დღე</p>
+                                                <p>17.09.2020</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="easy-calc-slider-box">
+                        <div>
+                            <div class="easy-calc-swiper-box-header">
+                                <p class="easy-calculator-first-box-title-2">სესხის მახასიათებლები</p>
+                                <div class="easy-calc-swiper-arrow-box">
+                                        <!-- Add Arrows -->
+                                    <i class="fas fa-chevron-left annuity-calc-swiper-go-left"></i>
+                                    <i class="fas fa-chevron-right annuity-calc-swiper-go-right"></i>
+                                </div>
+                            </div>
+                            <div class="easy-calc-swiper-box">
+                                    <!-- Swiper -->
+                                <div class="swiper-container annuity-swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide swiper-content-box">
+                                            <div class="grid-1">
+                                                <p>პერიოდული გადასახადი</p>
+                                                <p>1.84</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-content-box">
+                                            <div class="grid-2">
+                                                <p>პერიოდული გადასახადების რაოდენობა</p>
+                                                <p>0.08</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-content-box">
+                                            <div class="grid-3">
+                                                <p>სესხის პერიოდი თვეებში</p>
+                                                <p>12</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-content-box">
+                                            <div class="grid-4">
+                                                <p>სესხის გაცემის დღე</p>
+                                                <p>17.09.2019</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-content-box">
+                                            <div class="grid-5">
+                                                <p>სესხის დაბრუნების დღე</p>
+                                                <p>17.09.2020</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <table class="loan-calculator-table loan-calculator-table-desctop" >
                         <tr>
                             <th class="annuity-calculator-1-th">
                                 <a href="#!">
@@ -266,6 +368,7 @@
                             <td class="td-payment-money">0.02</td>
                             <td class="td-payment-money">0.02</td>
                         </tr>
+                        <tr class="tr-space"></tr>
                         <tr class="loan-calculator-1-tbody-section">
                             <td class="td-main-counter-box">
                                 <div class="td-counter-box">
@@ -280,6 +383,7 @@
                             <td class="td-payment-money">0.02</td>
                             <td class="td-payment-money">0.02</td>
                         </tr>
+                        <tr class="tr-space"></tr>
                         <tr class="loan-calculator-1-tbody-section">
                             <td class="td-main-counter-box">
                                 <div class="td-counter-box">
@@ -294,6 +398,7 @@
                             <td class="td-payment-money">0.02</td>
                             <td class="td-payment-money">0.02</td>
                         </tr>
+                        <tr class="tr-space"></tr>
                         <tr class="loan-calculator-1-tbody-section">
                             <td class="td-main-counter-box">
                                 <div class="td-counter-box">
@@ -308,6 +413,7 @@
                             <td class="td-payment-money">0.02</td>
                             <td class="td-payment-money">0.02</td>
                         </tr>
+                        <tr class="tr-space"></tr>
                         <tr class="loan-calculator-1-tbody-section">
                             <td class="td-main-counter-box">
                                 <div class="td-counter-box">
@@ -322,6 +428,7 @@
                             <td class="td-payment-money">0.02</td>
                             <td class="td-payment-money">0.02</td>
                         </tr>
+                        <tr class="tr-space"></tr>
                         <tr class="loan-calculator-1-tbody-section">
                             <td class="td-main-counter-box">
                                 <div class="td-counter-box">
@@ -336,7 +443,386 @@
                             <td class="td-payment-money">0.02</td>
                             <td class="td-payment-money">0.02</td>
                         </tr>
+                        <tr class="tr-space"></tr>
                     </table>
+                    
+                    <div class="table-slider-box">
+                        <div>
+                                  <!-- Swiper -->
+                            <div class="swiper-container annuity-swiper-slider-table">
+                                <div  class="swiper-pagination anuuity-pagenation-1"></div>
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <table class="loan-calculator-table" >
+                                        <tr>
+                                            <th class="loan-calculator-1-th">
+                                                <a href="#!">
+                                                    <img src="assets/media/img/export.png" alt="">
+                                                </a>
+                                            </th>
+                                            <th class="loan-calculator-2-th">
+                                                გადახდის დღე
+                                            </th>
+                                            <th class="loan-calculator-3-th">
+                                                საწყისი ბალანსი
+                                            </th>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">1</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">2</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">3</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">4</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">5</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">6</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">7</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                    </table>
+                                </div>
+                                <div class="swiper-slide">
+                                    <table class="loan-calculator-table" >
+                                        <tr>
+                                            <th class="loan-calculator-1-th">
+                                                <a href="#!">
+                                                    <img src="assets/media/img/export.png" alt="">
+                                                </a>
+                                            </th>
+                                            <th class="loan-calculator-2-th">
+                                                ყოველთვიური გადასახადი
+                                            </th>
+                                            <th class="loan-calculator-3-th">
+                                                ძირი
+                                            </th>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">1</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">2</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">3</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">4</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">5</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">6</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">7</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                    </table>
+                                </div>
+                                <div class="swiper-slide">
+                                    <table class="loan-calculator-table" >
+                                        <tr>
+                                            <th class="loan-calculator-1-th">
+                                                <a href="#!">
+                                                    <img src="assets/media/img/export.png" alt="">
+                                                </a>
+                                            </th>
+                                            <th class="loan-calculator-2-th">
+                                                პროცენტი	
+                                            </th>
+                                            <th class="loan-calculator-3-th">
+                                                საბოლოო   ბალანსი
+                                            </th>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">1</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">2</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">3</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">4</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">5</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">6</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                        <tr class="loan-calculator-1-tbody-section">
+                                            <td class="td-main-counter-box">
+                                                <div class="td-counter-box">
+                                                    <p class="td-counter">7</p>
+                                                </div>
+                                            </td>
+                                            <td class="td-payment-day">17.10.2019</td>
+                                            <td class="td-payment-money">0.02</td>
+                                        </tr>
+                                        <tr class="tr-space"></tr>
+                                    </table>
+                                </div>
+                                <div class="swiper-slide">
+                                        <table class="loan-calculator-table" >
+                                            <tr>
+                                                <th class="loan-calculator-1-th">
+                                                    <a href="#!">
+                                                        <img src="assets/media/img/export.png" alt="">
+                                                    </a>
+                                                </th>
+                                                <th class="loan-calculator-2-th">
+                                                    კუმულატიური პროცენტი
+                                                </th>
+                                            </tr>
+                                            <tr class="tr-space"></tr>
+                                            <tr class="tr-space"></tr>
+                                            <tr class="tr-space"></tr>
+                                            <tr class="tr-space"></tr>
+                                            <tr class="tr-space"></tr>
+                                            <tr class="tr-space"></tr>
+                                            <tr class="tr-space"></tr>
+                                            <tr class="loan-calculator-1-tbody-section">
+                                                <td class="td-main-counter-box">
+                                                    <div class="td-counter-box">
+                                                        <p class="td-counter">1</p>
+                                                    </div>
+                                                </td>
+                                                <td class="td-payment-day">17.10.2019</td>
+                                            </tr>
+                                            <tr class="tr-space"></tr>
+                                            <tr class="loan-calculator-1-tbody-section">
+                                                <td class="td-main-counter-box">
+                                                    <div class="td-counter-box">
+                                                        <p class="td-counter">2</p>
+                                                    </div>
+                                                </td>
+                                                <td class="td-payment-day">17.10.2019</td>
+                                            </tr>
+                                            <tr class="tr-space"></tr>
+                                            <tr class="loan-calculator-1-tbody-section">
+                                                <td class="td-main-counter-box">
+                                                    <div class="td-counter-box">
+                                                        <p class="td-counter">3</p>
+                                                    </div>
+                                                </td>
+                                                <td class="td-payment-day">17.10.2019</td>
+                                            </tr>
+                                            <tr class="tr-space"></tr>
+                                            <tr class="loan-calculator-1-tbody-section">
+                                                <td class="td-main-counter-box">
+                                                    <div class="td-counter-box">
+                                                        <p class="td-counter">4</p>
+                                                    </div>
+                                                </td>
+                                                <td class="td-payment-day">17.10.2019</td>
+                                            </tr>
+                                            <tr class="tr-space"></tr>
+                                            <tr class="loan-calculator-1-tbody-section">
+                                                <td class="td-main-counter-box">
+                                                    <div class="td-counter-box">
+                                                        <p class="td-counter">5</p>
+                                                    </div>
+                                                </td>
+                                                <td class="td-payment-day">17.10.2019</td>
+                                            </tr>
+                                            <tr class="tr-space"></tr>
+                                            <tr class="loan-calculator-1-tbody-section">
+                                                <td class="td-main-counter-box">
+                                                    <div class="td-counter-box">
+                                                        <p class="td-counter">6</p>
+                                                    </div>
+                                                </td>
+                                                <td class="td-payment-day">17.10.2019</td>
+                                            </tr>
+                                            <tr class="tr-space"></tr>
+                                            <tr class="loan-calculator-1-tbody-section">
+                                                <td class="td-main-counter-box">
+                                                    <div class="td-counter-box">
+                                                        <p class="td-counter">7</p>
+                                                    </div>
+                                                </td>
+                                                <td class="td-payment-day">17.10.2019</td>
+                                            </tr>
+                                            <tr class="tr-space"></tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination anuuity-pagenation"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -382,7 +868,9 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
     <script src="assets/js/swiper.min.js"></script>
-    <script src="assets/js/intSlider.js"></script>
+    <script src="assets/js/int.easy-calc.js"></script>
+    <script src="assets/js/int.annuity.js"></script>
+    <script src="assets/js/int.annuity.table.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

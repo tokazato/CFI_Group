@@ -371,6 +371,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .headerLanguageBox {
+    left: 15px;
+  }
+}
+
 .headerLanguageContent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -969,6 +975,20 @@ main .mainText .learnMore:hover {
   padding: 7px;
   outline: none;
   margin-right: 15px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .swiper-pagination span {
+    padding: 5px;
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .swiper-pagination span {
+    padding: 5px;
+    margin-right: 7px;
+  }
 }
 
 .mainFooter {
@@ -2876,6 +2896,12 @@ footer {
   height: 550px;
 }
 
+@media only screen and (max-width: 500px) {
+  .contact-map-box {
+    height: 240px;
+  }
+}
+
 .contact-footer {
   margin-top: 10px;
 }
@@ -3505,8 +3531,26 @@ input[type='radio']:checked:after {
   padding-top: 20px;
 }
 
+.easy-calc-slider-box {
+  margin-bottom: 30px;
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  .easy-calc-slider-box {
+    display: block;
+  }
+}
+
 .easy-calculator-content {
   margin-top: 70px;
+  padding: 0 24px;
+}
+
+@media only screen and (max-width: 750px) {
+  .easy-calculator-content {
+    margin-top: 30px;
+  }
 }
 
 .easy-calculator-content-h1 {
@@ -3516,11 +3560,37 @@ input[type='radio']:checked:after {
   margin-bottom: 50px;
 }
 
+@media only screen and (max-width: 750px) {
+  .easy-calculator-content-h1 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 22px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .easy-calculator-content-h1 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .annuity-calculator-content-h1 {
+    margin-bottom: 100px;
+  }
+}
+
 .easy-calculator-first-box-title {
   font-size: 18px;
   color: #102943;
   font-family: helvetica-bold;
   margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 750px) {
+  .easy-calculator-first-box-title {
+    display: none;
+  }
 }
 
 .easy-calculator-first-section {
@@ -3533,6 +3603,32 @@ input[type='radio']:checked:after {
   margin-bottom: 100px;
 }
 
+@media only screen and (max-width: 750px) {
+  .easy-calculator-first-section {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .easy-calculator-first-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.easy-calc-swiper-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% + 24px);
+}
+
+.easy-calc-swiper-arrow-box {
+  margin-bottom: 30px;
+}
+
 .loan-calculator-left-box {
   width: 63%;
   display: -ms-grid;
@@ -3540,6 +3636,20 @@ input[type='radio']:checked:after {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   grid-gap: 22px;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+  .loan-calculator-left-box {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .loan-calculator-left-box {
+    margin-top: 50px;
+    width: 100%;
+  }
 }
 
 .loan-calculator-left-box div {
@@ -3558,18 +3668,110 @@ input[type='radio']:checked:after {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 5px;
+  padding: 19px 0 21px 0;
 }
 
 .loan-calculator-left-box div :first-child {
   font-size: 15px;
   font-family: helvetica-normal;
   color: #102943;
+  text-align: center;
 }
 
 .loan-calculator-left-box div :nth-child(2) {
   font-size: 20px;
   color: #3237CC;
   font-family: helvetica-bold;
+}
+
+.swiper-content-box {
+  background-color: #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  margin: 0 10px 0 0;
+  padding: 19px 46px 21px 42px;
+  text-align: center;
+}
+
+.swiper-content-box :first-child {
+  font-size: 15px;
+  font-family: helvetica-normal;
+  color: #102943;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .swiper-content-box :first-child {
+    font-size: 10px;
+  }
+}
+
+.swiper-content-box :nth-child(2) {
+  font-size: 20px;
+  color: #3237CC;
+  font-family: helvetica-bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .swiper-content-box :nth-child(2) {
+    font-size: 13px;
+  }
+}
+
+.easy-calculator-first-box-title-2 {
+  font-size: 18px;
+  color: #102943;
+  font-family: helvetica-bold;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 750px) {
+  .easy-calculator-first-box-title-2 {
+    font-size: 12px;
+    color: rgba(16, 41, 67, 0.6);
+  }
+}
+
+.easy-calc-swiper-box-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.easy-calc-swiper-go-right, .easy-calc-swiper-go-left {
+  cursor: pointer;
+  outline: none;
+}
+
+.easy-calc-swiper-go-left {
+  margin-right: 10px;
+}
+
+.annuity-calc-swiper-go-right, .annuity-calc-swiper-go-left {
+  cursor: pointer;
+  outline: none;
+}
+
+.annuity-calc-swiper-go-left {
+  margin-right: 10px;
 }
 
 .grid-3 {
@@ -3584,13 +3786,41 @@ input[type='radio']:checked:after {
 }
 
 .loan-calculator-table {
-  width: 100%;
+  width: 99%;
   text-align: center;
   border-collapse: collapse;
 }
 
+@media only screen and (max-width: 1000px) {
+  .loan-calculator-table-desctop {
+    display: none;
+  }
+}
+
+.table-slider-box {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .table-slider-box {
+    display: block;
+  }
+}
+
 .loan-calculator-1-th {
   width: 5%;
+}
+
+.loan-calculator-1-th img {
+  width: 117px;
+  height: 57px;
+}
+
+@media only screen and (max-width: 500px) {
+  .loan-calculator-1-th img {
+    width: 71px;
+    height: 42px;
+  }
 }
 
 .loan-calculator-2-th {
@@ -3600,11 +3830,23 @@ input[type='radio']:checked:after {
   font-family: helvetica-normal;
 }
 
+@media only screen and (max-width: 500px) {
+  .loan-calculator-2-th {
+    font-size: 12px;
+  }
+}
+
 .loan-calculator-3-th {
   width: 40%;
   font-size: 16px;
   color: #102943;
   font-family: helvetica-normal;
+}
+
+@media only screen and (max-width: 500px) {
+  .loan-calculator-3-th {
+    font-size: 12px;
+  }
 }
 
 .loan-calculator-1-tbody-section {
@@ -3648,10 +3890,24 @@ input[type='radio']:checked:after {
   border-radius: 50%;
 }
 
+@media only screen and (max-width: 500px) {
+  .td-counter {
+    height: 30px;
+    width: 30px;
+    font-size: 12px;
+  }
+}
+
 .td-payment-day, .td-payment-money {
   font-size: 18px;
   color: #102943;
   font-family: mtavruli;
+}
+
+@media only screen and (max-width: 500px) {
+  .td-payment-day, .td-payment-money {
+    font-size: 15px;
+  }
 }
 
 .annuity-box {
@@ -3659,6 +3915,19 @@ input[type='radio']:checked:after {
   display: -ms-flexbox;
   display: flex;
   width: 65%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .annuity-box {
+    margin-top: 100px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .annuity-box {
+    display: none;
+  }
 }
 
 .annuity-calculator-left-box {
@@ -3691,6 +3960,12 @@ input[type='radio']:checked:after {
   text-align: center;
 }
 
+@media only screen and (max-width: 1000px) {
+  .annuity-calculator-left-box div {
+    padding: 19px 5px 21px 5px;
+  }
+}
+
 .annuity-calculator-left-box div :first-child {
   font-size: 15px;
   font-family: helvetica-normal;
@@ -3706,7 +3981,7 @@ input[type='radio']:checked:after {
 .annuity-box-title {
   position: absolute;
   left: 0;
-  top: -66px;
+  top: -60px;
   font-size: 18px;
   color: #102943;
   font-family: helvetica-bold;
@@ -3723,5 +3998,16 @@ input[type='radio']:checked:after {
 
 .annuity-calculator-3-th {
   width: 5%;
+}
+
+.anuuity-pagenation span, .anuuity-pagenation-1 span {
+  background: #102943 !important;
+  margin: 0 10px !important;
+  width: 2px !important;
+}
+
+.anuuity-pagenation-1 span {
+  position: relative;
+  top: 100px;
 }
 /*# sourceMappingURL=style.css.map */

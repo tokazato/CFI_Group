@@ -252,6 +252,9 @@ body {
     @include responsive(1000px) {
         width: 80px;
     }
+    @include responsive(400px) {
+        left: 15px;
+    }
 }
     .headerLanguageContent {
         display: flex;
@@ -643,6 +646,14 @@ main {
     padding: 7px;
     outline: none;
     margin-right: 15px;
+    @include responsive(1000px) {
+        padding: 5px;
+        margin-right: 10px;
+    }
+    @include responsive(700px) {
+        padding: 5px;
+        margin-right: 7px;
+    }
 }
 .mainFooter {
     display: flex;
@@ -849,6 +860,9 @@ main {
     text-align: center;
     @include responsive(1400px) {
         margin: 0 auto;
+    }
+    @include responsive(1400px) {
+       
     }
     @include responsive(570px) {
         width: 100%;
@@ -1840,6 +1854,9 @@ footer {
 .contact-map-box {
     width: 100%;
     height: 550px;
+    @include responsive(500px) {
+        height: 240px;
+    }
 }
 .contact-footer {
     margin-top: 10px;
@@ -2252,25 +2269,65 @@ input[type='radio']:checked:after {
 }
 
 // easy calculator page 
+.easy-calc-slider-box {
+    margin-bottom: 30px;
+    display: none;
+    @include responsive(750px) {
+        display: block;
+    }
+}
 .easy-calculator-content {
     margin-top: 70px;
+    padding: 0 24px;
+    @include responsive(750px) {
+        margin-top: 30px;
+    }
 }
 .easy-calculator-content-h1 {
     font-size: 48px;
     color: #102943;
     font-family: mtavrulibold;
     margin-bottom: 50px;
+    @include responsive(750px) {
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 22px;
+    }
+    @include responsive(550px) {
+        font-size: 16px;
+    }
+}
+.annuity-calculator-content-h1 {
+    @include responsive-min(1000px) {
+        margin-bottom: 100px;
+    }
 }
 .easy-calculator-first-box-title {
     font-size: 18px;
     color: #102943;
     font-family: helvetica-bold;
     margin-bottom: 30px;
+    @include responsive(750px) {
+        display: none;
+    }
 }
 .easy-calculator-first-section {
     display: flex;
     justify-content: space-between;
     margin-bottom: 100px;
+    @include responsive(750px) {
+        margin-bottom: 30px;
+    }
+    @include responsive(1000px) {
+       flex-direction: column-reverse;
+    }
+}
+.easy-calc-swiper-box {
+    display: flex;
+    width: calc(100% + 24px);
+}
+.easy-calc-swiper-arrow-box {
+    margin-bottom: 30px;
 }
 
 .loan-calculator-left-box {
@@ -2278,6 +2335,14 @@ input[type='radio']:checked:after {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 22px;
+    margin-right: 10px;
+    @include responsive(750px) {
+        display: none;
+    }
+    @include responsive(1000px) {
+       margin-top: 50px;
+       width: 100%;
+    }
     div {
         background-color: #F2F2F2;
         display: flex;
@@ -2285,10 +2350,12 @@ input[type='radio']:checked:after {
         justify-content: center;
         align-items: center;
         border-radius: 5px;
+        padding: 19px 0 21px 0;
         :first-child {
             font-size: 15px;
             font-family: helvetica-normal;
             color: #102943;
+            text-align: center;
         }
         :nth-child(2){
            font-size: 20px; 
@@ -2297,6 +2364,64 @@ input[type='radio']:checked:after {
         }
     }
 }
+.swiper-content-box {
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 0 10px 0 0;
+    padding: 19px 46px 21px 42px;
+    text-align: center;
+        :first-child {
+            font-size: 15px;
+            font-family: helvetica-normal;
+            color: #102943;
+            text-align: center;
+            @include responsive(600px) {
+                font-size: 10px;
+            }
+        }
+        :nth-child(2){
+           font-size: 20px; 
+           color: #3237CC;
+           font-family: helvetica-bold;
+           @include responsive(600px) {
+                font-size: 13px; 
+           }
+        }
+}
+.easy-calculator-first-box-title-2 {
+    font-size: 18px;
+    color: #102943;
+    font-family: helvetica-bold;
+    margin-bottom: 30px;
+    @include responsive(750px) {
+        font-size: 12px;  
+        color: rgba(16, 41, 67, 0.6);
+    }
+}
+.easy-calc-swiper-box-header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+}
+.easy-calc-swiper-go-right, .easy-calc-swiper-go-left {
+    cursor: pointer;
+    outline: none;
+}
+.easy-calc-swiper-go-left {
+    margin-right: 10px;
+}
+.annuity-calc-swiper-go-right, .annuity-calc-swiper-go-left {
+    cursor: pointer;
+    outline: none;
+}
+.annuity-calc-swiper-go-left {
+    margin-right: 10px;
+}
+
 .grid-3 {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -2306,24 +2431,49 @@ input[type='radio']:checked:after {
     border-radius: 10px;
 }
 .loan-calculator-table {
-    width: 100%;
+    width: 99%;
     text-align: center;
     border-collapse: collapse;
 }
+.loan-calculator-table-desctop {
+    @include responsive(1000px) {
+        display: none;
+    }
+}
+.table-slider-box {
+    display: none;
+    @include responsive(1000px) {
+        display: block;
+    }
+}
 .loan-calculator-1-th {
     width: 5%;
+        img {
+            width: 117px;
+            height: 57px;
+            @include responsive(500px) {
+                width: 71px;
+                height: 42px;
+            }
+        }
 }
 .loan-calculator-2-th {
     width: 45%;
     font-size: 16px;
     color: #102943;
     font-family: helvetica-normal;
+    @include responsive(500px) {
+        font-size: 12px; 
+    }
 }
 .loan-calculator-3-th {
     width: 40%;
     font-size: 16px;
     color: #102943;
     font-family: helvetica-normal;
+    @include responsive(500px) {
+        font-size: 12px; 
+    }
 }
 .loan-calculator-1-tbody-section {
     height: 80px;
@@ -2349,17 +2499,32 @@ input[type='radio']:checked:after {
     width: 48px;
     background: rgba(31, 178, 111, 0.1);
     border-radius: 50%;
+    @include responsive(500px) {
+        height: 30px;
+        width: 30px;
+        font-size: 12px; 
+    }
 }
  .td-payment-day, .td-payment-money {
     font-size: 18px;  
     color: #102943;
     font-family: mtavruli;
+    @include responsive(500px) {
+        font-size: 15px;  
+    }
 }
 
 // annuity page 
 .annuity-box {
     display: flex;
     width: 65%;
+    @include responsive(1000px) {
+        margin-top: 100px;
+        width: 100%;
+    }
+    @include responsive(750px) {
+        display: none;
+    }
 }
 .annuity-calculator-left-box {
     width: 63%;
@@ -2376,6 +2541,9 @@ input[type='radio']:checked:after {
         align-items: center;
         border-radius: 5px;
         text-align: center;
+        @include responsive(1000px) {
+            padding: 19px 5px 21px 5px;
+        }
         :first-child {
             font-size: 15px;
             font-family: helvetica-normal;
@@ -2392,7 +2560,7 @@ input[type='radio']:checked:after {
 .annuity-box-title {
     position: absolute;
     left: 0;
-    top: -66px;
+    top: -60px;
     font-size: 18px;
     color: #102943;
     font-family: helvetica-bold;
@@ -2406,4 +2574,13 @@ input[type='radio']:checked:after {
 }
 .annuity-calculator-3-th {
     width: 5%;
+}
+.anuuity-pagenation span, .anuuity-pagenation-1 span {
+    background: #102943 !important;
+    margin: 0 10px !important;
+    width: 2px !important;
+}
+.anuuity-pagenation-1 span {
+    position: relative;
+    top: 100px;
 }

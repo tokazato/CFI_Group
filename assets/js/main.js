@@ -57,7 +57,11 @@ $(document).ready(function(){
     $('#txtDate').attr('min', today);
 
     var sliderLength = $('.swiper-slide').length;
-    $('.wholeImgNumber').text('/ ' + sliderLength);
+    if(sliderLength < 10){
+        $('.wholeImgNumber').text('/ 0' + sliderLength);
+    } else {
+        $('.wholeImgNumber').text('/ ' + sliderLength);
+    }
 
     for(let i = 1; i <= sliderLength; i++){
         var li = $(`<li>${i}</li>`);
