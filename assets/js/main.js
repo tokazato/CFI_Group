@@ -80,6 +80,12 @@ $(document).ready(function(){
         $('.form-description').removeClass('form-description-active');
         $(this).addClass('form-description-active');
     })
+
+    $('.popup-hide').on('click', function(){
+        $('.popup').hide();
+    })
+
+    
     
         
 })
