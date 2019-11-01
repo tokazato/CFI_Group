@@ -2011,6 +2011,12 @@ footer {
   padding: 0 24px;
 }
 
+@media only screen and (max-width: 550px) {
+  .footerContent {
+    height: 68px;
+  }
+}
+
 .footerContent .footerbox1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2156,6 +2162,12 @@ footer {
 .right-protection-box {
   height: 73px;
   background: #102943;
+}
+
+@media only screen and (max-width: 550px) {
+  .right-protection-box {
+    height: 40px;
+  }
 }
 
 .right-protection-text {
@@ -2379,6 +2391,7 @@ footer {
 .news-text {
   font-size: 16px;
   color: #454A4A;
+  margin-top: 14px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -2504,6 +2517,10 @@ footer {
   .news2-content-box {
     margin-top: 20px;
   }
+}
+
+.news2-content-box p {
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 550px) {
@@ -2677,6 +2694,7 @@ footer {
   border-radius: 5px;
   font-size: 14px;
   font-family: helvetica-bold;
+  color: #102943;
 }
 
 @media only screen and (max-width: 500px) {
@@ -2686,23 +2704,7 @@ footer {
 }
 
 .contact-email {
-  border: 1.5px solid #E2574C;
-}
-
-.contact-email::-webkit-input-placeholder {
-  color: #E2574C;
-}
-
-.contact-email:-ms-input-placeholder {
-  color: #E2574C;
-}
-
-.contact-email::-ms-input-placeholder {
-  color: #E2574C;
-}
-
-.contact-email::placeholder {
-  color: #E2574C;
+  border: 1.5px solid rgba(16, 41, 67, 0.7);
 }
 
 .contact-user-icon-box, .contact-email-icon-box {
@@ -2719,7 +2721,7 @@ footer {
 }
 
 .contact-email-icon-box {
-  background: #E2574C;
+  background: #57697B;
 }
 
 .fa-user, .fa-envelope {
@@ -2744,6 +2746,7 @@ footer {
   border: none;
   font-family: helvetica-bold;
   font-size: 14px;
+  color: #102943;
 }
 
 @media only screen and (max-width: 500px) {
@@ -2924,6 +2927,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media only screen and (max-width: 900px) {
@@ -2943,6 +2949,13 @@ footer {
   color: #353D48;
   font-family: mtavrulibold;
   margin-bottom: 32px;
+  margin-left: 9%;
+}
+
+@media only screen and (max-width: 900px) {
+  .loans-h1 {
+    margin-left: initial;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -3013,12 +3026,16 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  bottom: 60px;
 }
 
 @media only screen and (max-width: 900px) {
   .loans-right-side-box {
     width: 100%;
     margin-top: 40px;
+    position: static;
+    bottom: initial;
   }
 }
 
@@ -3107,6 +3124,16 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: helvetica-bold;
+}
+
+@media only screen and (max-width: 900px) {
+  .fill-form-text-box {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 40px;
+  }
 }
 
 .fill-form-text {
@@ -3150,7 +3177,7 @@ footer {
 
 .fill-loan-title-h1 {
   font-size: 30px;
-  color: #7D8183;
+  color: #353D48;
   font-family: mtavrulibold;
   text-align: center;
   margin-top: 47px;
@@ -3268,6 +3295,7 @@ input[type='radio']:checked:after {
   -webkit-box-shadow: none;
           box-shadow: none;
   padding-left: 41px;
+  font-size: 16px;
 }
 
 .fill-form-input-p {
@@ -3334,6 +3362,20 @@ input[type='radio']:checked:after {
   width: 100%;
   height: 60px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.fill-form-select-main-box:hover .fa-angle-down {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .fill-form-select-box {
@@ -3359,11 +3401,6 @@ input[type='radio']:checked:after {
   height: 180px;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
-}
-
-.fill-form-select-box:hover .fa-angle-down {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
 }
 
 .fill-form-select {
@@ -3403,18 +3440,7 @@ input[type='radio']:checked:after {
 
 .fa-angle-down {
   color: #A7A7A7;
-  display: none;
-}
-
-.fa-angle-down:hover {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-
-.fill-form-select-arrow-active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-right: 32px;
 }
 
 .fill-form-roboto-box {

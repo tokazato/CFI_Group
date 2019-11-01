@@ -1292,6 +1292,9 @@ footer {
     align-items: center;
     height: 110px;
     padding: 0 24px;
+    @include responsive(550px) {
+        height: 68px;
+     } 
     .footerbox1 {
         display: flex;
         flex-direction: column;
@@ -1383,6 +1386,9 @@ footer {
 .right-protection-box {
     height: 73px;
     background: #102943;
+    @include responsive(550px) {
+        height: 40px;
+     }
 }
 .right-protection-text {
     height: 100%;
@@ -1526,6 +1532,7 @@ footer {
 .news-text {
    font-size: 16px;
     color: #454A4A;
+    margin-top: 14px;
     @include responsive(600px) {
         display: none; 
     }
@@ -1607,6 +1614,7 @@ footer {
         margin-top: 20px;
     }
     p {
+        font-size: 16px;
         @include responsive(550px) {
             font-size: 12px;
         }
@@ -1718,15 +1726,13 @@ footer {
     border-radius: 5px;
     font-size: 14px;
     font-family: helvetica-bold;
+    color: #102943;
     @include responsive(500px) {
         font-size: 12px;
     }
 }
 .contact-email {
-    border: 1.5px solid #E2574C;
-    &::placeholder {
-        color: #E2574C;
-    }
+    border: 1.5px solid rgba(16, 41, 67, 0.7);
 }
 .contact-user-icon-box, .contact-email-icon-box {
     position: absolute;
@@ -1740,7 +1746,7 @@ footer {
     border-bottom-right-radius: 5px;
 }
 .contact-email-icon-box {
-    background:  #E2574C; 
+    background: #57697B;
 }
 .fa-user, .fa-envelope {
     height: 100%;
@@ -1757,6 +1763,7 @@ footer {
     border: none;
     font-family: helvetica-bold;
     font-size: 14px;
+    color: #102943;
     @include responsive(500px) {
         font-size: 12px;
     }
@@ -1874,7 +1881,7 @@ footer {
 }
 .loans-bottom-content-box {
     display: flex;
-    // justify-content: space-between;
+    justify-content: center;
     @include responsive(900px) {
         display: flex;
         flex-direction: column;
@@ -1885,6 +1892,10 @@ footer {
     color: #353D48;
     font-family: mtavrulibold;
     margin-bottom: 32px;
+    margin-left: 9%;
+    @include responsive(900px) {
+        margin-left: initial;
+    }
     @include responsive(600px) {
         text-align: center;
         font-size: 16px;
@@ -1928,9 +1939,13 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    bottom: 60px;
     @include responsive(900px) {
         width: 100%;
         margin-top: 40px;
+        position: static;
+        bottom: initial;
     }
 }
 .loans-right-side-h2 {
@@ -1989,6 +2004,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: helvetica-bold;
+    @include responsive(900px) {
+        order: -1;
+        margin-bottom: 40px;
+    }
+    
 }
 .fill-form-text {
     text-align: center;
@@ -2023,7 +2044,7 @@ footer {
 }
 .fill-loan-title-h1 {
     font-size: 30px;
-    color: #7D8183;
+    color: #353D48;
     font-family: mtavrulibold;
     text-align: center;
     margin-top: 47px;
@@ -2105,6 +2126,7 @@ input[type='radio']:checked:after {
     border-radius: 5px;
     box-shadow: none;
     padding-left: 41px;
+    font-size: 16px;
 }
 .fill-form-input-p {
     font-size: 15px;
@@ -2149,6 +2171,14 @@ input[type='radio']:checked:after {
     width: 100%;
     height: 60px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &:hover {
+        .fa-angle-down {
+            transform: rotate(-180deg);
+        }
+    }
 }
 .fill-form-select-box {
     width: 100%;
@@ -2164,9 +2194,6 @@ input[type='radio']:checked:after {
     &:hover {
         height: 180px;
         transition: 0.6s ease;
-        .fa-angle-down {
-            transform: rotate(-180deg);
-        }
     }
 }
 .fill-form-select {
@@ -2191,13 +2218,10 @@ input[type='radio']:checked:after {
 }
 .fa-angle-down {
     color: #A7A7A7;
-    display: none;
-    &:hover {
-        transform: rotate(-180deg);
-    }
-}
-.fill-form-select-arrow-active {
-    display: flex;
+    margin-right: 32px;
+    // &:hover {
+    //     transform: rotate(-180deg);
+    // }
 }
 .fill-form-roboto-box {
     width: 100%;

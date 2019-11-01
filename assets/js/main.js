@@ -70,6 +70,17 @@ $(document).ready(function(){
         }
         $('#indexCounter').append(li);
     }
+
+    $('.fill-form-select').on('click', function(){
+        $('.fill-form-select').removeClass('fill-form-select-text-active');
+        $(this).addClass('fill-form-select-text-active');
+    })
+
+    $('.form-description').on('click', function(){
+        $('.form-description').removeClass('form-description-active');
+        $(this).addClass('form-description-active');
+    })
+    
         
 })
 
