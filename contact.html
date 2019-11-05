@@ -122,29 +122,29 @@
                     <h1 class="contact-page-title">დაგვიკავშირდით</h1>
                     <div class="contact-form-and-map-box">
                         <div class="contact-form-box">
-                            <form id="contact-form" action="" method="post">
+                            <form id="contact-form" action="/action_page.php" method="get">
                                 <div class="form-description-box">
                                     <span class="form-description form-description-active">კონტაქტი</span>
                                     <span class="form-description">პრეტენზია</span>
                                 </div>
                                 <div class="contact-input-box">
-                                    <input class="contact-first-name" type="text" name="firstName" placeholder="სახელი" required>
+                                    <input class="contact-first-name contact-input" type="text" name="firstName" placeholder="სახელი" required>
                                     <div class="contact-user-icon-box">
-                                        <i class="fas fa-user"></i>
+                                        <i class="fas fa-user contact-icon1"></i>
                                     </div>
                                 </div>
                                 <div class="contact-input-box">
-                                    <input class="contact-email" type="email" name="mail" placeholder="ელ-ფოსტა" required>
+                                    <input class="contact-email contact-input" type="email" name="mail" placeholder="ელ-ფოსტა" required>
                                     <div class="contact-email-icon-box">
-                                        <i class="far fa-envelope"></i>
+                                        <i class="far fa-envelope contact-icon2"></i>
                                     </div>
                                 </div>
-                                <textarea class="contact-textarea" name="text" id="" cols="30" rows="10" placeholder="თქვენი შეტყობინება" required></textarea>
+                                <textarea class="contact-textarea contact-input" name="text" id="" cols="30" rows="10" placeholder="თქვენი შეტყობინება" required></textarea>
                                 <div class="contact-roboto-box">
                                     <img src="assets/media/img/Image 2.png" alt="">
                                 </div>
                                 <div class="contact-send-button-box">
-                                    <input class="contact-send-button" type="button" name="send" value="გაგზავნა">
+                                    <input id="cnt-submit" class="contact-send-button" type="submit" name="send" value="გაგზავნა">
                                 </div>
                                 <a class="contact-pdf-box" href="#!">
                                     <p class="contact-pdf-text">მომხმარებელთა პრეტენზიების მიღების და განხილვის წესი</p>
