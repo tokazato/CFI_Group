@@ -67,7 +67,10 @@
     input[type=date]::-webkit-inner-spin-button, 
     input[type=date]::-webkit-outer-spin-button { 
     -webkit-appearance: none; 
-    } 
+    }
+    input[type=number] {
+    -moz-appearance:textfield;
+    }
 }
 body {
     font-family: roboto;
@@ -788,11 +791,12 @@ main {
     justify-content: space-between;
 }
 .all-news {
-    display: none;
-    font-size: 12px;
+    font-size: 16px;
     color: #454A4A;
-    @include responsive(950px) {
-        display: block;
+    margin-right: 20px;
+    @include responsive(1400px) {
+        font-size: 12px;
+        margin-right: 0px;
     }
 }
 .newsBox {
@@ -802,11 +806,12 @@ main {
     position: relative;
     margin: 60px 0;
     margin-right: 20px;
-    @include responsive(550px) {
+    @include responsive(1600px) {
+        margin-left: 24px;
+     }
+     @include responsive(1400px) {
         margin-right: 0px;
-    }
-    @include responsive(1400px) {
-        margin-right: 0px;
+        margin-left: 7px;
         padding: 0 16px;
     }
     @include responsive(450px) {
@@ -814,6 +819,7 @@ main {
         padding: 12px;
         margin: 16px 0;
      }
+     
 }
 .sectionImg {
     position: relative;
@@ -1839,6 +1845,9 @@ footer {
     height: 113px;
     margin: 10px 0;
     border: 1px solid #B7BEC6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .contact-send-button-box {
     width: 100%;
@@ -2144,7 +2153,7 @@ input[type='radio']:checked:after {
     border: 2px solid white;
 }
 .fill-loan-box-content {
-    margin-bottom: 80px;
+    margin-bottom: 72px;
     @include responsive(600px) {
         margin-bottom: 61px;
     }
@@ -2167,7 +2176,7 @@ input[type='radio']:checked:after {
 }
 .fill-form-input-up-box {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-between;
     width: 100%;
     margin-top: 12px;
@@ -2238,13 +2247,20 @@ input[type='radio']:checked:after {
     height: 60px;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-end;
+    transition: 0.6s ease;
     &:hover {
+        height: 180px;
+        transition: 0.6s ease;
         .fa-angle-down {
             transform: rotate(-180deg);
-        }
+        }    
     }
+}
+.fill-form-select-arrow-active {
+    margin-top: 25px;
+
 }
 .fill-form-select-box {
     width: 100%;
@@ -2295,7 +2311,6 @@ input[type='radio']:checked:after {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 160px;
     margin-bottom: 72px;
     @include responsive(600px) {
         margin-top: 126px;
@@ -2327,11 +2342,13 @@ input[type='radio']:checked:after {
     height: 100%;
     background: #1FB26F;
     border-radius: 5px;
+    border: none;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    font-size: 15px;
+    cursor: pointer;
 }
 // agro loan 
 .fill-form-input-up-box-left-side {
@@ -2343,7 +2360,7 @@ input[type='radio']:checked:after {
     }
 }
 .fill-form-textarea-box {
-    margin-top: 120px;
+    margin-top: 72px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -2646,7 +2663,6 @@ input[type='radio']:checked:after {
         }
     }
 }
-
 .annuity-box-title {
     position: absolute;
     left: 0;
@@ -2673,4 +2689,10 @@ input[type='radio']:checked:after {
 .anuuity-pagenation-1 span {
     position: relative;
     top: 100px;
+}
+.form-error {
+    border-color: #E2574C;
+    color: #E2574C;
+    border: 2px solid #E2574C;
+    border-radius: 5px;
 }
