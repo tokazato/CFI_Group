@@ -113,6 +113,16 @@ $(document).ready(function(){
 
     $('.contact-send-button').on('click', function(event){
 
+        // -------- reCaptcha eror contact page
+        var response = grecaptcha.getResponse();
+             if(response == ""){
+             	$('.g-recaptcha').css('border', '1px solid red')
+                if( $('.recaptcha-checkbox-border').css('display') == 'none' ){ alert() }
+             	event.preventDefault()
+             } else {
+             	$('.g-recaptcha').css('border', 'none')
+             }
+
         // ------ check email on click
         var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
             if (testEmail.test( emailInput.val())) {
@@ -180,7 +190,7 @@ $(document).ready(function(){
     })
 
     
-// ---------------- calculator monthly limit
+// ---------------- calculator monthly limit  --------------------------------------------------------------------------------- calc
     $('.monthly-loan').keyup(function(){
         if( $(this).val() > 240 ){
             $(this).val('240')
@@ -223,16 +233,18 @@ $(document).ready(function(){
     var idNumber = $('.form-id-number');
     for(let i = 0; i < idNumber.length; i++){
         setInputFilter(idNumber[i], function(value) {
-            return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 310000000000); });
+            return /^\d*$/.test(value) });
     }
+    // && (value === "" || parseInt(value) >= 31000000000 );
+
 
     // ---------------  check input id value that max length to be 11 number
-    var max_chars = 10;
-    $('.form-id-number').keydown( function(e){
-        if ($(this).val().length >= max_chars) { 
-            $(this).val($(this).val().substr(0, max_chars));
-        }
-    });
+    // var max_chars = 10;
+    // $('.form-id-number').keydown( function(e){
+    //     if ($(this).val().length >= max_chars) { 
+    //         $(this).val($(this).val().substr(0, max_chars));
+    //     }
+    // });
     // $('#input').keyup( function(e){
     //     if ($(this).val().length >= max_chars) { 
     //         $(this).val($(this).val().substr(0, max_chars));
@@ -244,7 +256,7 @@ $(document).ready(function(){
     var onlyText = document.getElementsByClassName("form-only-text");
     for(let i = 0; i < onlyText.length; i++ ){
         setInputFilter(onlyText[i], function(value) {
-        return /^[a-z\u00c0-\u024f]*$/i.test(value); });
+        return /^[а-яА-ЯЁёa-zA-zა-ჰ\u00c0-\u024f]*$/i.test(value); });
     }
 
     //   setInputFilter(document.getElementsByClassName("form-only-text")[0], function(value) {
@@ -274,12 +286,25 @@ $(document).ready(function(){
         $('.fill-loan-main-box :input').each(function(){
             var input = $(this);
 
-            // ------- check input value length
+            // ------- check input value length 
             if( input.val().length < 2){
                 $(this).addClass('form-error');
             } else {
                 $(this).removeClass('form-error');
             }
+
+             // ---- remove class form error radio buttons and other input which we don't need 
+             if(input.attr('id') != "undefined" &&  (input.attr('id') == "radio_1" ||  input.attr('id') == "radio_2"  ||  input.attr('id') == "valuta_value" )) 
+             {
+                 $(this).removeClass('form-error');
+             }
+             if(input.attr('name') != 'undifined' && (input.attr('name') == 'type_form' )) 
+             {
+                $(this).removeClass('form-error');
+             }
+             if( $('button').hasClass('form-error')){
+                $('button').removeClass('form-error');
+             }
 
             // ------- check id Number value
             for(let i = 0; i < idNumber.length; i++ ){
@@ -291,7 +316,25 @@ $(document).ready(function(){
                 }
             }
 
-            // --------- add error class radion buttons only we choose
+            // ------- you can't get less then 2000 Gel on fast loan page
+            var fastLoanMoney = $('.fast-loan-money');
+            if( fastLoanMoney.val() < 2000 ){
+                fastLoanMoney.addClass('form-error');
+                fastLoanMoney.val('2000');
+            } else {
+                fastLoanMoney.removeClass('form-error');
+            }
+
+            // ------- you can't get less then 1000 Gel on consumer loan page
+            var consumerLoanMoney = $('.cunsumer-loan-money');
+            if( consumerLoanMoney.val() < 1000 ){
+                consumerLoanMoney.addClass('form-error');
+                consumerLoanMoney.val('1000');
+            } else {
+                consumerLoanMoney.removeClass('form-error');
+            }
+
+            // --------- add error class radion buttons only we choose -------------------------------------------------------------------
             if( $('.fill-form-input-up-box-right-side').css('display') == 'none'  ){
                 $('.fill-form-input-up-box-right-side input').removeClass('form-error');
             } 
@@ -304,13 +347,27 @@ $(document).ready(function(){
                 event.preventDefault()
             }
 
+
+             // -------- reCaptcha eror contact page
+            if(document.getElementById('re_captcha_test') != null) {
+                var response = grecaptcha.getResponse();
+                if(response == ""){
+                    $('.g-recaptcha').css('border', '1px solid red')
+                    // if( $('.recaptcha-checkbox-border').css('display') == 'none' ){ alert() }
+                    event.preventDefault()
+                } else {
+                    $('.g-recaptcha').css('border', 'none')
+                }
+            }
+
+
         })
     })
 
 
 // ------------------- check loans form on key up
 
-    // ------- check input length
+    // ------- check input length  -------------------------------------------------------------------------------------------
     $('.fill-loan-main-box :input').each(function(){
         var input = $(this);
         input.keyup(function(){
@@ -337,10 +394,86 @@ $(document).ready(function(){
         return event.keyCode !== 69;
     })
 
-    
+    // ------- you can't get less then 2000 Gel on fast loan page
+    var fastLoanMoney = $('.fast-loan-money');
+    $(fastLoanMoney).keyup(function(){
+        if( fastLoanMoney.val() < 2000 ){
+            fastLoanMoney.addClass('form-error');
+        } else {
+            fastLoanMoney.removeClass('form-error');
+        }
+    })
+
+    // ------- you can't get less then 1000 Gel on consumer loan page
+    var consumerLoanMoney = $('.cunsumer-loan-money');
+    $(consumerLoanMoney).keyup(function(){
+        if( consumerLoanMoney.val() < 1000 ){
+            consumerLoanMoney.addClass('form-error');
+        } else {
+            consumerLoanMoney.removeClass('form-error');
+        }
+    })
+
+    // ---------- select currency 
+    $('.fill-form-select-main-box').click(function(){
+        var inputValue = $('#valuta_value');
+        var currentValue = $('.fill-form-select-text-active').attr('data-select-currency');
+        inputValue.val(currentValue);
+    })
+
+
+// -------------------------------- check calculator field
+
+    // var calcInputNumber = $('.calculatorInput-number');
+    //     for(let i = 0; i < calcInputNumber.length; i++){
+    //         setInputFilter(calcInputNumber[i], function(value) {
+    //             return  /^\d*$/.test(value) && (value === "" || parseInt(value) <= 310000000000); 
+    //         });
+    //     }
+        
+    // ---------- check on click
+    $('#startToCalculate').on('click', function(event){
+       $('.calculatorInput').each(function(){
+        var calcInput = $(this);
+        if(calcInput.val() < 0.1){
+            calcInput.css('border', '1px solid red ')
+            event.preventDefault()
+        } else {
+            calcInput.css('border', 'none');
+        }
+       })
+    })
+
+    // ---------- check on keyup
+    $('.calculatorInput').keyup(function(event){
+        $('.calculatorInput').each(function(){
+            var calcInput = $(this);
+            if(calcInput.val() < 0.1){
+                calcInput.css('border', '1px solid red ')
+                event.preventDefault()
+            } else {
+                calcInput.css('border', 'none')
+            }
+        })
+    })
 
     
- 
+    function rs(){
+        if(window.matchMedia('(max-width: 1000px)').matches){
+            $('.headerLanguageContent').on('click', function(){
+                $(this).toggleClass('header-change-height');
+                $('.languageArrow').toggleClass('languageArrow-rotate');
+                $('.headerLanguageContent a.active').toggleClass('active-black-for-mobile')
+            });
+        }
+    }
+    rs()
+    $( window ).resize(function() {
+        rs()
+    });
+    
+  
+
 }) // -------------- end jquery    
 
 
@@ -386,6 +519,80 @@ try {
 } catch (error) {
     
 }
+
+
+// ------------------------------------- google map Contact Page
+    // -------------- Initialize and add the map
+    function initMap() {
+        var options = {
+            zoom: 8,
+            center: {
+                lat:42.3601,
+                lng:-71.0589
+            }
+        }
+        var map = new 
+        google.maps.Map(document.getElementById('map'), options);
+
+        //  // -------- add marker
+        //  var marker = new google.maps.Marker({
+        //      position: {lat:42.4668, lng:-70.9495},
+        //      map:map,
+        //      icon: "https://cdn.webshopapp.com/shops/16738/files/43789804/50x50x2/beach-flag-convex.jpg"
+        //  });
+
+        //  var infoWindow = new google.maps.InfoWindow({
+        //      content: '<h1> Zato </h1>'
+        //  });
+
+        //  marker.addListener('click', function(){
+        //      infoWindow.open(map, marker);
+        //  });
+
+        // --------- array of markers
+        var markers = [
+            {
+                coords: {lat:42.4668, lng:-70.9495},
+                iconImg: 'https://cdn.webshopapp.com/shops/16738/files/43789804/50x50x2/beach-flag-convex.jpg',
+                content: '<h1>Zato</h1>',
+            },
+            {
+                coords: {lat:42.8584, lng:-70.9300}
+            },
+            {
+                coords: {lat:42.7762, lng:-71.0773}
+            }
+        ]
+
+        // -------- loop through markers
+        for(let i = 0; i < markers.length; i++){
+            addMarker(markers[i]);
+        }
+
+        // -------- add marker function
+        function addMarker(props){
+            var marker = new google.maps.Marker({
+                    position: props.coords,
+                    map:map,
+                    //  icon: props.iconImg
+                });
+            // ---- check for customicon
+            if(props.iconImg){
+                // ----- set icon image
+                marker.setIcon(props.iconImg);
+            }
+
+            // ----- check content popup
+            if(props.content){
+                var infoWindow = new google.maps.InfoWindow({
+                        content: props.content
+                    });
+                    marker.addListener('click', function(){
+                        infoWindow.open(map, marker);
+                    });
+            }
+        } 
+    }
 
 
 

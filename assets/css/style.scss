@@ -3,6 +3,11 @@
         @content;
     }
 }
+@mixin responsive-height($param){
+    @media only screen and (max-height: $param) {
+        @content;
+    }
+}
 @mixin responsive-min($param){
     @media only screen and (min-width: $param) {
         @content;
@@ -50,7 +55,7 @@
     src: url(../fonts/Linotype-Helvetica-Neue-World-55-Roman.ttf);
 }
 @font-face {
-    font-family: helvetica;
+    font-family: helvetica-45;
     src: url(../fonts/Linotype-Helvetica-Neue-World-45Lt.ttf);
 }
 * {
@@ -75,6 +80,11 @@
 body {
     font-family: roboto;
 }
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    }
 .container {
     max-width: 1550px;
     margin: 0 auto;
@@ -95,6 +105,7 @@ body {
 .logo img {
     width: 215px;
     height: 45px;
+    object-fit: contain;
     @include responsive(550px) {
         width: 147px;
         height: 31px;
@@ -134,7 +145,7 @@ body {
         font-family: roboto;
         font-weight: bold;
         @include responsive(1000px) {
-            font-size: 14px;
+            font-size: 13px;
             font-family: mtavrulibold;
             color: #102943;
         }
@@ -162,7 +173,7 @@ body {
         background: #1FB26F;
     }
     @include responsive(450px) {
-        margin-right: 2px;
+        margin-right: 6px;
     }
 }
 .headerTel img {
@@ -260,6 +271,7 @@ body {
         left: 15px;
     }
 }
+
     .headerLanguageContent {
         display: flex;
         flex-direction: column;
@@ -273,6 +285,7 @@ body {
         border: 1px solid; 
         top: 0; 
         transition: 0.9s ease;
+        @include responsive-min(1000px) {
         &:hover {
             height: 147px;
             border-radius: 8px;
@@ -283,15 +296,14 @@ body {
                 a.active {
                    color: #454A4A;
                 }
-            }
-            .languageArrow{
-                transform: rotate(-180deg);
-            }
+            } 
+          }
         }
         @include responsive(1000px) {
             background: none;
             border: none; 
             color: #fff;
+            height: 100%;
         }
         a.active {
             order: -1;
@@ -305,13 +317,14 @@ body {
             visibility: visible;
         }
         a {
-            display: flex;
-            align-items: center;
+            // display: flex;
+            // align-items: center;
             color: rgba(69,74,74, 0.3);
             font-size: 15px;
             font-family: mtavrulibold;
             text-align: center;
-            padding: 14px 0;
+            height: 100px;
+            padding: 15px 0;
             @include responsive(400px) {
                 font-size: 13px;
             }
@@ -330,6 +343,32 @@ body {
             }
         }
 }
+.headerLanguageContent {
+    a.active {
+        @include responsive(1000px) {
+            color: #fff;
+        }
+    }
+    .active-black-for-mobile {
+        color: #454A4A !important;
+    }
+}
+.header-change-height {
+    background: #fff;
+    height: 147px;
+    border-radius: 8px;
+    color: #000;
+    @include responsive(1000px) {
+        background: #fff;
+        color: #000;
+    }
+}
+.languageArrow-rotate{
+    transform: rotate(-180deg);
+}
+.headerLanguageContent a:last-child {
+    padding-bottom: initial !important;
+  }
 .header-content-left-side, .header-content-right-side, .header-social-logo-box {
     display: flex;
     align-items: center;
@@ -366,6 +405,7 @@ body {
 }
 .headerNav {
     background: #102943;
+    padding: 0 0 0 24px;
 }
 .navigationBox {
     margin: 0;
@@ -441,7 +481,6 @@ body {
     margin-left: 3.5px;
     font-size: 10px;
 }
-
 .openHeaderDropDown {
   position: relative;
   &:hover .dropDownContent {
@@ -615,6 +654,9 @@ main {
             border-radius: 5px;
             font-size: 18px;
             font-family: mtavrulibold;
+            a {
+                color: #fff;
+            }
             @include responsive(1000px) {
                 padding: 10px 15px 12px 15px;
                 font-size: 13px;
@@ -624,6 +666,7 @@ main {
             background: #E2574C;
             cursor: pointer;
             transition: 0.5s ease;
+            margin-right: 5px;
             &:hover {
                 background: #C13E34;
                 transition: 0.5s ease;
@@ -634,16 +677,27 @@ main {
             transition: 0.5s ease;
             cursor: pointer;
             &:hover {
-                color: #1D1D1D;
                 background: #fff;
                 border: none;
                 transition: 0.5s ease;
+                a { 
+                    color: #1D1D1D;
+                    transition: 0.5s ease;
+                }
             }
         }
     }
 }
 .swiper-pagination {
-    position: static;
+    position: relative;
+}
+.swiper-wrapper {
+    padding-bottom: 50px;
+}
+@include responsive(1000px) {
+    .for-annuity-excel .dt-button {
+        top: 70px;
+    }
 }
 .swiper-pagination span {
     background: #fff !important;
@@ -688,8 +742,8 @@ main {
         cursor: pointer;
         transition: 0.5s ease;
         &:hover {
-            background: #9e9c9c;
-            color: #181818;
+            background: #fff;
+            color: #1D1D1D; 
             transition: 0.5s ease;
             border: none;
         }
@@ -746,13 +800,25 @@ main {
 }
 .h1title {
     @include titleh1;
+    position: relative;
+    // left: -24px;
+    @include responsive(1600px) {
+        // left: 0px;
+    }
     @include responsive(450px) {
         font-size: 16px;
         text-align: center;
     }
 }
+.gridBoxLeft-title-box .h1title {
+    @include responsive-min(1600px) {
+        left: -24px;
+    }
+}
+
 .h3title {
     @include titleh3;
+    margin-top: 5px;
     @include responsive(850px) {
         font-size: 12px;
      } 
@@ -763,7 +829,7 @@ main {
     @include responsive(850px) {
         font-size: 10px;
     } 
-    @include responsive(850px) {
+    @include responsive(750px) {
         display: none;
     }
 }
@@ -778,13 +844,36 @@ main {
     @include responsive(1400px) {
         display: flex;
         flex-direction: column-reverse
+    } 
+}
+.firstSectionContent-eng-ru {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 0 24px;
+    @include responsive(2830px) {
+        padding: 0 24px;
     }
-    
+    @include responsive(2800px) {
+        display: flex;
+        flex-direction: column-reverse
+    } 
 }
 .gridBoxLeft {
     // width: 984px;
-    width: 100%;
+    width: 95%;
+    @include responsive(1400px) {
+        width: 100%;
+    }
 }
+.gridBoxLeft-eng-ru {       
+    // width: 984px;
+    width: 95%;
+    @include responsive(2800px) {
+        width: 100%;
+    }
+}
+
 .gridBoxLeft-title-box{
     display: flex;
     align-items: center;
@@ -822,12 +911,16 @@ main {
      
 }
 .sectionImg {
+    height: 300px;
+    width: 388px;
     position: relative;
     right: 24px;
     bottom: 26px;
+    border-radius: 10px;
+    object-fit: cover;
     @include responsive(850px) {
-        width: 119px;
-        height: 98px;
+        width: 200px;
+        height: 150px;
     }
     @include responsive(450px) {
         position: static;
@@ -843,7 +936,7 @@ main {
     padding: 17px 35px 18px 35px;
     background: #1FB26F;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 5px;
     font-family: mtavrulibold;
     font-size: 16px;
     cursor: pointer;
@@ -859,23 +952,109 @@ main {
 .newsTextBox {
     padding: 25px 45px;
     @include responsive(850px) {
-        padding: 2px 2px;
+        padding: 10px 2px;
     }
 }
 .gridBoxRight {
     width: 481px;
     text-align: center;
     @include responsive(1400px) {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    @include responsive(1060px) {
+        display: initial;
         margin: 0 auto;
     }
+    @include responsive(570px) {
+        width: 100%;
+    }
+}
+.gridBoxRight-eng-ru {
+    width: 481px;
+    text-align: center;
+    @include responsive(2800px) {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    @include responsive(1060px) {
+        display: initial;
+        margin: 0 auto;
+    }
+    @include responsive(570px) {
+        width: 100%;
+    }
+}
+.gridBoxRight-home {   
+    width: 481px; 
+    text-align: center;
     @include responsive(1400px) {
-       
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    @include responsive(1060px) {
+        display: initial;
+        margin: 0 auto;
+        width: 481px;
+    }
+    @include responsive(570px) {
+        width: 100%;
+    }
+}
+.gridBoxRight-home-eng-ru {   
+    width: 481px; 
+    text-align: center;
+    @include responsive(2800px) {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    @include responsive(1060px) {
+        display: initial;
+        margin: 0 auto;
+        width: 481px;
     }
     @include responsive(570px) {
         width: 100%;
     }
 }
 .calculatorBox {
+    @include responsive(1400px) {
+       width: 40%;
+    }
+    @include responsive(1060px) {
+        width: 100%;
+     }
+}
+// 2222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+.calculatorBox-eng-ru {
+    @include responsive(2800px) {
+       width: 40%;
+    }
+    @include responsive(1060px) {
+        width: 100%;
+     }
+}
+
+.exchange-rate-hide {
+    @include responsive(1400px) {
+       width: 40%;
+    }
+    @include responsive(1060px) {
+        width: 100%;
+     }
+}
+// 22222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+.exchange-rate-hide-eng-ru {
+    @include responsive(2800px) {
+       width: 40%;
+    }
+    @include responsive(1060px) {
+        width: 100%;
+     }
+}
+#calcForm {
     background: #F4F4F4;
     border-radius: 10px;
     margin-bottom: 50px;
@@ -915,11 +1094,17 @@ main {
         display: none;
     } 
 }
+.exchange-rate-hide {
+    @include responsive(550px) {
+        display: none;
+    } 
+}
 .exchange-rate-main-box {
     padding: 0 24px;
     display: none;
     @include responsive(550px) {
         display: block;
+        margin-top: 16px;
         h1 {
             text-align: center;
         }
@@ -1005,6 +1190,20 @@ main {
                        bottom: -20px;
                        right: 25px;
                    }
+                }
+                .attention-eng-ru {
+                    right: 20%;
+                    @include responsive(1366px) {
+                        right: 13%;
+                    }
+                    @include responsive(550px) {
+                        right: 22%;
+                       }
+                    @include responsive(450px) {
+                        width: 188px;
+                        font-size: 12px;
+                        right: 12%;
+                    }
                 }
                 input:nth-child(2) {
                     margin-bottom: 20px;
@@ -1165,7 +1364,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 108px;
-    @include responsive(450px) {
+    @include responsive(850px) {
         margin-top: 20px;
     }
     h1 {
@@ -1206,8 +1405,13 @@ main {
 }
 .howGetLoanBoxImg {
     width: 45%;
+    height: 580px;
     @include responsive(1100px) {
         width: 100%;
+        height: 480px;
+    }
+    @include responsive(580px) {
+        height: 188px;
     }
     img {
         width: 100%;
@@ -1241,13 +1445,14 @@ main {
     .getLoanMethod {
         display: flex;
         align-items: flex-start;
-        width: 744px;
-        height: 124px;
-        @include responsive(1100px) {
+        // width: 744px;
+        // height: 124px;
+        @include responsive(1400px) {
             margin-bottom: 24px;
         }
         @include responsive(800px) {
             width: 100%;
+            height: 80px;
          }
         div {
             height: 100%;
@@ -1265,7 +1470,8 @@ main {
                 color: #454A4A;
                 @include responsive(800px) {
                     font-size: 13px;
-                 }
+                    margin-bottom: 8px;
+                }
             }
             p {
                 font-size: 16px;
@@ -1354,7 +1560,7 @@ main {
 footer {
     background: #F2F2F2;
     margin-top: 115px;
-    @include responsive(800px) {
+    @include responsive(1025px) {
         margin-top: 50px;
      }
 }
@@ -1494,13 +1700,17 @@ footer {
     
 }
 .aboutas-img img {
-    width: 880px;
-    height: 410;
+    width: 705px;
+    height: 410px;
     float: left;
     margin-right: 70px;
     margin-bottom: 24px;
+    object-fit: contain;
     @include responsive(1000px) {
         width: 100%;
+     }
+     @include responsive(550px) {
+        height: 210px;
      }
 }
 .aboutas-text-box {
@@ -1566,6 +1776,13 @@ footer {
     width: 200px;
     img {
         width: 100%;
+        height: 383px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        @include responsive(550px) {
+            height: 200px; 
+            object-fit: cover;
+        }
     }
 }
 .news-see-more-button {
@@ -1615,7 +1832,8 @@ footer {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     position: relative;
-    bottom: 5px;
+    border-top: none;
+    // bottom: 5px;
     @include responsive(600px) {
         padding: 10px;
     }
@@ -1625,6 +1843,9 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 114px;
+    a, i {
+        color: #848484;
+    }
     @include responsive(500px) {
         margin-top: 34px;
     }
@@ -1641,6 +1862,20 @@ footer {
     margin: 0px 3px;
     transition: 0.3s ease; 
     cursor: pointer;
+    a {
+        color: #848484;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        border-radius: 50%;
+        &:hover {
+            background: #E2574C;
+            color: #fff;
+            transition: 0.3s ease; 
+        }
+    }
     @include responsive(500px) {
         height: 32px;
         width: 32px;
@@ -1672,6 +1907,10 @@ footer {
 }
 
 // news 2 page 
+
+.news-2-section {
+    min-height: calc(100vh - 50px);
+}
 .news2-box {
     min-height: calc(100vh - 513px);
     margin-top: 100px;
@@ -1686,10 +1925,15 @@ footer {
         margin-top: 20px;
     }
     p {
+        line-height: 18px;
         font-size: 16px;
         @include responsive(550px) {
             font-size: 12px;
         }
+    }
+    @include responsive(1180px) {
+        display: flex;
+        flex-direction: column;
     }
 }
 .news2-h1 {
@@ -1705,11 +1949,23 @@ footer {
     margin-right: 54px;
     margin-bottom: 56px;
     width: 793px;
+    // height: 672px;
+    height: 472px;
+    border-radius: 20px;
+    object-fit: cover;
+    // @include responsive(1800px) {
+    //     height: 472px;
+    // }
+    @include responsive-height(650px) {
+        height: 472px;
+    }
     @include responsive(870px) {
         width: 100%;
+        height: 472px;
     }
-    @include responsive(600px) {
+    @include responsive(500px) {
         margin-bottom: 20px;
+        height: 220px;
     }
 }
 
@@ -1729,9 +1985,17 @@ footer {
     margin-bottom: 32px;
     @include responsive(800px) {
         text-align: center;
+        font-size: 32px;
     }
-    @include responsive(800px) {
-        font-size: 16px;
+    @include responsive(600px) {
+        font-size: 22px;
+    }
+}
+.captcha_error {
+    h2 {
+        color: red;
+        font-size: 18px;
+        margin-bottom: 10px;
     }
 }
 .contact-form-and-map-box {
@@ -1842,9 +2106,10 @@ footer {
 }
 .contact-roboto-box {
     width: 100%;
-    height: 113px;
+    // height: 113px;
+    height: 90px;
     margin: 10px 0;
-    border: 1px solid #B7BEC6;
+    // border: 1px solid #B7BEC6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1926,7 +2191,7 @@ footer {
     }
 }
 .contact-address-p {
-    font-family: helvetica;
+    font-family: helvetica-45;
     font-size: 14px;
     color: #102943;
     @include responsive(500px) {
@@ -1935,7 +2200,7 @@ footer {
 }
 .contact-map-box {
     width: 100%;
-    height: 550px;
+    height: 525px;
     @include responsive(500px) {
         height: 240px;
     }
@@ -2004,7 +2269,7 @@ footer {
 .loans-left-side-text, .loans-left-side-list {
     font-size: 16px;
     color: #454A4A;
-    font-family: helvetica;
+    font-family: helvetica-45;
     @include responsive(600px) {
         font-size: 12px;
     }
@@ -2041,10 +2306,17 @@ footer {
     align-items: center;
     justify-content: space-around;
     margin-bottom: 20px;
-    padding: 0 5px;
+    padding: 0 20px;
+    @include responsive(600px) {
+        height: 95px;
+    }
 }
 .loans-right-side-small-img-box {
     height: 100%;
+    @include responsive(900px) {
+        display: flex;
+        align-items: center;
+    }
 }
 .loans-right-side-small-img {
     margin-top: 20px;
@@ -2058,15 +2330,15 @@ footer {
 .loans-right-side-h5 {
     font-size: 18px;
     color: #102943;
-    font-family: helvetica;
+    font-family: helvetica-bold;
     @include responsive(600px) {
         font-size: 14px;
     }
 }
 .loans-right-side-p {
-    font-size: 15px;
+    font-size: 14px;
     color: #102943;
-    font-family: helvetica;
+    font-family: helvetica-45;
     @include responsive(600px) {
         font-size: 12px;
     }
@@ -2089,6 +2361,8 @@ footer {
 .fill-form-text {
     text-align: center;
     color: #fff;
+    position: relative;
+    bottom: 4px;
     @include responsive(600px) {
         font-size: 12px;
     }
@@ -2155,7 +2429,7 @@ input[type='radio']:checked:after {
 .fill-loan-box-content {
     margin-bottom: 72px;
     @include responsive(600px) {
-        margin-bottom: 61px;
+        margin-bottom: 34px;
     }
 }
 .fill-form-section-title-box {
@@ -2164,12 +2438,15 @@ input[type='radio']:checked:after {
     border-bottom: 1px solid #707070;
     padding-bottom: 10px;
     margin-bottom: 39px;
+    @include responsive(600px) {
+        margin-bottom: 8px;
+    }
 }
 .fill-form-section-h2 {
     font-size: 25px;
     color: #1FB26F;
     margin-left: 30px; 
-    font-family: helvetica-normal;
+    font-family: helvetica-bold;
     @include responsive(666px) {
         font-size: 16px;
     }
@@ -2202,6 +2479,9 @@ input[type='radio']:checked:after {
     box-shadow: none;
     padding-left: 41px;
     font-size: 16px;
+    @include responsive(600px) {
+        height: 40px;
+    }
 }
 .fill-form-input-p {
     font-size: 15px;
@@ -2230,10 +2510,14 @@ input[type='radio']:checked:after {
     display: none;
 }
 .fill-form-section2-radio-text {
-    margin-left: 30px;
+    margin-left: 13px;
     color: #74787B;
     font-size: 20px;
     font-family: roboto;
+}
+#radio_1, #radio_2 {
+    width: 30px;
+    height: 27px;
 }
 .fill-form-section-big-box {
     width: 45%;
@@ -2244,27 +2528,35 @@ input[type='radio']:checked:after {
 }
 .fill-form-select-main-box  {
     width: 100%;
-    height: 60px;
+    height: 62px;
     position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
     transition: 0.6s ease;
     &:hover {
-        height: 180px;
+        height: 140px;
         transition: 0.6s ease;
         .fa-angle-down {
             transform: rotate(-180deg);
+        }
+        @include responsive(600px) {
+            height: 100px;
         }    
+    }
+    @include responsive(600px) {
+        height: 40px;
     }
 }
 .fill-form-select-arrow-active {
     margin-top: 25px;
-
+    @include responsive(600px) {
+        margin-top: 12px;
+    }
 }
 .fill-form-select-box {
     width: 100%;
-    height: 60px;
+    height: 62px;
     display: flex;
     flex-direction: column;
     border: 1.5px solid #57697B;
@@ -2274,15 +2566,23 @@ input[type='radio']:checked:after {
     overflow: hidden;
     transition: 0.6s ease;
     &:hover {
-        height: 180px;
+        height: 140px;
         transition: 0.6s ease;
+        @include responsive(600px) {
+            height: 100px;
+            margin-bottom:  10px;
+        } 
+    }
+    @include responsive(600px) {
+        height: 40px;
     }
 }
 .fill-form-select {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
     padding: 18px 41px;
+    padding-bottom: 20px;
     font-size: 15px;
     color: #A7A7A7;
     font-family: roboto;
@@ -2292,11 +2592,16 @@ input[type='radio']:checked:after {
         color: #535353; 
         transition: 0.2s ease;
     }
+    @include responsive(600px) {
+        padding: 10px 41px;
+        margin-bottom: 10px;
+    }
 }
 .fill-form-select-text-active {
     color: #535353;
     display: flex;
     order: -1;
+    margin-bottom: 10px;
 }
 .fa-angle-down {
     color: #A7A7A7;
@@ -2313,15 +2618,14 @@ input[type='radio']:checked:after {
     align-items: center;
     margin-bottom: 72px;
     @include responsive(600px) {
-        margin-top: 126px;
+        // margin-top: 126px;
         margin-bottom: 10px;
-        height: 60px;
+        height: 100px;
     }
 }
 .fill-form-roboto {
     width: 529px;
     height: 100%;
-    border: 1.5px solid #848484;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2336,10 +2640,13 @@ input[type='radio']:checked:after {
     display: flex;
     justify-content: center;
     align-items: center;
+    @include responsive(600px) {
+        height: 40px;
+    }
 }
 .send-form {
-    width: 672px;
-    height: 100%;
+    width: 272px;
+    height: 64px;
     background: #1FB26F;
     border-radius: 5px;
     border: none;
@@ -2349,12 +2656,27 @@ input[type='radio']:checked:after {
     align-items: center;
     font-size: 15px;
     cursor: pointer;
+    @include responsive(550px) {
+        height: 42px;
+    }
+    @include responsive(600px) {
+        font-size: 12px;
+        width: 196px;
+    }
+}
+.send-form-box {
+    .send-form {
+        width: 672px;
+        @include responsive(600px) {
+            width: 280px;
+        }
+    }
 }
 // agro loan 
 .fill-form-input-up-box-left-side {
     display: flex; 
     align-items: center;
-    margin-top: 53px;
+    margin-top: 14px;
     @include responsive(600px) {
         margin-top: 0px;
     }
@@ -2364,6 +2686,9 @@ input[type='radio']:checked:after {
     display: flex;
     flex-direction: column;
     width: 100%;
+    @include responsive(600px) {
+        margin-top: 11px;
+    }
 }
 .fill-form-textarea {
     height: 158px;
@@ -2432,6 +2757,7 @@ input[type='radio']:checked:after {
 .easy-calc-swiper-box {
     display: flex;
     width: calc(100% + 24px);
+    height: 85px;
 }
 .easy-calc-swiper-arrow-box {
     margin-bottom: 30px;
@@ -2534,6 +2860,7 @@ input[type='radio']:checked:after {
     grid-column-end: 3;
 }
 .loan-calculatorBox{
+    width: 100%;
     background: #F4F4F4;
     border-radius: 10px;
 }
@@ -2554,7 +2881,12 @@ input[type='radio']:checked:after {
     }
 }
 .loan-calculator-1-th {
-    width: 5%;
+    @include responsive(1000px) {
+        width: 20%;
+    }
+    @include responsive(550px) {
+        width: 30%;
+    }
         img {
             width: 117px;
             height: 57px;
@@ -2564,6 +2896,9 @@ input[type='radio']:checked:after {
             }
         }
 }
+tr {
+    height: 60px;
+  }
 .loan-calculator-2-th {
     width: 45%;
     font-size: 16px;
@@ -2672,8 +3007,60 @@ input[type='radio']:checked:after {
     font-family: helvetica-bold;
     margin-bottom: 30px;
 }
+
+.dt-button {
+    position: relative;
+    top: 55px;
+    width: 10%;
+    height: 65px;
+    border-radius: 5px;
+    background: #E2574C;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 15px;
+     font-family: helvetica-bold;
+     border: none;
+}
+@media only screen and (max-width: 1000px) {
+  .dt-button {
+    top: 55px;
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .dt-button {
+   font-size: 12px;
+   width: 28%;
+  }
+}
+.loan-1-width {
+    width: 10%;
+}
+@include responsive(1000px) {
+    .loan-1-width {
+        width: 20%;
+    }
+}
+@include responsive(550px) {
+    .loan-1-width {
+        width: 30%;
+    }
+}
+
+
 .annuity-calculator-1-th {
-    width: 1%;
+    width: 6%;
+}
+@include responsive(1200px) {
+    .annuity-calculator-1-th {
+        width: 8%;
+    }
+}
+@include responsive(1000px) {
+    .annuity-calculator-1-th {
+        width: 6%;
+    }
 }
 .annuity-calculator-2-th {
     width: 10%;
@@ -2695,4 +3082,15 @@ input[type='radio']:checked:after {
     color: #E2574C;
     border: 2px solid #E2574C;
     border-radius: 5px;
+}
+.g-recaptcha > div {
+    @include responsive(580px) {
+        -webkit-transform: scale(0.82);
+        -ms-transform: scale(0.82);
+        transform: scale(0.82);
+        -webkit-transform-origin: 0 50%;
+        -ms-transform-origin: 0 50%;
+        transform-origin: 0 50%;
+        width: 250px!important;  
+    }
 }

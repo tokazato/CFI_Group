@@ -10,6 +10,9 @@ var swiper = new Swiper('.swiper-container', {
     },
     speed: 1000,
     spaceBetween: 100,
+    keyboard: {
+      enabled: true,
+    },
   //   on: {
   //     slideChange: function () {
 
@@ -34,19 +37,46 @@ var swiper = new Swiper('.swiper-container', {
   //   }
   });
 
-  var mq = window.matchMedia(' (min-width:550px)' );
+  // var mq = window.matchMedia(' (min-width:550px)' );
 
+  // if(mq.matches){
+  //   swiper.on('slideChange', function(){
+  //     let fromTop = (79 * this.realIndex);
+  //         document.getElementById("indexCounter").style.top = `${-fromTop}px`;
+  //   })
+  // }else{
+  //   swiper.on('slideChange', function(){
+  //     let fromTop = (25 * this.realIndex);
+  //         document.getElementById("indexCounter").style.top = `${-fromTop}px`;
+  //   })
+  // }
+
+var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;       
+var mq = window.matchMedia(' (min-width:550px)' );
+try{
+    
   if(mq.matches){
     swiper.on('slideChange', function(){
       let fromTop = (79 * this.realIndex);
           document.getElementById("indexCounter").style.top = `${-fromTop}px`;
-          console.log(-fromTop + "px");
     })
   }else{
     swiper.on('slideChange', function(){
-      let fromTop = (25 * this.realIndex);
+
+      // let fromTop = (25 * this.realIndex);
+      //     document.getElementById("indexCounter").style.top = `${-fromTop}px`;
+
+if(iOS){
+        let fromTop = (27 * this.realIndex);
           document.getElementById("indexCounter").style.top = `${-fromTop}px`;
-          console.log(-fromTop + "px");
+    }
+    else{
+      let fromTop = (27 * this.realIndex);
+      document.getElementById("indexCounter").style.top = `${-fromTop}px`;
+    }
+
     })
   }
+
+}catch (e){}
 

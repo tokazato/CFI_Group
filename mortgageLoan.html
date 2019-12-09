@@ -121,7 +121,7 @@
                 <img class="fill-loan-form-img" src="assets/media/img/adeolu-eletu-E7RLgUjjazc-unsplash.png" alt="">
             </div>
             <div class="container">
-                <form class="fill-loan-main-box" action="/action_page.php" method="GET" >
+                <form class="fill-loan-main-box" action="/action_page.php" method="GET">
                     <h1 class="fill-loan-title-h1" >იპოთეკური სესხი</h1>
                     <div class="fill-loan-box-content">
                         <div>
@@ -133,7 +133,7 @@
                                 <div class="fill-form-input-up-box">
                                     <div class="fill-form-input-box">
                                         <p class="fill-form-input-p">განმცხადებლის სახელი</p>
-                                        <input class="fill-form-input form-only-text"  type="text" name="userSurName"  >
+                                        <input oninput="validate(event)" class="fill-form-input form-only-text"  type="text" name="userSurName"  >
                                     </div>
                                     <div class="fill-form-input-box">
                                         <p class="fill-form-input-p">განმცხადებლის გვარი</p>
@@ -143,7 +143,7 @@
                                 <div class="fill-form-input-up-box">
                                     <div class="fill-form-input-box">
                                         <p class="fill-form-input-p ">პირადი ნომერი</p>
-                                        <input class="fill-form-input form-id-number" type="text" name="userIdNumber"  >
+                                        <input maxlength="11" class="fill-form-input form-id-number" type="text" name="userIdNumber"  >
                                     </div>
                                     <div class="fill-form-input-box">
                                         <p class="fill-form-input-p">საკონტაქტო ნომერი</p>
@@ -192,7 +192,7 @@
                                     <div class="fill-form-input-up-box-left-side">
                                         <div class="fill-form-input-box">
                                             <p class="fill-form-input-p">პირადი ნომერი</p>
-                                            <input class="fill-form-input form-id-number" type="text" name="ownerIdNumber" >
+                                            <input maxlength="11" class="fill-form-input form-id-number" type="text" name="ownerIdNumber" >
                                         </div>
                                     </div>
                                     <div class="fill-form-input-up-box-left-side">
